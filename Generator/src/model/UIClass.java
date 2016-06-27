@@ -1,9 +1,9 @@
 package model;
 
-public class UIClass {
+public class UIClass extends UIElement {
 
-	public UIClass() {
-		super();
+	public UIClass(String label) {
+		super(label);
 	}
-	
+
 }
