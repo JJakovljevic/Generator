@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RootElement="http:///schemas/RootElement/_LPkScDxbEeaogZRN3evpZg/10" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RootElement/_LPkScDxbEeaogZRN3evpZg/10 /UserInterfaceProfile/userInterfaceProfile.profile.uml#_LPk5gDxbEeaogZRN3evpZg">
+  <uml:Model xmi:id="_2hAe4Dw9EeaogZRN3evpZg" name="RootElement">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ft6t8Dw-EeaogZRN3evpZg" name="Zanr">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Hbu6oDw-EeaogZRN3evpZg" name="idZanr" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_oeMO8Dw-EeaogZRN3evpZg" name="nazivZanr" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wqmPsDw-EeaogZRN3evpZg" name="opisZanr" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TPRdUTxCEeaogZRN3evpZg" name="knjiga" type="_qBvacDxAEeaogZRN3evpZg" association="_TPPBEDxCEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gNKQEDxCEeaogZRN3evpZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gNLeMDxCEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qBvacDxAEeaogZRN3evpZg" name="Knjiga">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sGgukDxAEeaogZRN3evpZg" name="idKnjiga" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_zhR3ADxAEeaogZRN3evpZg" name="naslov" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CYdtsDxBEeaogZRN3evpZg" name="jezik" visibility="private" type="_5MWjcDxAEeaogZRN3evpZg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VaC8sjxLEeaogZRN3evpZg" name="knjigaogranka" type="_0ZUDgDxGEeaogZRN3evpZg" association="_VaCVoDxLEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r6Y9IDxLEeaogZRN3evpZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r6aLQDxLEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TPRdUDxCEeaogZRN3evpZg" name="zanr" type="_Ft6t8Dw-EeaogZRN3evpZg" association="_TPPBEDxCEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fXoWQDxCEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fX9GYDxCEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Y-uWozxGEeaogZRN3evpZg" name="autor" type="_Bg3agDxFEeaogZRN3evpZg" association="_Y-tvkDxGEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uLTCEDxGEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uLU3QDxGEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5MWjcDxAEeaogZRN3evpZg" name="Jezik">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_770aYDxAEeaogZRN3evpZg" name="idJezik" visibility="private"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__QugsDxAEeaogZRN3evpZg" name="imeJezik" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TPPBEDxCEeaogZRN3evpZg" name="pripadaZanru" memberEnd="_TPRdUDxCEeaogZRN3evpZg _TPRdUTxCEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TPQPMDxCEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TPQPMTxCEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Bg3agDxFEeaogZRN3evpZg" name="Autor">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_g8qTADxFEeaogZRN3evpZg" name="idAutor" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jsvN8DxFEeaogZRN3evpZg" name="ime" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_lhtLgDxFEeaogZRN3evpZg" name="prezime" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_oqRe8DxFEeaogZRN3evpZg" name="biografija" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Y-uWojxGEeaogZRN3evpZg" name="knjiga" type="_qBvacDxAEeaogZRN3evpZg" association="_Y-tvkDxGEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nlKbkDxGEeaogZRN3evpZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nlP7IDxGEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Y-tvkDxGEeaogZRN3evpZg" name="napisanaOd" memberEnd="_Y-uWojxGEeaogZRN3evpZg _Y-uWozxGEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y-uWoDxGEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Y-uWoTxGEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0ZUDgDxGEeaogZRN3evpZg" name="KnjigaOgranka">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ei-aoDxMEeaogZRN3evpZg" name="idKnjigeOgranka" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LNGiYzxdEeaogZRN3evpZg" name="rezervacija" type="_HogbQDxSEeaogZRN3evpZg" association="_LNGiYDxdEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MNSNADxdEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MNTbIDxdEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OVOw8jxdEeaogZRN3evpZg" name="primerak" type="_ZC78sDxQEeaogZRN3evpZg" association="_OVOJ4DxdEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PcbCgDxdEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PcbpkDxdEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_SpzmgDxHEeaogZRN3evpZg" name="Zaposlen" isAbstract="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WejqgDxHEeaogZRN3evpZg" name="korisnickoIme" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZqMgEDxHEeaogZRN3evpZg" name="imeZaposlenog" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cyE3ADxHEeaogZRN3evpZg" name="prezimeZaposlenog" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_e3DmgDxHEeaogZRN3evpZg" name="lozinka" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_hgMzADxHEeaogZRN3evpZg" name="pol" visibility="private" type="_jQH4gDxHEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_jQH4gDxHEeaogZRN3evpZg" name="Pol">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_lSbugDxHEeaogZRN3evpZg" name="Musko"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_naKQADxHEeaogZRN3evpZg" name="Zensko"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VmQUEDxIEeaogZRN3evpZg" name="Administrator">
+      <generalization xmi:type="uml:Generalization" xmi:id="_bhXAkDxIEeaogZRN3evpZg" general="_SpzmgDxHEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Y6DAEDxIEeaogZRN3evpZg" name="Bibliotekar">
+      <generalization xmi:type="uml:Generalization" xmi:id="_cFhdkDxIEeaogZRN3evpZg" general="_SpzmgDxHEeaogZRN3evpZg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_p_L8EDxIEeaogZRN3evpZg" name="maticniBrojBibliotekara" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9QZuEDxIEeaogZRN3evpZg" name="Ogranak">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AJtdgDxJEeaogZRN3evpZg" name="oznakaOgranka" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Dh7WgDxJEeaogZRN3evpZg" name="imeOgranka" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HC6xADxJEeaogZRN3evpZg" name="adresaOgranka" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_J1hbgDxJEeaogZRN3evpZg" name="telefonOgranka" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ASSDUjxMEeaogZRN3evpZg" name="knjigaogranka" type="_0ZUDgDxGEeaogZRN3evpZg" association="_ASRcQDxMEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DCqgQDxMEeaogZRN3evpZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DCsVcDxMEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ss3IQjxMEeaogZRN3evpZg" name="bibliotekar" type="_Y6DAEDxIEeaogZRN3evpZg" association="_Ss2hMDxMEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YhsNoDxMEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YhtbwDxMEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9r3FkDxJEeaogZRN3evpZg" name="Clan">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RRbaIDxOEeaogZRN3evpZg" name="brClanskeKarte" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TptgIDxOEeaogZRN3evpZg" name="imeClana" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VtBbsDxOEeaogZRN3evpZg" name="prezimeClana" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YE6gIDxOEeaogZRN3evpZg" name="jmbg" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZblYIDxOEeaogZRN3evpZg" name="datumRodjenja" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bQnnIDxOEeaogZRN3evpZg" name="adresaClana" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dSFvoDxOEeaogZRN3evpZg" name="telefonClana" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_e71UoDxOEeaogZRN3evpZg" name="emailClana" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_g150oDxOEeaogZRN3evpZg" name="polClana" visibility="private" type="_jQH4gDxHEeaogZRN3evpZg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_i2_ioDxOEeaogZRN3evpZg" name="clanstvo" visibility="private" type="_lKUQIDxOEeaogZRN3evpZg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_mqELoDxOEeaogZRN3evpZg" name="datumUplate" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_z9GmoTxcEeaogZRN3evpZg" name="zaduzenje" type="_v3zUQDxTEeaogZRN3evpZg" association="_z9F_kDxcEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_01Jo8DxcEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_01MFMDxcEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_H7Y6AzxdEeaogZRN3evpZg" name="rezervacija" type="_HogbQDxSEeaogZRN3evpZg" association="_H7Y6ADxdEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I7wK0DxdEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I7xY8DxdEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_VaCVoDxLEeaogZRN3evpZg" visibility="private" memberEnd="_VaC8sjxLEeaogZRN3evpZg _VaC8szxLEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VaC8sDxLEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VaC8sTxLEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_VaC8szxLEeaogZRN3evpZg" name="knjiga" type="_qBvacDxAEeaogZRN3evpZg" association="_VaCVoDxLEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ASRcQDxMEeaogZRN3evpZg" memberEnd="_ASSDUjxMEeaogZRN3evpZg _ASSDUzxMEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ASSDUDxMEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ASSDUTxMEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ASSDUzxMEeaogZRN3evpZg" name="ogranak" type="_9QZuEDxIEeaogZRN3evpZg" association="_ASRcQDxMEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Ss2hMDxMEeaogZRN3evpZg" memberEnd="_Ss3IQjxMEeaogZRN3evpZg _Ss3IQzxMEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ss3IQDxMEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ss3IQTxMEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Ss3IQzxMEeaogZRN3evpZg" name="ogranak" type="_9QZuEDxIEeaogZRN3evpZg" association="_Ss2hMDxMEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_lKUQIDxOEeaogZRN3evpZg" name="Clanstvo">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_oamVIDxOEeaogZRN3evpZg" name="vazece"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_p9BxMDxOEeaogZRN3evpZg" name="suspendovan"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_reXoIDxOEeaogZRN3evpZg" name="isteklo"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZC78sDxQEeaogZRN3evpZg" name="Primerak">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_x3dmQDxQEeaogZRN3evpZg" name="idPrimerka" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2X1aIDxQEeaogZRN3evpZg" name="godinaIzdavanja" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8I8dIDxQEeaogZRN3evpZg" name="stanje" visibility="private" type="_F5nF8DxREeaogZRN3evpZg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4vKncjxcEeaogZRN3evpZg" name="zaduzenje" type="_v3zUQDxTEeaogZRN3evpZg" association="_4vKAYDxcEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5oGakDxcEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5oHosDxcEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_fixbAjxdEeaogZRN3evpZg" name="odobrenarezervacija" type="_XqzkwDxTEeaogZRN3evpZg" association="_fiwz8DxdEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gdG8UDxdEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gdIKcDxdEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_F5nF8DxREeaogZRN3evpZg" name="Stanje">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_H2sdsDxREeaogZRN3evpZg" name="ostecena"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_KmUssDxREeaogZRN3evpZg" name="dobar"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lbxFIDxREeaogZRN3evpZg" name="Izdavac">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_tl8RQDxREeaogZRN3evpZg" name="idIzdavaca" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wTzlsDxREeaogZRN3evpZg" name="nazivIzdavaca" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_hBnNAzxcEeaogZRN3evpZg" name="primerak" type="_ZC78sDxQEeaogZRN3evpZg" association="_hBnNADxcEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kGDOYDxcEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kGEcgDxcEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_HogbQDxSEeaogZRN3evpZg" name="Rezervacija">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Q89CIDxSEeaogZRN3evpZg" name="idRezervacije" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Tzw3MDxSEeaogZRN3evpZg" name="datumRezervacije" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YbP_sDxSEeaogZRN3evpZg" name="statusRezervacije" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ceE68jxdEeaogZRN3evpZg" name="odobrenarezervacija" type="_XqzkwDxTEeaogZRN3evpZg" association="_ceET4DxdEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dSI1IDxdEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dSKDQDxdEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_XqzkwDxTEeaogZRN3evpZg" name="OdobrenaRezervacija">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_eXuIsDxTEeaogZRN3evpZg" name="idOdobreneRezervacije" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_iZXZMDxTEeaogZRN3evpZg" name="datumOdobrenja" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_kzQBsDxTEeaogZRN3evpZg" name="brojDana" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_v3zUQDxTEeaogZRN3evpZg" name="Zaduzenje">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6W8zsDxTEeaogZRN3evpZg" name="datumIznajmljivanja" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_A97HsDxUEeaogZRN3evpZg" name="idZaduzenja" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F8wZMDxUEeaogZRN3evpZg" name="datumVracanjaMax" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NIbVsDxUEeaogZRN3evpZg" name="datumVracanja" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_DCqQgTxdEeaogZRN3evpZg" name="opomena" type="_s_q3QDxYEeaogZRN3evpZg" association="_DCpCYDxdEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EVM2cDxdEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EVOEkDxdEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_s_q3QDxYEeaogZRN3evpZg" name="Opomena">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1o9BQDxYEeaogZRN3evpZg" name="oznakaOpomene" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4tkBwDxYEeaogZRN3evpZg" name="nazivOpomene" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6Ja7wDxYEeaogZRN3evpZg" name="opisOpomene" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7oe6wDxYEeaogZRN3evpZg" name="statusOpomene" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_X720UDxaEeaogZRN3evpZg" name="VrstaOpomene">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_aogn0DxaEeaogZRN3evpZg" name="idVrste" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dbaNQDxaEeaogZRN3evpZg" name="nazivVrsteOpomene" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ggQeUDxaEeaogZRN3evpZg" name="opisVrsteOpomene" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ih4X0DxaEeaogZRN3evpZg" name="kazna" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pBJPYzxcEeaogZRN3evpZg" name="opomena" type="_s_q3QDxYEeaogZRN3evpZg" association="_pBJPYDxcEeaogZRN3evpZg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qpXxcDxcEeaogZRN3evpZg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qpZmoDxcEeaogZRN3evpZg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hBnNADxcEeaogZRN3evpZg" memberEnd="_hBnNAzxcEeaogZRN3evpZg _hBn0EDxcEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hBnNATxcEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hBnNAjxcEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_hBn0EDxcEeaogZRN3evpZg" name="izdavac" type="_lbxFIDxREeaogZRN3evpZg" association="_hBnNADxcEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_pBJPYDxcEeaogZRN3evpZg" memberEnd="_pBJPYzxcEeaogZRN3evpZg _pBJPZDxcEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pBJPYTxcEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pBJPYjxcEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_pBJPZDxcEeaogZRN3evpZg" name="vrstaopomene" type="_X720UDxaEeaogZRN3evpZg" association="_pBJPYDxcEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_z9F_kDxcEeaogZRN3evpZg" memberEnd="_z9GmoTxcEeaogZRN3evpZg _z9H0wDxcEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_z9F_kTxcEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_z9GmoDxcEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_z9H0wDxcEeaogZRN3evpZg" name="clan" type="_9r3FkDxJEeaogZRN3evpZg" association="_z9F_kDxcEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4vKAYDxcEeaogZRN3evpZg" memberEnd="_4vKncjxcEeaogZRN3evpZg _4vKnczxcEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4vKncDxcEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4vKncTxcEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4vKnczxcEeaogZRN3evpZg" name="primerak" type="_ZC78sDxQEeaogZRN3evpZg" association="_4vKAYDxcEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_DCpCYDxdEeaogZRN3evpZg" memberEnd="_DCqQgTxdEeaogZRN3evpZg _DCqQgjxdEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DCppcDxdEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DCqQgDxdEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_DCqQgjxdEeaogZRN3evpZg" name="zaduzenje" type="_v3zUQDxTEeaogZRN3evpZg" association="_DCpCYDxdEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_H7Y6ADxdEeaogZRN3evpZg" memberEnd="_H7Y6AzxdEeaogZRN3evpZg _H7Y6BDxdEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_H7Y6ATxdEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_H7Y6AjxdEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_H7Y6BDxdEeaogZRN3evpZg" name="clan" type="_9r3FkDxJEeaogZRN3evpZg" association="_H7Y6ADxdEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_LNGiYDxdEeaogZRN3evpZg" memberEnd="_LNGiYzxdEeaogZRN3evpZg _LNGiZDxdEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LNGiYTxdEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LNGiYjxdEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_LNGiZDxdEeaogZRN3evpZg" name="knjigaogranka" type="_0ZUDgDxGEeaogZRN3evpZg" association="_LNGiYDxdEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_OVOJ4DxdEeaogZRN3evpZg" memberEnd="_OVOw8jxdEeaogZRN3evpZg _OVOw8zxdEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OVOw8DxdEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OVOw8TxdEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_OVOw8zxdEeaogZRN3evpZg" name="knjigaogranka" type="_0ZUDgDxGEeaogZRN3evpZg" association="_OVOJ4DxdEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ceET4DxdEeaogZRN3evpZg" memberEnd="_ceE68jxdEeaogZRN3evpZg _ceE68zxdEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ceE68DxdEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ceE68TxdEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ceE68zxdEeaogZRN3evpZg" name="rezervacija" type="_HogbQDxSEeaogZRN3evpZg" association="_ceET4DxdEeaogZRN3evpZg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_fiwz8DxdEeaogZRN3evpZg" memberEnd="_fixbAjxdEeaogZRN3evpZg _fixbAzxdEeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fixbADxdEeaogZRN3evpZg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fixbATxdEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_fixbAzxdEeaogZRN3evpZg" name="primerak" type="_ZC78sDxQEeaogZRN3evpZg" association="_fiwz8DxdEeaogZRN3evpZg"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_m49hEDw_EeaogZRN3evpZg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UAWyoDxbEeaogZRN3evpZg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UAWyoTxbEeaogZRN3evpZg" key="Version" value="0.0.11"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UAWyojxbEeaogZRN3evpZg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UAWyozxbEeaogZRN3evpZg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UAWypDxbEeaogZRN3evpZg" key="Date" value="2016-06-27"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UAWypTxbEeaogZRN3evpZg" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m4-IIDw_EeaogZRN3evpZg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="/UserInterfaceProfile/userInterfaceProfile.profile.uml#_LPk5gDxbEeaogZRN3evpZg"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="/UserInterfaceProfile/userInterfaceProfile.profile.uml#_drb9gDq-EeaItMzh_zRl8g"/>
+    </profileApplication>
+  </uml:Model>
+  <RootElement:ReadOnly xmi:id="_3tzXQDw_EeaogZRN3evpZg" base_Element="_Hbu6oDw-EeaogZRN3evpZg" label="id zanra" base_Property="_Hbu6oDw-EeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_6W9x4Dw_EeaogZRN3evpZg" base_Element="_oeMO8Dw-EeaogZRN3evpZg" label="naziv zanra" base_Property="_oeMO8Dw-EeaogZRN3evpZg" length="20" display="true"/>
+  <RootElement:Editable xmi:id="_7Qv5kDw_EeaogZRN3evpZg" base_Element="_wqmPsDw-EeaogZRN3evpZg" label="opis zanra" base_Property="_wqmPsDw-EeaogZRN3evpZg" length="100"/>
+  <RootElement:StandardForm xmi:id="_8g4EsDw_EeaogZRN3evpZg" base_Element="_Ft6t8Dw-EeaogZRN3evpZg" base_Class="_Ft6t8Dw-EeaogZRN3evpZg"/>
+  <RootElement:StandardForm xmi:id="_PIu7MDxBEeaogZRN3evpZg" base_Element="_qBvacDxAEeaogZRN3evpZg" label="Knjiga" base_Class="_qBvacDxAEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
+  <RootElement:ReadOnly xmi:id="_W5IVYDxBEeaogZRN3evpZg" base_Element="_sGgukDxAEeaogZRN3evpZg" label="id knjige" base_Property="_sGgukDxAEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_ersSwDxBEeaogZRN3evpZg" base_Element="_zhR3ADxAEeaogZRN3evpZg" label="naslov" base_Property="_zhR3ADxAEeaogZRN3evpZg" length="100" display="true"/>
+  <RootElement:Lookup xmi:id="_tIf6kDxBEeaogZRN3evpZg" base_Element="_CYdtsDxBEeaogZRN3evpZg" label="jezik" base_Property="_CYdtsDxBEeaogZRN3evpZg" component="combobox" display="true"/>
+  <RootElement:StandardForm xmi:id="_1-m_oDxBEeaogZRN3evpZg" base_Element="_5MWjcDxAEeaogZRN3evpZg" label="Jezik" base_Class="_5MWjcDxAEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
+  <RootElement:Editable xmi:id="_9JdcwDxBEeaogZRN3evpZg" base_Element="__QugsDxAEeaogZRN3evpZg" label="ime jezika" base_Property="__QugsDxAEeaogZRN3evpZg" length="30" display="true"/>
+  <RootElement:ReadOnly xmi:id="_BMhpkDxCEeaogZRN3evpZg" base_Element="_770aYDxAEeaogZRN3evpZg" label="id jezika" base_Property="_770aYDxAEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:StandardForm xmi:id="_DvvF0DxFEeaogZRN3evpZg" base_Element="_Bg3agDxFEeaogZRN3evpZg" label="Autor" base_Class="_Bg3agDxFEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
+  <RootElement:ReadOnly xmi:id="_wVkWsDxFEeaogZRN3evpZg" base_Element="_g8qTADxFEeaogZRN3evpZg" label="ID autora" base_Property="_g8qTADxFEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_81n98DxFEeaogZRN3evpZg" base_Element="_jsvN8DxFEeaogZRN3evpZg" label="Ime autora" base_Property="_jsvN8DxFEeaogZRN3evpZg" length="30" display="true"/>
+  <RootElement:Editable xmi:id="_ElInUDxGEeaogZRN3evpZg" base_Element="_lhtLgDxFEeaogZRN3evpZg" label="Prezime autora" base_Property="_lhtLgDxFEeaogZRN3evpZg" length="35" display="true"/>
+  <RootElement:Editable xmi:id="_MN0P8DxGEeaogZRN3evpZg" base_Element="_oqRe8DxFEeaogZRN3evpZg" label="Biografija" base_Property="_oqRe8DxFEeaogZRN3evpZg" length="300"/>
+  <RootElement:StandardForm xmi:id="_6A7MQDxGEeaogZRN3evpZg" base_Element="_0ZUDgDxGEeaogZRN3evpZg" base_Class="_0ZUDgDxGEeaogZRN3evpZg"/>
+  <RootElement:ReadOnly xmi:id="_09w-8DxHEeaogZRN3evpZg" base_Element="_WejqgDxHEeaogZRN3evpZg" label="Korisnicko ime" base_Property="_WejqgDxHEeaogZRN3evpZg" length="30" display="true"/>
+  <RootElement:Editable xmi:id="_7aXO8DxHEeaogZRN3evpZg" base_Element="_ZqMgEDxHEeaogZRN3evpZg" label="Ime zaposlenog" base_Property="_ZqMgEDxHEeaogZRN3evpZg" length="30" display="true"/>
+  <RootElement:Editable xmi:id="_Alxj4DxIEeaogZRN3evpZg" base_Element="_cyE3ADxHEeaogZRN3evpZg" label="Prezime zaposlenog" base_Property="_cyE3ADxHEeaogZRN3evpZg" length="35" display="true"/>
+  <RootElement:Editable xmi:id="_GW2xsDxIEeaogZRN3evpZg" base_Element="_e3DmgDxHEeaogZRN3evpZg" label="Lozinka" base_Property="_e3DmgDxHEeaogZRN3evpZg" length="15"/>
+  <RootElement:Editable xmi:id="_M1CWEDxIEeaogZRN3evpZg" base_Element="_hgMzADxHEeaogZRN3evpZg" label="Pol" base_Property="_hgMzADxHEeaogZRN3evpZg" component="combobox" display="true"/>
+  <RootElement:StandardForm xmi:id="_hU66oDxIEeaogZRN3evpZg" base_Element="_Y6DAEDxIEeaogZRN3evpZg" label="Bibliotekar" base_Class="_Y6DAEDxIEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
+  <RootElement:ReadOnly xmi:id="_01FuoDxIEeaogZRN3evpZg" base_Element="_p_L8EDxIEeaogZRN3evpZg" label="Maticni broj bibliotekara" base_Property="_p_L8EDxIEeaogZRN3evpZg" length="10" display="true"/>
+  <RootElement:ReadOnly xmi:id="_N7kq4DxJEeaogZRN3evpZg" base_Element="_AJtdgDxJEeaogZRN3evpZg" label="Oznaka ogranka" base_Property="_AJtdgDxJEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_TxzecDxJEeaogZRN3evpZg" base_Element="_Dh7WgDxJEeaogZRN3evpZg" label="Ime ogranka" base_Property="_Dh7WgDxJEeaogZRN3evpZg" length="60" display="true"/>
+  <RootElement:Editable xmi:id="_bSb-UDxJEeaogZRN3evpZg" base_Element="_HC6xADxJEeaogZRN3evpZg" label="Adresa ogranka" base_Property="_HC6xADxJEeaogZRN3evpZg" length="60" display="true"/>
+  <RootElement:Editable xmi:id="_mKDoIDxJEeaogZRN3evpZg" base_Element="_J1hbgDxJEeaogZRN3evpZg" label="Telefon ogranka" base_Property="_J1hbgDxJEeaogZRN3evpZg" length="15" display="true"/>
+  <RootElement:ReadOnly xmi:id="_rBkpUDxMEeaogZRN3evpZg" base_Element="_ei-aoDxMEeaogZRN3evpZg" label="ID knjige ogranka" base_Property="_ei-aoDxMEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:ReadOnly xmi:id="__n0CoDxOEeaogZRN3evpZg" base_Element="_RRbaIDxOEeaogZRN3evpZg" label="Broj clanske karte" base_Property="_RRbaIDxOEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_HKIkkDxPEeaogZRN3evpZg" base_Element="_TptgIDxOEeaogZRN3evpZg" label="Ime clana" base_Property="_TptgIDxOEeaogZRN3evpZg" length="30" display="true"/>
+  <RootElement:Editable xmi:id="_MXrAcDxPEeaogZRN3evpZg" base_Element="_VtBbsDxOEeaogZRN3evpZg" label="Prezime clana" base_Property="_VtBbsDxOEeaogZRN3evpZg" length="35" display="true"/>
+  <RootElement:Editable xmi:id="_TgVFMDxPEeaogZRN3evpZg" base_Element="_YE6gIDxOEeaogZRN3evpZg" label="JMBG" base_Property="_YE6gIDxOEeaogZRN3evpZg" length="13" display="true"/>
+  <RootElement:Editable xmi:id="_eMIgkDxPEeaogZRN3evpZg" base_Element="_ZblYIDxOEeaogZRN3evpZg" label="Datum rodjenja" base_Property="_ZblYIDxOEeaogZRN3evpZg" component="dateChooser" display="true"/>
+  <RootElement:Editable xmi:id="_kqOlYDxPEeaogZRN3evpZg" base_Element="_bQnnIDxOEeaogZRN3evpZg" label="Adresa clana" base_Property="_bQnnIDxOEeaogZRN3evpZg" length="60" display="true"/>
+  <RootElement:Editable xmi:id="_pDTecDxPEeaogZRN3evpZg" base_Element="_dSFvoDxOEeaogZRN3evpZg" label="Telefon clana" base_Property="_dSFvoDxOEeaogZRN3evpZg" length="15" display="true"/>
+  <RootElement:Editable xmi:id="_u0s1UDxPEeaogZRN3evpZg" base_Element="_e71UoDxOEeaogZRN3evpZg" label="Telefon clana" base_Property="_e71UoDxOEeaogZRN3evpZg" length="30" display="true"/>
+  <RootElement:Editable xmi:id="_2y2-sDxPEeaogZRN3evpZg" base_Element="_g150oDxOEeaogZRN3evpZg" label="Pol clana" base_Property="_g150oDxOEeaogZRN3evpZg" component="combobox" display="true"/>
+  <RootElement:Editable xmi:id="_-bXBIDxPEeaogZRN3evpZg" base_Element="_i2_ioDxOEeaogZRN3evpZg" label="Clanstvo" base_Property="_i2_ioDxOEeaogZRN3evpZg" component="combobox" display="true"/>
+  <RootElement:Editable xmi:id="_EjGbcDxQEeaogZRN3evpZg" base_Element="_mqELoDxOEeaogZRN3evpZg" label="Datum uplate" base_Property="_mqELoDxOEeaogZRN3evpZg" component="dateChooser" display="true"/>
+  <RootElement:StandardForm xmi:id="_cugPgDxQEeaogZRN3evpZg" base_Element="_9r3FkDxJEeaogZRN3evpZg" label="Clan" base_Class="_9r3FkDxJEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
+  <RootElement:StandardForm xmi:id="_t_l80DxQEeaogZRN3evpZg" base_Element="_ZC78sDxQEeaogZRN3evpZg" label="Primerak" base_Class="_ZC78sDxQEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
+  <RootElement:ReadOnly xmi:id="_BIYLkDxREeaogZRN3evpZg" base_Element="_x3dmQDxQEeaogZRN3evpZg" label="ID primerka" base_Property="_x3dmQDxQEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_VE0E0DxREeaogZRN3evpZg" base_Element="_2X1aIDxQEeaogZRN3evpZg" label="Godina izdavanja" base_Property="_2X1aIDxQEeaogZRN3evpZg" length="4" display="true"/>
+  <RootElement:ReadOnly xmi:id="_adnVgDxREeaogZRN3evpZg" base_Element="_8I8dIDxQEeaogZRN3evpZg" label="Stanje primerka" base_Property="_8I8dIDxQEeaogZRN3evpZg" component="combobox" display="true"/>
+  <RootElement:StandardForm xmi:id="_pVyqsDxREeaogZRN3evpZg" base_Element="_lbxFIDxREeaogZRN3evpZg" label="Izdavac" base_Class="_lbxFIDxREeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
+  <RootElement:ReadOnly xmi:id="_2onLoDxREeaogZRN3evpZg" base_Element="_tl8RQDxREeaogZRN3evpZg" label="ID izdavaca" base_Property="_tl8RQDxREeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_94QpMDxREeaogZRN3evpZg" base_Element="_wTzlsDxREeaogZRN3evpZg" label="Naziv izdavaca" base_Property="_wTzlsDxREeaogZRN3evpZg" length="30" display="true"/>
+  <RootElement:StandardForm xmi:id="_J4p48DxSEeaogZRN3evpZg" base_Element="_HogbQDxSEeaogZRN3evpZg" label="Rezervacija" base_Class="_HogbQDxSEeaogZRN3evpZg" add="true" delete="true" update="true"/>
+  <RootElement:ReadOnly xmi:id="_uY-bQDxSEeaogZRN3evpZg" base_Element="_Q89CIDxSEeaogZRN3evpZg" label="ID rezervacije" base_Property="_Q89CIDxSEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_07RqoDxSEeaogZRN3evpZg" base_Element="_Tzw3MDxSEeaogZRN3evpZg" label="Datum rezervacije" base_Property="_Tzw3MDxSEeaogZRN3evpZg" component="dateChooser" display="true"/>
+  <RootElement:Editable xmi:id="_6aHR4DxSEeaogZRN3evpZg" base_Element="_YbP_sDxSEeaogZRN3evpZg" label="Status rezervacije" base_Property="_YbP_sDxSEeaogZRN3evpZg" component="chechkbox" display="true"/>
+  <RootElement:StandardForm xmi:id="_3FfC8DxTEeaogZRN3evpZg" base_Element="_v3zUQDxTEeaogZRN3evpZg" label="Zaduzenja" base_Class="_v3zUQDxTEeaogZRN3evpZg" add="true" delete="true" update="true"/>
+  <RootElement:Editable xmi:id="_caJMQDxUEeaogZRN3evpZg" base_Element="_6W8zsDxTEeaogZRN3evpZg" base_Property="_6W8zsDxTEeaogZRN3evpZg"/>
+  <RootElement:ReadOnly xmi:id="_daHbgDxUEeaogZRN3evpZg" base_Element="_A97HsDxUEeaogZRN3evpZg" base_Property="_A97HsDxUEeaogZRN3evpZg"/>
+  <RootElement:Editable xmi:id="_eKehcDxUEeaogZRN3evpZg" base_Element="_F8wZMDxUEeaogZRN3evpZg" base_Property="_F8wZMDxUEeaogZRN3evpZg"/>
+  <RootElement:Editable xmi:id="_fPLfsDxUEeaogZRN3evpZg" base_Element="_NIbVsDxUEeaogZRN3evpZg" base_Property="_NIbVsDxUEeaogZRN3evpZg"/>
+  <RootElement:StandardForm xmi:id="_wkzx8DxYEeaogZRN3evpZg" base_Element="_s_q3QDxYEeaogZRN3evpZg" label="Opomena" base_Class="_s_q3QDxYEeaogZRN3evpZg" add="true" delete="true" update="true"/>
+  <RootElement:ReadOnly xmi:id="_Q98ccDxZEeaogZRN3evpZg" base_Element="_1o9BQDxYEeaogZRN3evpZg" label="Oznaka opomene" base_Property="_1o9BQDxYEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_dorCoDxZEeaogZRN3evpZg" base_Element="_4tkBwDxYEeaogZRN3evpZg" label="Naziv opomene" base_Property="_4tkBwDxYEeaogZRN3evpZg" length="30" display="true"/>
+  <RootElement:Editable xmi:id="_4P4x0DxZEeaogZRN3evpZg" base_Element="_7oe6wDxYEeaogZRN3evpZg" label="Status opomene" base_Property="_7oe6wDxYEeaogZRN3evpZg" component="chechkbox" display="true"/>
+  <RootElement:Editable xmi:id="_SNKzMDxaEeaogZRN3evpZg" base_Element="_6Ja7wDxYEeaogZRN3evpZg" label="Opis opomene" base_Property="_6Ja7wDxYEeaogZRN3evpZg" length="200"/>
+  <RootElement:ReadOnly xmi:id="_ptTcsDxaEeaogZRN3evpZg" base_Element="_aogn0DxaEeaogZRN3evpZg" base_Property="_aogn0DxaEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_WxCKgDxbEeaogZRN3evpZg" base_Property="_dbaNQDxaEeaogZRN3evpZg" unique="true"/>
+  <RootElement:Editable xmi:id="_WxSCIDxbEeaogZRN3evpZg" base_Element="_dbaNQDxaEeaogZRN3evpZg" label="Naziv" base_Property="_dbaNQDxaEeaogZRN3evpZg" length="20" display="true"/>
+  <RootElement:DBProperty xmi:id="_osC-kDxbEeaogZRN3evpZg" base_Property="_aogn0DxaEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_tPCBkDxbEeaogZRN3evpZg" base_Property="_ggQeUDxaEeaogZRN3evpZg" mandatory="false"/>
+  <RootElement:Editable xmi:id="_tPR5MDxbEeaogZRN3evpZg" base_Element="_ggQeUDxaEeaogZRN3evpZg" label="Opis" base_Property="_ggQeUDxaEeaogZRN3evpZg" length="100"/>
+  <RootElement:DBProperty xmi:id="_22ENQDxbEeaogZRN3evpZg" base_Property="_ih4X0DxaEeaogZRN3evpZg"/>
+  <RootElement:Editable xmi:id="_22VTADxbEeaogZRN3evpZg" base_Element="_ih4X0DxaEeaogZRN3evpZg" label="Kazna" base_Property="_ih4X0DxaEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:DBProperty xmi:id="_t-B4wDxfEeat_L31rHO22A" base_Property="_Hbu6oDw-EeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_J8E4ADxgEeat_L31rHO22A" base_Property="_wqmPsDw-EeaogZRN3evpZg" mandatory="false"/>
+  <RootElement:DBProperty xmi:id="_NUvc8DxgEeat_L31rHO22A" base_Property="_oeMO8Dw-EeaogZRN3evpZg" unique="true"/>
+  <RootElement:DBProperty xmi:id="_0Nvb8DxiEea6ZJGitK1rXQ" base_Property="_sGgukDxAEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_3aDm8DxiEea6ZJGitK1rXQ" base_Property="_zhR3ADxAEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_7GcZIDxiEea6ZJGitK1rXQ" base_Property="_CYdtsDxBEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="__NjYcDxiEea6ZJGitK1rXQ" base_Property="_g8qTADxFEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_CpQqUDxjEea6ZJGitK1rXQ" base_Property="_jsvN8DxFEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_EfTl8DxjEea6ZJGitK1rXQ" base_Property="_lhtLgDxFEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_GBqJgDxjEea6ZJGitK1rXQ" base_Property="_oqRe8DxFEeaogZRN3evpZg" mandatory="false"/>
+  <RootElement:DBProperty xmi:id="_Km7rgDxjEea6ZJGitK1rXQ" base_Property="_770aYDxAEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_NB-KkDxjEea6ZJGitK1rXQ" base_Property="__QugsDxAEeaogZRN3evpZg" unique="true"/>
+  <RootElement:DBProperty xmi:id="_QIPX8DxjEea6ZJGitK1rXQ" base_Property="_ei-aoDxMEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_ZU1DUDxjEea6ZJGitK1rXQ" base_Property="_x3dmQDxQEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_aA9wkDxjEea6ZJGitK1rXQ" base_Property="_2X1aIDxQEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_aqlVUDxjEea6ZJGitK1rXQ" base_Property="_8I8dIDxQEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_jnSxoDxjEea6ZJGitK1rXQ" base_Property="_tl8RQDxREeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_lY7uYDxjEea6ZJGitK1rXQ" base_Property="_wTzlsDxREeaogZRN3evpZg" unique="true"/>
+  <RootElement:DBProperty xmi:id="_qGmXYDxjEea6ZJGitK1rXQ" base_Property="_WejqgDxHEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_tB7gEDxjEea6ZJGitK1rXQ" base_Property="_ZqMgEDxHEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_wD3nEDxjEea6ZJGitK1rXQ" base_Property="_cyE3ADxHEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_xTL54DxjEea6ZJGitK1rXQ" base_Property="_e3DmgDxHEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_yTNMcDxjEea6ZJGitK1rXQ" base_Property="_hgMzADxHEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_1yjBIDxjEea6ZJGitK1rXQ" base_Property="_AJtdgDxJEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_6Up6YDxjEea6ZJGitK1rXQ" base_Property="_Dh7WgDxJEeaogZRN3evpZg" unique="true"/>
+  <RootElement:DBProperty xmi:id="_9zNr8DxjEea6ZJGitK1rXQ" base_Property="_HC6xADxJEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="__jqV4DxjEea6ZJGitK1rXQ" base_Property="_J1hbgDxJEeaogZRN3evpZg" mandatory="false"/>
+  <RootElement:DBProperty xmi:id="_LFVM0DxlEea6ZJGitK1rXQ" base_Property="_Q89CIDxSEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_LvMCIDxlEea6ZJGitK1rXQ" base_Property="_Tzw3MDxSEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_MaZiUDxlEea6ZJGitK1rXQ" base_Property="_YbP_sDxSEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_jBZkYDxlEea6ZJGitK1rXQ" base_Property="_eXuIsDxTEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_j7fOEDxlEea6ZJGitK1rXQ" base_Property="_iZXZMDxTEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_ki8PoDxlEea6ZJGitK1rXQ" base_Property="_kzQBsDxTEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_UaODIDxmEea6ZJGitK1rXQ" base_Property="_p_L8EDxIEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_hOzI4DxmEea6ZJGitK1rXQ" base_Property="_6W8zsDxTEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_lRFSkDxmEea6ZJGitK1rXQ" base_Property="_A97HsDxUEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_nU6LgDxmEea6ZJGitK1rXQ" base_Property="_F8wZMDxUEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_sTlsADxmEea6ZJGitK1rXQ" base_Property="_NIbVsDxUEeaogZRN3evpZg" mandatory="false"/>
+  <RootElement:DBProperty xmi:id="_ue5tADxmEea6ZJGitK1rXQ" base_Property="_1o9BQDxYEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_vRGmADxmEea6ZJGitK1rXQ" base_Property="_4tkBwDxYEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_wDtHoDxmEea6ZJGitK1rXQ" base_Property="_6Ja7wDxYEeaogZRN3evpZg" mandatory="false"/>
+  <RootElement:DBProperty xmi:id="_wtiHwDxmEea6ZJGitK1rXQ" base_Property="_7oe6wDxYEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_8IaPoDxmEea6ZJGitK1rXQ" base_Property="_RRbaIDxOEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_-3nA0DxmEea6ZJGitK1rXQ" base_Property="_TptgIDxOEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_Cn7QwDxnEea6ZJGitK1rXQ" base_Property="_VtBbsDxOEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_D1oaADxnEea6ZJGitK1rXQ" base_Property="_YE6gIDxOEeaogZRN3evpZg" unique="true"/>
+  <RootElement:DBProperty xmi:id="_IXKrgDxnEea6ZJGitK1rXQ" base_Property="_ZblYIDxOEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_Jnu7gDxnEea6ZJGitK1rXQ" base_Property="_bQnnIDxOEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_NU-CQDxnEea6ZJGitK1rXQ" base_Property="_dSFvoDxOEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_Pu8xYDxnEea6ZJGitK1rXQ" base_Property="_e71UoDxOEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_RVQn4DxnEea6ZJGitK1rXQ" base_Property="_g150oDxOEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_Tq_JIDxnEea6ZJGitK1rXQ" base_Property="_i2_ioDxOEeaogZRN3evpZg"/>
+  <RootElement:DBProperty xmi:id="_V6BzkDxnEea6ZJGitK1rXQ" base_Property="_mqELoDxOEeaogZRN3evpZg"/>
+</xmi:XMI>
