@@ -3,22 +3,13 @@ package model;
 
 
 public class FMProperty extends FMNamedElement  {
-	//Tip obelezja
-	//TODO Razmislisti da li je bolje da type bude string ili referenca na FMType
+	
 	private String type;
-	
-	//kadrinalitet (kompletan string)
-	//TODO Razmisliti o enum
 	private String visibility; 
-	
-	//donja granica
 	private Integer lower;
-	
-	//gornja granica 
-	//konvencija: -1 znači *
 	private Integer upper;
-	
-	//TODO Dodati duzinu, preciznost, indikator da li se radi o kljucu itd...
+	private Group group;
+	private DBProperty dbProperty;
 
 	
 	/**
@@ -29,16 +20,33 @@ public class FMProperty extends FMNamedElement  {
 	 * @param lower Donja granica kardinaliteta
 	 * @param upper Gornja granica kardinaliteta. -1 znači *
 	 */
-	public FMProperty(String name, String type, String visibility, int lower, int upper) {
+	public FMProperty(String name, String type, String visibility, int lower, int upper,Group group, DBProperty dbPropeerty) {
 		super(name);		
 		this.type = type;
 		this.visibility = visibility;
-
+		this.dbProperty = dbPropeerty;
+		this.group = group;
 		
 		this.lower = lower;
 		this.upper = upper;		
 	}
 	
+	public Group getGroup() {
+		return group;
+	}
+
+	public void setGroup(Group group) {
+		this.group = group;
+	}
+
+	public DBProperty getDbProperty() {
+		return dbProperty;
+	}
+
+	public void setDbProperty(DBProperty dbProperty) {
+		this.dbProperty = dbProperty;
+	}
+
 	public String getType() {
 		return type;
 	}
