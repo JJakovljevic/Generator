@@ -11,9 +11,8 @@ public class DBProperty {
 		super();
 	}
 
-	public DBProperty(FMProperty parent, boolean id, boolean mandatory, boolean unique) {
+	public DBProperty(boolean id, boolean mandatory, boolean unique) {
 		super();
-		this.parent = parent;
 		this.id = id;
 		this.mandatory = mandatory;
 		this.unique = unique;

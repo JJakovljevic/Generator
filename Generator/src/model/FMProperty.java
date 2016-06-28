@@ -21,12 +21,10 @@ public class FMProperty extends FMNamedElement  {
 	 * @param lower Donja granica kardinaliteta
 	 * @param upper Gornja granica kardinaliteta. -1 znaÄ�i *
 	 */
-	public FMProperty(String name, String type, String visibility, int lower, int upper,Group group, DBProperty dbPropeerty) {
+	public FMProperty(String name, String type, String visibility, int lower, int upper) {
 		super(name);		
 		this.type = type;
 		this.visibility = visibility;
-		this.dbProperty = dbPropeerty;
-		this.group = group;
 		
 		this.lower = lower;
 		this.upper = upper;		

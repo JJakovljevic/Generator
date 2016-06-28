@@ -17,8 +17,8 @@ public class FMModel {
 	    return elements.get(id);
 	}
 	
-	public void addElement(FMNamedElement element) {
-	    elements.put(element.getName(), element);
+	public void addElement(String id,FMNamedElement element) {
+	    elements.put(id, element);
 	}
 
 	public List<FMClass> getClasses() {
