@@ -10,6 +10,7 @@ public class FMProperty extends FMNamedElement  {
 	private Integer upper;
 	private Group group;
 	private DBProperty dbProperty;
+	private UIProperty uiProperty;
 
 	
 	/**
@@ -18,7 +19,7 @@ public class FMProperty extends FMNamedElement  {
 	 * @param type
 	 * @param visibility private, protected, public, ?
 	 * @param lower Donja granica kardinaliteta
-	 * @param upper Gornja granica kardinaliteta. -1 znači *
+	 * @param upper Gornja granica kardinaliteta. -1 znaÄ�i *
 	 */
 	public FMProperty(String name, String type, String visibility, int lower, int upper,Group group, DBProperty dbPropeerty) {
 		super(name);		
@@ -74,5 +75,13 @@ public class FMProperty extends FMNamedElement  {
 
 	public void setUpper(Integer upper) {
 		this.upper = upper;
+	}
+
+	public UIProperty getUiProperty() {
+		return uiProperty;
+	}
+
+	public void setUiProperty(UIProperty uiProperty) {
+		this.uiProperty = uiProperty;
 	}
 }
