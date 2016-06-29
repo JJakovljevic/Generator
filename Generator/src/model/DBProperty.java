@@ -49,6 +49,11 @@ public class DBProperty {
 	public void setUnique(boolean unique) {
 		this.unique = unique;
 	}
+
+	@Override
+	public String toString() {
+		return "DBProperty [parent=" + parent + ", id=" + id + ", mandatory=" + mandatory + ", unique=" + unique + "]";
+	}
 	
 	
 	

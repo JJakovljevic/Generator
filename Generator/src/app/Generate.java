@@ -21,8 +21,8 @@ import parser.UMLParser;
 @SuppressWarnings("deprecation")
 public class Generate {
 	private static Configuration cfg = new Configuration();
-	
-	public static void main(String[] args) {
+
+	public static void main(String[] args) throws Exception {
 		File f = new File("model.uml");
 		UMLParser umlParser = null;
 		try {
@@ -41,10 +41,31 @@ public class Generate {
 			file.mkdir();
 		}
 		generateDaoBean(classes,model, path+ "src");
-		
+		generateJavaBean(classes, path+ "src");
+
 	}
-	
-	public static void generateDaoBean(List<FMClass> classes, FMModel model,String path){
+	public static void generateJavaBean(List<FMClass> classes, String path) throws Exception{
+		File f = new File(path + "/beans");
+		if(!f.exists()){
+			f.mkdir();
+		}
+
+		for(FMClass fmClass : classes){
+			Map<String, Object> data = new HashMap<String, Object>();
+			
+			data.put("class", fmClass);	
+			
+			Template temp = cfg.getTemplate("javaBean.ftl");
+			FileWriter out = new FileWriter(path + "/beans/"+ fmClass.getName() + ".java");
+			temp.process(data, out);
+			out.flush();  
+		}
+		System.out.println("Java Bean klase su uspesno generisane");
+
+	}
+
+
+	public static void generateDaoBean(List<FMClass> classes, FMModel model, String path){
 		File f = new File(path + "/dao");
 		if(!f.exists()){
 			f.mkdir();
@@ -71,15 +92,15 @@ public class Generate {
 						}
 					}
 				}
-				
+
 				if(ok){
 					try {
 						Template temp = cfg.getTemplate("daoBean.ftl");
-						
+
 						FileWriter out = new FileWriter(path+"/dao/"+c.getName()+"DaoBean.java");
 						temp.process(map, out);
 						out.flush();  			
-						
+
 					} catch (IOException e) {
 						// TODO cfg.getTemplate može izazvati ovaj izuzetak ukoliko šablon nije pronađen.
 						e.printStackTrace();
@@ -96,11 +117,11 @@ public class Generate {
 		map.put("persistenceName",model.getName());
 		try {
 			Template temp = cfg.getTemplate("genericDaoBean.ftl");
-			
+
 			FileWriter out = new FileWriter(path+"/dao/GenericDaoBean.java");
 			temp.process(map, out);
 			out.flush();  			
-			
+
 		} catch (IOException e) {
 			// TODO cfg.getTemplate može izazvati ovaj izuzetak ukoliko šablon nije pronađen.
 			e.printStackTrace();

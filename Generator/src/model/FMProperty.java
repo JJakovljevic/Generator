@@ -82,4 +82,11 @@ public class FMProperty extends FMNamedElement  {
 	public void setUiProperty(UIProperty uiProperty) {
 		this.uiProperty = uiProperty;
 	}
+
+	@Override
+	public String toString() {
+		return "FMProperty [type=" + type + ", visibility=" + visibility + ", lower=" + lower + ", upper=" + upper
+				+ ", group=" + group + ", dbProperty=" + dbProperty + ", uiProperty=" + uiProperty + "]";
+	}
+	
 }
