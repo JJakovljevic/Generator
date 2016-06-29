@@ -75,7 +75,7 @@ public class UMLParser extends Observable {
                     } else if (reader.getLocalName().equals("packagedElement") && type.equals("uml:Package")) {
                         packages.push(name);
                     } else if (reader.getLocalName().equals("packagedElement") && type.equals("uml:Class")) {
-                        currentClass = new FMClass(name, String.join(".", packages), visibility);
+                        currentClass = new FMClass(name, String.join(".", packages), visibility,null);
                         model.addElement(id,currentClass);
                     } else if (reader.getLocalName().equals("packagedElement") && type.equals("uml:Enumeration")) {
                         currentEnum = new FMEnum(name, String.join(".", packages));
@@ -87,7 +87,7 @@ public class UMLParser extends Observable {
                         currentProperty = new FMProperty(name, localType,visibility,1,1);
                         model.addElement(id,currentProperty);
                         currentClass.getProperties().add(currentProperty);
-                    } else if (reader.getLocalName().equals("ownedLiteral")) {
+                    }else if (reader.getLocalName().equals("ownedLiteral")) {
                         FMEnumLiteral literal = new FMEnumLiteral(id, name);
                         model.addElement(id,literal);
                         currentEnum.getLiterals().add(literal);
@@ -110,8 +110,12 @@ public class UMLParser extends Observable {
                         else {
                         	currentProperty.setUpper(1);
                         }
-                    }  else if (reader.getLocalName().equals("Application")) {
-                        model.setPackagePrefix(reader.getAttributeValue(null, "packagePrefix"));
+                    }else if(reader.getLocalName().equals("generalization") && currentClass !=null){
+                    	FMClass parent = (FMClass)model
+                                .getElementById(reader.getAttributeValue(null, "general"));
+                    	currentClass.setParent(parent);
+                    }  else if (reader.getLocalName().equals("Model")) {
+                        model.setName(name);
                     } else if (reader.getLocalName().equals("UIClass")) {
                         FMClass refClass = (FMClass)model
                                 .getElementById(reader.getAttributeValue(null, "base_Element"));
@@ -166,7 +170,7 @@ public class UMLParser extends Observable {
                         }
                     } else if (reader.getLocalName().equals("DBProperty")) {
                         FMProperty refProperty = (FMProperty)model
-                                .getElementById(reader.getAttributeValue(null, "base_Element"));
+                                .getElementById(reader.getAttributeValue(null, "base_Property"));
                         if (refProperty != null) {
                             stereotypes.put(id, refProperty);
                            
@@ -175,8 +179,12 @@ public class UMLParser extends Observable {
                                 label = refProperty.getName();
                             }
                             DBProperty dbProperty = new DBProperty();
-                            dbProperty.setId(Boolean.parseBoolean(reader.getAttributeValue(null,"id")));
-                            dbProperty.setMandatory(Boolean.parseBoolean(reader.getAttributeValue(null,"mandatory")));
+                            dbProperty.setId(Boolean.parseBoolean(reader.getAttributeValue(null,"ID")));
+                            if(reader.getAttributeValue(null,"mandatory")==null){
+                            	dbProperty.setMandatory(true);
+                            }else{
+                            	dbProperty.setMandatory(false);
+                            }
                             dbProperty.setUnique(Boolean.parseBoolean(reader.getAttributeValue(null,"unique")));
 
                             refProperty.setDbProperty(dbProperty);

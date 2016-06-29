@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 public class FMModel {
+	private String name;
     private Map<String, FMNamedElement> elements;
-    private String packagePrefix;
 
 	public FMModel() {
 	    elements = new HashMap<String, FMNamedElement>();
@@ -45,12 +45,12 @@ public class FMModel {
         return enums;
     }
 
-    public String getPackagePrefix() {
-        return packagePrefix;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setPackagePrefix(String packagePrefix) {
-        this.packagePrefix = packagePrefix;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
 }

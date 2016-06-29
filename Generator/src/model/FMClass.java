@@ -11,14 +11,30 @@ public class FMClass extends FMType {
 	private List<FMProperty> properties = new ArrayList<FMProperty>();
 	private List<String> importedPackages = new ArrayList<String>();
 	private UIClass uiClass;
+	private FMClass parent;
 	
 	
 	
-	public FMClass(String name, String classPackage, String visibility) {
+	public FMClass(String name, String classPackage, String visibility, FMClass parent) {
 		super(name, classPackage);		
 		this.visibility = visibility;
+		this.parent = parent;
 	}	
 	
+	
+	
+	public FMClass getParent() {
+		return parent;
+	}
+
+
+
+	public void setParent(FMClass parent) {
+		this.parent = parent;
+	}
+
+
+
 	public void setProperties(List<FMProperty> properties) {
 		this.properties = properties;
 	}
