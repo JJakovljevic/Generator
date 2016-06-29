@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import freemarker.cache.ClassTemplateLoader;
+import freemarker.core.ParseException;
 import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.Template;
