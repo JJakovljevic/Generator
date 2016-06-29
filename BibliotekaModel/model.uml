@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RootElement="http:///schemas/RootElement/_fb368D3gEeakQ-cQhU3thw/11" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RootElement/_fb368D3gEeakQ-cQhU3thw/11 /UserInterfaceProfile/userInterfaceProfile.profile.uml#_fb7lUD3gEeakQ-cQhU3thw">
-  <uml:Model xmi:id="_2hAe4Dw9EeaogZRN3evpZg" name="RootElement">
+  <uml:Model xmi:id="_2hAe4Dw9EeaogZRN3evpZg" name="Biblioteka">
     <packagedElement xmi:type="uml:Class" xmi:id="_Ft6t8Dw-EeaogZRN3evpZg" name="Zanr">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Hbu6oDw-EeaogZRN3evpZg" name="idZanr" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
