@@ -27,7 +27,7 @@
   <children xmi:type="notation:Shape" xmi:id="_xlssgDq-EeaItMzh_zRl8g" type="1031">
     <children xmi:type="notation:DecorationNode" xmi:id="_xlt6oDq-EeaItMzh_zRl8g" type="1084"/>
     <element xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Element"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xlt6oTq-EeaItMzh_zRl8g" x="288" y="65"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xlt6oTq-EeaItMzh_zRl8g" x="292" y="73"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_xnKFEDq-EeaItMzh_zRl8g" type="StereotypeComment">
     <styles xmi:type="notation:TitleStyle" xmi:id="_xnKFETq-EeaItMzh_zRl8g" showTitle="true"/>
@@ -396,8 +396,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_26OhMTq-EeaItMzh_zRl8g"/>
     <element xmi:type="uml:Extension" href="userInterfaceProfile.profile.uml#_255xEDq-EeaItMzh_zRl8g"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_26OhMjq-EeaItMzh_zRl8g" points="[-3, -22, -16, 114]$[-37, -134, -50, 2]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_26858Dq-EeaItMzh_zRl8g" id="(0.2822222222222222,0.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_269hADq-EeaItMzh_zRl8g" id="(0.4533333333333333,1.0)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_26858Dq-EeaItMzh_zRl8g" id="(0.30666666666666664,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_269hADq-EeaItMzh_zRl8g" id="(0.45,1.0)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_39NLtDq_EeaItMzh_zRl8g" type="StereotypeCommentLink" source="_38sOUDq_EeaItMzh_zRl8g" target="_39NLsDq_EeaItMzh_zRl8g">
     <styles xmi:type="notation:FontStyle" xmi:id="_39NLtTq_EeaItMzh_zRl8g"/>
