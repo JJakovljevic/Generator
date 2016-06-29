@@ -16,7 +16,7 @@ public class FMClass extends FMType {
 	
 	public FMClass(String name, String classPackage, String visibility) {
 		super(name, classPackage);		
-		this.visibility = visibility;  
+		this.visibility = visibility;
 	}	
 	
 	public void setProperties(List<FMProperty> properties) {
