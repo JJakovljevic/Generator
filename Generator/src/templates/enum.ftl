@@ -1,4 +1,4 @@
-package destination.model;
+package enumeration;
 
 public enum ${enum.name} {
 <#list enum.literals as literal>

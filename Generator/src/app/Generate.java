@@ -129,7 +129,7 @@ public class Generate {
 	
 	public static void generateEnum(FMEnum enumElement, String path) {
 		
-		File f = new File(path + "/enum");
+		File f = new File(path + "/enumeration");
 		if (!f.exists()) {
 			f.mkdirs();
 		}
