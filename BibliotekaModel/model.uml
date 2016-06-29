@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RootElement="http:///schemas/RootElement/_LPkScDxbEeaogZRN3evpZg/10" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RootElement/_LPkScDxbEeaogZRN3evpZg/10 /UserInterfaceProfile/userInterfaceProfile.profile.uml#_LPk5gDxbEeaogZRN3evpZg">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RootElement="http:///schemas/RootElement/_fb368D3gEeakQ-cQhU3thw/11" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RootElement/_fb368D3gEeakQ-cQhU3thw/11 /UserInterfaceProfile/userInterfaceProfile.profile.uml#_fb7lUD3gEeakQ-cQhU3thw">
   <uml:Model xmi:id="_2hAe4Dw9EeaogZRN3evpZg" name="RootElement">
     <packagedElement xmi:type="uml:Class" xmi:id="_Ft6t8Dw-EeaogZRN3evpZg" name="Zanr">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Hbu6oDw-EeaogZRN3evpZg" name="idZanr" visibility="private">
@@ -38,8 +38,12 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_5MWjcDxAEeaogZRN3evpZg" name="Jezik">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_770aYDxAEeaogZRN3evpZg" name="idJezik" visibility="private"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="__QugsDxAEeaogZRN3evpZg" name="imeJezik" visibility="private"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_770aYDxAEeaogZRN3evpZg" name="idJezik" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__QugsDxAEeaogZRN3evpZg" name="imeJezik" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_TPPBEDxCEeaogZRN3evpZg" name="pripadaZanru" memberEnd="_TPRdUDxCEeaogZRN3evpZg _TPRdUTxCEeaogZRN3evpZg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TPQPMDxCEeaogZRN3evpZg" source="org.eclipse.papyrus">
@@ -364,30 +368,30 @@
       <ownedEnd xmi:type="uml:Property" xmi:id="_fixbAzxdEeaogZRN3evpZg" name="primerak" type="_ZC78sDxQEeaogZRN3evpZg" association="_fiwz8DxdEeaogZRN3evpZg"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_m49hEDw_EeaogZRN3evpZg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UAWyoDxbEeaogZRN3evpZg" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UAWyoTxbEeaogZRN3evpZg" key="Version" value="0.0.11"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UAWyojxbEeaogZRN3evpZg" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UAWyozxbEeaogZRN3evpZg" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UAWypDxbEeaogZRN3evpZg" key="Date" value="2016-06-27"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UAWypTxbEeaogZRN3evpZg" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h1uHMD3gEeakQ-cQhU3thw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h1uHMT3gEeakQ-cQhU3thw" key="Version" value="0.0.12"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h1uHMj3gEeakQ-cQhU3thw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h1uHMz3gEeakQ-cQhU3thw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h1uHND3gEeakQ-cQhU3thw" key="Date" value="2016-06-29"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h1uHNT3gEeakQ-cQhU3thw" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m4-IIDw_EeaogZRN3evpZg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="/UserInterfaceProfile/userInterfaceProfile.profile.uml#_LPk5gDxbEeaogZRN3evpZg"/>
+        <references xmi:type="ecore:EPackage" href="/UserInterfaceProfile/userInterfaceProfile.profile.uml#_fb7lUD3gEeakQ-cQhU3thw"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="/UserInterfaceProfile/userInterfaceProfile.profile.uml#_drb9gDq-EeaItMzh_zRl8g"/>
     </profileApplication>
   </uml:Model>
-  <RootElement:ReadOnly xmi:id="_3tzXQDw_EeaogZRN3evpZg" base_Element="_Hbu6oDw-EeaogZRN3evpZg" label="id zanra" base_Property="_Hbu6oDw-EeaogZRN3evpZg" length="6" display="true"/>
-  <RootElement:Editable xmi:id="_6W9x4Dw_EeaogZRN3evpZg" base_Element="_oeMO8Dw-EeaogZRN3evpZg" label="naziv zanra" base_Property="_oeMO8Dw-EeaogZRN3evpZg" length="20" display="true"/>
-  <RootElement:Editable xmi:id="_7Qv5kDw_EeaogZRN3evpZg" base_Element="_wqmPsDw-EeaogZRN3evpZg" label="opis zanra" base_Property="_wqmPsDw-EeaogZRN3evpZg" length="100"/>
+  <RootElement:ReadOnly xmi:id="_3tzXQDw_EeaogZRN3evpZg" base_Element="_Hbu6oDw-EeaogZRN3evpZg" label="Id zanra" base_Property="_Hbu6oDw-EeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_6W9x4Dw_EeaogZRN3evpZg" base_Element="_oeMO8Dw-EeaogZRN3evpZg" label="Naziv zanra" base_Property="_oeMO8Dw-EeaogZRN3evpZg" length="20" display="true"/>
+  <RootElement:Editable xmi:id="_7Qv5kDw_EeaogZRN3evpZg" base_Element="_wqmPsDw-EeaogZRN3evpZg" label="Opis zanra" base_Property="_wqmPsDw-EeaogZRN3evpZg" length="100"/>
   <RootElement:StandardForm xmi:id="_8g4EsDw_EeaogZRN3evpZg" base_Element="_Ft6t8Dw-EeaogZRN3evpZg" base_Class="_Ft6t8Dw-EeaogZRN3evpZg"/>
   <RootElement:StandardForm xmi:id="_PIu7MDxBEeaogZRN3evpZg" base_Element="_qBvacDxAEeaogZRN3evpZg" label="Knjiga" base_Class="_qBvacDxAEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
-  <RootElement:ReadOnly xmi:id="_W5IVYDxBEeaogZRN3evpZg" base_Element="_sGgukDxAEeaogZRN3evpZg" label="id knjige" base_Property="_sGgukDxAEeaogZRN3evpZg" length="6" display="true"/>
-  <RootElement:Editable xmi:id="_ersSwDxBEeaogZRN3evpZg" base_Element="_zhR3ADxAEeaogZRN3evpZg" label="naslov" base_Property="_zhR3ADxAEeaogZRN3evpZg" length="100" display="true"/>
-  <RootElement:Lookup xmi:id="_tIf6kDxBEeaogZRN3evpZg" base_Element="_CYdtsDxBEeaogZRN3evpZg" label="jezik" base_Property="_CYdtsDxBEeaogZRN3evpZg" component="combobox" display="true"/>
+  <RootElement:ReadOnly xmi:id="_W5IVYDxBEeaogZRN3evpZg" base_Element="_sGgukDxAEeaogZRN3evpZg" label="Id knjige" base_Property="_sGgukDxAEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_ersSwDxBEeaogZRN3evpZg" base_Element="_zhR3ADxAEeaogZRN3evpZg" label="Naslov" base_Property="_zhR3ADxAEeaogZRN3evpZg" length="100" display="true"/>
+  <RootElement:Lookup xmi:id="_tIf6kDxBEeaogZRN3evpZg" base_Element="_CYdtsDxBEeaogZRN3evpZg" label="Jezik" base_Property="_CYdtsDxBEeaogZRN3evpZg" component="combobox" display="true"/>
   <RootElement:StandardForm xmi:id="_1-m_oDxBEeaogZRN3evpZg" base_Element="_5MWjcDxAEeaogZRN3evpZg" label="Jezik" base_Class="_5MWjcDxAEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
-  <RootElement:Editable xmi:id="_9JdcwDxBEeaogZRN3evpZg" base_Element="__QugsDxAEeaogZRN3evpZg" label="ime jezika" base_Property="__QugsDxAEeaogZRN3evpZg" length="30" display="true"/>
-  <RootElement:ReadOnly xmi:id="_BMhpkDxCEeaogZRN3evpZg" base_Element="_770aYDxAEeaogZRN3evpZg" label="id jezika" base_Property="_770aYDxAEeaogZRN3evpZg" length="6" display="true"/>
+  <RootElement:Editable xmi:id="_9JdcwDxBEeaogZRN3evpZg" base_Element="__QugsDxAEeaogZRN3evpZg" label="Ime jezika" base_Property="__QugsDxAEeaogZRN3evpZg" length="30" display="true"/>
+  <RootElement:ReadOnly xmi:id="_BMhpkDxCEeaogZRN3evpZg" base_Element="_770aYDxAEeaogZRN3evpZg" label="Id jezika" base_Property="_770aYDxAEeaogZRN3evpZg" length="6" display="true"/>
   <RootElement:StandardForm xmi:id="_DvvF0DxFEeaogZRN3evpZg" base_Element="_Bg3agDxFEeaogZRN3evpZg" label="Autor" base_Class="_Bg3agDxFEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
   <RootElement:ReadOnly xmi:id="_wVkWsDxFEeaogZRN3evpZg" base_Element="_g8qTADxFEeaogZRN3evpZg" label="ID autora" base_Property="_g8qTADxFEeaogZRN3evpZg" length="6" display="true"/>
   <RootElement:Editable xmi:id="_81n98DxFEeaogZRN3evpZg" base_Element="_jsvN8DxFEeaogZRN3evpZg" label="Ime autora" base_Property="_jsvN8DxFEeaogZRN3evpZg" length="30" display="true"/>
@@ -442,54 +446,54 @@
   <RootElement:ReadOnly xmi:id="_ptTcsDxaEeaogZRN3evpZg" base_Element="_aogn0DxaEeaogZRN3evpZg" base_Property="_aogn0DxaEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_WxCKgDxbEeaogZRN3evpZg" base_Property="_dbaNQDxaEeaogZRN3evpZg" unique="true"/>
   <RootElement:Editable xmi:id="_WxSCIDxbEeaogZRN3evpZg" base_Element="_dbaNQDxaEeaogZRN3evpZg" label="Naziv" base_Property="_dbaNQDxaEeaogZRN3evpZg" length="20" display="true"/>
-  <RootElement:DBProperty xmi:id="_osC-kDxbEeaogZRN3evpZg" base_Property="_aogn0DxaEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_osC-kDxbEeaogZRN3evpZg" base_Property="_aogn0DxaEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_tPCBkDxbEeaogZRN3evpZg" base_Property="_ggQeUDxaEeaogZRN3evpZg" mandatory="false"/>
   <RootElement:Editable xmi:id="_tPR5MDxbEeaogZRN3evpZg" base_Element="_ggQeUDxaEeaogZRN3evpZg" label="Opis" base_Property="_ggQeUDxaEeaogZRN3evpZg" length="100"/>
   <RootElement:DBProperty xmi:id="_22ENQDxbEeaogZRN3evpZg" base_Property="_ih4X0DxaEeaogZRN3evpZg"/>
   <RootElement:Editable xmi:id="_22VTADxbEeaogZRN3evpZg" base_Element="_ih4X0DxaEeaogZRN3evpZg" label="Kazna" base_Property="_ih4X0DxaEeaogZRN3evpZg" length="6" display="true"/>
-  <RootElement:DBProperty xmi:id="_t-B4wDxfEeat_L31rHO22A" base_Property="_Hbu6oDw-EeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_t-B4wDxfEeat_L31rHO22A" base_Property="_Hbu6oDw-EeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_J8E4ADxgEeat_L31rHO22A" base_Property="_wqmPsDw-EeaogZRN3evpZg" mandatory="false"/>
   <RootElement:DBProperty xmi:id="_NUvc8DxgEeat_L31rHO22A" base_Property="_oeMO8Dw-EeaogZRN3evpZg" unique="true"/>
-  <RootElement:DBProperty xmi:id="_0Nvb8DxiEea6ZJGitK1rXQ" base_Property="_sGgukDxAEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_0Nvb8DxiEea6ZJGitK1rXQ" base_Property="_sGgukDxAEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_3aDm8DxiEea6ZJGitK1rXQ" base_Property="_zhR3ADxAEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_7GcZIDxiEea6ZJGitK1rXQ" base_Property="_CYdtsDxBEeaogZRN3evpZg"/>
-  <RootElement:DBProperty xmi:id="__NjYcDxiEea6ZJGitK1rXQ" base_Property="_g8qTADxFEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="__NjYcDxiEea6ZJGitK1rXQ" base_Property="_g8qTADxFEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_CpQqUDxjEea6ZJGitK1rXQ" base_Property="_jsvN8DxFEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_EfTl8DxjEea6ZJGitK1rXQ" base_Property="_lhtLgDxFEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_GBqJgDxjEea6ZJGitK1rXQ" base_Property="_oqRe8DxFEeaogZRN3evpZg" mandatory="false"/>
-  <RootElement:DBProperty xmi:id="_Km7rgDxjEea6ZJGitK1rXQ" base_Property="_770aYDxAEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_Km7rgDxjEea6ZJGitK1rXQ" base_Property="_770aYDxAEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_NB-KkDxjEea6ZJGitK1rXQ" base_Property="__QugsDxAEeaogZRN3evpZg" unique="true"/>
-  <RootElement:DBProperty xmi:id="_QIPX8DxjEea6ZJGitK1rXQ" base_Property="_ei-aoDxMEeaogZRN3evpZg" id="true" unique="true"/>
-  <RootElement:DBProperty xmi:id="_ZU1DUDxjEea6ZJGitK1rXQ" base_Property="_x3dmQDxQEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_QIPX8DxjEea6ZJGitK1rXQ" base_Property="_ei-aoDxMEeaogZRN3evpZg" ID="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_ZU1DUDxjEea6ZJGitK1rXQ" base_Property="_x3dmQDxQEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_aA9wkDxjEea6ZJGitK1rXQ" base_Property="_2X1aIDxQEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_aqlVUDxjEea6ZJGitK1rXQ" base_Property="_8I8dIDxQEeaogZRN3evpZg"/>
-  <RootElement:DBProperty xmi:id="_jnSxoDxjEea6ZJGitK1rXQ" base_Property="_tl8RQDxREeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_jnSxoDxjEea6ZJGitK1rXQ" base_Property="_tl8RQDxREeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_lY7uYDxjEea6ZJGitK1rXQ" base_Property="_wTzlsDxREeaogZRN3evpZg" unique="true"/>
-  <RootElement:DBProperty xmi:id="_qGmXYDxjEea6ZJGitK1rXQ" base_Property="_WejqgDxHEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_qGmXYDxjEea6ZJGitK1rXQ" base_Property="_WejqgDxHEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_tB7gEDxjEea6ZJGitK1rXQ" base_Property="_ZqMgEDxHEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_wD3nEDxjEea6ZJGitK1rXQ" base_Property="_cyE3ADxHEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_xTL54DxjEea6ZJGitK1rXQ" base_Property="_e3DmgDxHEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_yTNMcDxjEea6ZJGitK1rXQ" base_Property="_hgMzADxHEeaogZRN3evpZg"/>
-  <RootElement:DBProperty xmi:id="_1yjBIDxjEea6ZJGitK1rXQ" base_Property="_AJtdgDxJEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_1yjBIDxjEea6ZJGitK1rXQ" base_Property="_AJtdgDxJEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_6Up6YDxjEea6ZJGitK1rXQ" base_Property="_Dh7WgDxJEeaogZRN3evpZg" unique="true"/>
   <RootElement:DBProperty xmi:id="_9zNr8DxjEea6ZJGitK1rXQ" base_Property="_HC6xADxJEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="__jqV4DxjEea6ZJGitK1rXQ" base_Property="_J1hbgDxJEeaogZRN3evpZg" mandatory="false"/>
-  <RootElement:DBProperty xmi:id="_LFVM0DxlEea6ZJGitK1rXQ" base_Property="_Q89CIDxSEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_LFVM0DxlEea6ZJGitK1rXQ" base_Property="_Q89CIDxSEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_LvMCIDxlEea6ZJGitK1rXQ" base_Property="_Tzw3MDxSEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_MaZiUDxlEea6ZJGitK1rXQ" base_Property="_YbP_sDxSEeaogZRN3evpZg"/>
-  <RootElement:DBProperty xmi:id="_jBZkYDxlEea6ZJGitK1rXQ" base_Property="_eXuIsDxTEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_jBZkYDxlEea6ZJGitK1rXQ" base_Property="_eXuIsDxTEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_j7fOEDxlEea6ZJGitK1rXQ" base_Property="_iZXZMDxTEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_ki8PoDxlEea6ZJGitK1rXQ" base_Property="_kzQBsDxTEeaogZRN3evpZg"/>
-  <RootElement:DBProperty xmi:id="_UaODIDxmEea6ZJGitK1rXQ" base_Property="_p_L8EDxIEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_UaODIDxmEea6ZJGitK1rXQ" base_Property="_p_L8EDxIEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_hOzI4DxmEea6ZJGitK1rXQ" base_Property="_6W8zsDxTEeaogZRN3evpZg"/>
-  <RootElement:DBProperty xmi:id="_lRFSkDxmEea6ZJGitK1rXQ" base_Property="_A97HsDxUEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_lRFSkDxmEea6ZJGitK1rXQ" base_Property="_A97HsDxUEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_nU6LgDxmEea6ZJGitK1rXQ" base_Property="_F8wZMDxUEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_sTlsADxmEea6ZJGitK1rXQ" base_Property="_NIbVsDxUEeaogZRN3evpZg" mandatory="false"/>
-  <RootElement:DBProperty xmi:id="_ue5tADxmEea6ZJGitK1rXQ" base_Property="_1o9BQDxYEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_ue5tADxmEea6ZJGitK1rXQ" base_Property="_1o9BQDxYEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_vRGmADxmEea6ZJGitK1rXQ" base_Property="_4tkBwDxYEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_wDtHoDxmEea6ZJGitK1rXQ" base_Property="_6Ja7wDxYEeaogZRN3evpZg" mandatory="false"/>
   <RootElement:DBProperty xmi:id="_wtiHwDxmEea6ZJGitK1rXQ" base_Property="_7oe6wDxYEeaogZRN3evpZg"/>
-  <RootElement:DBProperty xmi:id="_8IaPoDxmEea6ZJGitK1rXQ" base_Property="_RRbaIDxOEeaogZRN3evpZg" id="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_8IaPoDxmEea6ZJGitK1rXQ" base_Property="_RRbaIDxOEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_-3nA0DxmEea6ZJGitK1rXQ" base_Property="_TptgIDxOEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_Cn7QwDxnEea6ZJGitK1rXQ" base_Property="_VtBbsDxOEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_D1oaADxnEea6ZJGitK1rXQ" base_Property="_YE6gIDxOEeaogZRN3evpZg" unique="true"/>
