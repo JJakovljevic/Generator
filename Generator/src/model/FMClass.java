@@ -8,22 +8,33 @@ import java.util.List;
 public class FMClass extends FMType {	
 	
 	private String visibility;
-	
-
-	//Obelezja klase
 	private List<FMProperty> properties = new ArrayList<FMProperty>();
-	
-	//Spisak paketa (za import deklaraciju klase) 
 	private List<String> importedPackages = new ArrayList<String>();
+	private UIClass uiClass;
 	
-	//TODO Dodati i spisak metoda!
-	//TODO Omoguciti definisanje klase-pretka!
+	
 	
 	public FMClass(String name, String classPackage, String visibility) {
 		super(name, classPackage);		
-		this.visibility = visibility;
+		this.visibility = visibility;  
 	}	
 	
+	public void setProperties(List<FMProperty> properties) {
+		this.properties = properties;
+	}
+
+	public void setImportedPackages(List<String> importedPackages) {
+		this.importedPackages = importedPackages;
+	}
+
+	public UIClass getUiClass() {
+		return uiClass;
+	}
+
+	public void setUiClass(UIClass uiClass) {
+		this.uiClass = uiClass;
+	}
+
 	public List<FMProperty> getProperties(){
 		return properties;
 	}
