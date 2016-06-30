@@ -105,7 +105,7 @@ public class UMLParser extends Observable {
                     } else if (reader.getLocalName().equals("upperValue") && currentProperty != null) {
                         String value = reader.getAttributeValue(null, "value");
                         if (value != null && value.equals("*")) {
-                        	currentProperty.setUpper(Integer.MAX_VALUE);
+                        	currentProperty.setUpper(100);
                         }
                         else {
                         	currentProperty.setUpper(1);

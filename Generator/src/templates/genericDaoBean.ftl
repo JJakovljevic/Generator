@@ -13,7 +13,7 @@ public class GenericDaoBean<T,ID extends Serializable> {
 
 	private Class<T> entityType;
 	
-	protected static EntityManagerFactory emf = Persistence.createEntityManagerFactory("${persistenceName}");
+	protected static EntityManagerFactory emf = Persistence.createEntityManagerFactory("${persistenceName?lower_case}");
 	protected static EntityManager em = emf.createEntityManager();
 	
 	@SuppressWarnings("unchecked")
