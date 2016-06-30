@@ -6,9 +6,18 @@
   	<#return testSting>
   	</#if>
 </#function>
+
+<#function mandatory value>
+	<#if value>
+  	<#return false>
+  	<#else>
+  	<#return true>
+  	</#if>
+</#function>
 package beans;
 
 import javax.persistence.*;
+import java.util.*;
 
 @Entity
 @Table(name = "${class.name}")
@@ -20,17 +29,26 @@ ${class.visibility} class ${class.name} {
 	@Id
     @GeneratedValue
 		</#if>
-	@Column(name = "${property.name}", nullable = false)
-	private ${property.name} ${checkType(property.type)};
-	
+	@Column(name = "${property.name}", unique = "${property.dbProperty.unique?c}", nullable = "${mandatory(property.dbProperty.mandatory)?c}")
+	private ${checkType(property.type)} ${property.name};
 	</#if>
-	</#list>
+	<#if !property.dbProperty?exists>
+    	<#if property.upper == 100>
+    @OneToMany
+    @JoinColumn(name="${property.name}", unique = "false", nullable = "false")
+    private Set<${property.type}> ${property.name};
+    	</#if>	
+    @ManyToOne
+    @JoinColumn(name="${property.name}", unique = "false", nullable = "false")
+    private ${property.type} ${property.name};
+	</#if>
 	
+	</#list>
 	public ${class.name}() {
         super();
     }
     <#list class.properties as property>
-	<#if property.dbProperty?exists>
+	
 	${property.visibility} ${checkType(property.type)} get${property.name?cap_first}(){
 		return ${property.name};
 	}
@@ -38,7 +56,5 @@ ${class.visibility} class ${class.name} {
 	${property.visibility} void set${property.name?cap_first}(${checkType(property.type)} ${property.name}){
 		this.${property.name} = ${property.name};
 	}
-	
-	</#if>
 	</#list>
 }
