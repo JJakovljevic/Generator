@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,6 @@ import model.FMEnum;
 import model.FMModel;
 import model.FMProperty;
 import model.MainForm;
-import model.UIClass;
 import parser.UMLParser;
 
 @SuppressWarnings("deprecation")
@@ -47,13 +47,14 @@ public class Generate {
 		if (!file.exists()) {
 			file.mkdirs();
 		}
-//		generateDaoBean(classes, model, path);
-//		generateJavaBean(classes, path);
+		generateDaoBean(classes, model, path);
+		generateJavaBean(classes, path);
 		generateAction(classes, path);
-//		
-//		for (FMEnum enumElement : en) {
-//			generateEnum(enumElement, path);
-//		}
+		generatePersistence(classes, model.getName(), path);
+		
+		for (FMEnum enumElement : en) {
+			generateEnum(enumElement, path);
+		}
 
 	}
 
@@ -207,5 +208,42 @@ public class Generate {
 			e1.printStackTrace();
 		}
 		System.out.println("Klase za enumeraciju uspesno izgenerisane.");
+	}
+	
+	public static void generatePersistence(List<FMClass> classes, String persistenceName, String path) {
+		File f = new File(path + "/META-INF");
+		if (!f.exists()) {
+			f.mkdirs();
+		}
+		
+		List<FMClass> listaKlasa = new ArrayList<>();
+		for(FMClass c : classes) {
+			if(c.getUiClass() != null && c.getUiClass() instanceof MainForm) {
+				continue;
+			}
+			listaKlasa.add(c);
+		}
+		
+		Map<String, Object> data = new HashMap<String, Object>();
+		data.put("classes", listaKlasa);
+		data.put("persistenceName", persistenceName);
+
+		try {
+			
+			Template temp = cfg.getTemplate("persistence.ftl");
+			FileWriter out;
+			out = new FileWriter(path + "/META-INF/persistence.xml");
+			temp.process(data, out);
+			out.flush();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (TemplateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		System.out.println("persistence.xml je uspesno generisan");
 	}
 }
