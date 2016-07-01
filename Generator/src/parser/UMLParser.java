@@ -76,6 +76,7 @@ public class UMLParser extends Observable {
                         packages.push(name);
                     } else if (reader.getLocalName().equals("packagedElement") && type.equals("uml:Class")) {
                         currentClass = new FMClass(name, String.join(".", packages), visibility,null);
+                        currentClass.setAbstract(Boolean.parseBoolean(reader.getAttributeValue(null, "isAbstract")));
                         model.addElement(id,currentClass);
                     } else if (reader.getLocalName().equals("packagedElement") && type.equals("uml:Enumeration")) {
                         currentEnum = new FMEnum(name, String.join(".", packages));

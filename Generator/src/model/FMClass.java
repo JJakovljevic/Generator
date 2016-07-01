@@ -8,6 +8,7 @@ import java.util.List;
 public class FMClass extends FMType {	
 	
 	private String visibility;
+	private boolean isAbstract;
 	private List<FMProperty> properties = new ArrayList<FMProperty>();
 	private List<String> importedPackages = new ArrayList<String>();
 	private UIClass uiClass;
@@ -89,6 +90,18 @@ public class FMClass extends FMType {
 
 	public void setVisibility(String visibility) {
 		this.visibility = visibility;
+	}
+
+
+
+	public boolean isAbstract() {
+		return isAbstract;
+	}
+
+
+
+	public void setAbstract(boolean isAbstract) {
+		this.isAbstract = isAbstract;
 	}	
 
 	
