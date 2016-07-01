@@ -92,18 +92,19 @@ public class FMClass extends FMType {
 		this.visibility = visibility;
 	}
 
-
-
 	public boolean isAbstract() {
 		return isAbstract;
 	}
 
-
-
 	public void setAbstract(boolean isAbstract) {
 		this.isAbstract = isAbstract;
+	}
+
+	@Override
+	public String toString() {
+		return "FMClass [visibility=" + visibility + ", isAbstract=" + isAbstract + ", properties=" + properties
+				+ ", importedPackages=" + importedPackages + ", uiClass=" + uiClass + ", parent=" + parent + "]";
 	}	
 
-	
 	
 }

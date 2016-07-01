@@ -16,4 +16,10 @@ public class UIClass extends UIElement {
 	public void setParent(FMClass parent) {
 		this.parent = parent;
 	}
+	
+	@Override
+	public String toString() {
+		return "UIClass [parent=" + parent + "]";
+	}
+	
 }

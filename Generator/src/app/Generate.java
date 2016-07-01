@@ -21,6 +21,7 @@ import model.FMEnum;
 import model.FMModel;
 import model.FMProperty;
 import model.MainForm;
+import model.UIClass;
 import parser.UMLParser;
 
 @SuppressWarnings("deprecation")
@@ -41,22 +42,23 @@ public class Generate {
 		List<FMEnum> en = model.getEnums();
 		cfg.setTemplateLoader(new ClassTemplateLoader(Generate.class, "/templates"));
 		cfg.setObjectWrapper(new DefaultObjectWrapper());
-		String path = "generated/";
-		File file = new File(path + "src");
+		String path = "generated/" + "src";
+		File file = new File(path);
 		if (!file.exists()) {
 			file.mkdirs();
 		}
-		generateDaoBean(classes, model, path + "src");
-		generateJavaBean(classes, path + "src");
-		
-		for (FMEnum enumElement : en) {
-			generateEnum(enumElement, path + "src");
-		}
+//		generateDaoBean(classes, model, path);
+//		generateJavaBean(classes, path);
+		generateAction(classes, path);
+//		
+//		for (FMEnum enumElement : en) {
+//			generateEnum(enumElement, path);
+//		}
 
 	}
 
 	public static void generateJavaBean(List<FMClass> classes, String path) throws Exception {
-		File f = new File(path + "/beans");
+		File f = new File(path + "/bean");
 		if (!f.exists()) {
 			f.mkdir();
 		}
@@ -67,11 +69,32 @@ public class Generate {
 			data.put("class", fmClass);
 
 			Template temp = cfg.getTemplate("javaBean.ftl");
-			FileWriter out = new FileWriter(path + "/beans/" + fmClass.getName() + ".java");
+			FileWriter out = new FileWriter(path + "/bean/" + fmClass.getName() + ".java");
 			temp.process(data, out);
 			out.flush();
 		}
 		System.out.println("Java Bean klase su uspesno generisane");
+
+	}
+	
+	public static void generateAction(List<FMClass> classes, String path) throws Exception {
+		File f = new File(path + "/action");
+		if (!f.exists()) {
+			f.mkdir();
+		}
+		int i = 0;
+		for (FMClass fmClass : classes) {
+			Map<String, Object> data = new HashMap<String, Object>();
+			if(fmClass.getUiClass() != null){
+				data.put("class", fmClass.getUiClass());
+				System.out.println(++i + "." + fmClass.getUiClass());
+				Template temp = cfg.getTemplate("action.ftl");
+				FileWriter out = new FileWriter(path + "/action/" + "Open" + fmClass.getName() + "StandardForm" + ".java");
+				temp.process(data, out);
+				out.flush();
+			}
+		}
+		System.out.println("Akcije za pokretanje standardnih formi su uspesno generisane");
 
 	}
 

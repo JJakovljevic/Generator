@@ -34,8 +34,7 @@ ${class.visibility} <#if class.abstract>abstract </#if>class ${class.name} <#if 
 		</#if>
 	@Column(name = "${property.name}", unique = "${property.dbProperty.unique?c}", nullable = "${mandatory(property.dbProperty.mandatory)?c}")
 	private ${checkType(property.type)} ${property.name};
-	</#if>
-	<#if !property.dbProperty?exists>
+	<#else>
     	<#if property.upper == 100>
   	@OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY, mappedBy = "${class.name?lower_case}")
     private Set<${property.type}> ${property.name};
