@@ -32,7 +32,7 @@ ${class.visibility} <#if class.abstract>abstract </#if>class ${class.name} <#if 
 	@Id
     @GeneratedValue
 		</#if>
-	@Column(name = "${property.name}", unique = "${property.dbProperty.unique?c}", nullable = "${mandatory(property.dbProperty.mandatory)?c}")
+	@Column(name = "${property.name}", unique = ${property.dbProperty.unique?c}, nullable = ${mandatory(property.dbProperty.mandatory)?c})
 	private ${checkType(property.type)} ${property.name};
 	<#else>
     	<#if property.upper == 100>
@@ -40,7 +40,7 @@ ${class.visibility} <#if class.abstract>abstract </#if>class ${class.name} <#if 
     private Set<${property.type}> ${property.name};
     	<#else>
     @ManyToOne
-    @JoinColumn(name="${property.name}", unique = "false", nullable = "false")
+    @JoinColumn(name="${property.name}", referencedColumnName = "${property.name}", nullable = false)
     private ${property.type} ${property.name};
    		 </#if>
 	</#if>
