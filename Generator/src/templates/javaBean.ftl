@@ -21,7 +21,10 @@ import java.util.*;
 
 @Entity
 @Table(name = "${class.name}")
-${class.visibility} class ${class.name} <#if class.parent?exists>extends ${class.parent.name}</#if>{
+<#if class.abstract>
+@MappedSuperclass
+</#if>
+${class.visibility} <#if class.abstract>abstract </#if>class ${class.name} <#if class.parent?exists>extends ${class.parent.name}</#if>{
 
 	<#list class.properties as property>
 	<#if property.dbProperty?exists>
@@ -36,10 +39,11 @@ ${class.visibility} class ${class.name} <#if class.parent?exists>extends ${class
     	<#if property.upper == 100>
   	@OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY, mappedBy = "${class.name?lower_case}")
     private Set<${property.type}> ${property.name};
-    	</#if>	
+    	<#else>
     @ManyToOne
     @JoinColumn(name="${property.name}", unique = "false", nullable = "false")
     private ${property.type} ${property.name};
+   		 </#if>
 	</#if>
 	
 	</#list>
@@ -49,19 +53,19 @@ ${class.visibility} class ${class.name} <#if class.parent?exists>extends ${class
     <#list class.properties as property>
 	
 	<#if property.upper == 100>
-	${property.visibility} Set<${property.type}> get${property.name?cap_first}(){
+	public Set<${property.type}> get${property.name?cap_first}(){
 		return ${property.name};
 	}
 	
-	${property.visibility} void set${property.name?cap_first}(Set<${property.type}> ${property.name}){
+	public void set${property.name?cap_first}(Set<${property.type}> ${property.name}){
 		this.${property.name} = ${property.name};
 	}
 	<#else>
-	${property.visibility} ${checkType(property.type)} get${property.name?cap_first}(){
+	public ${checkType(property.type)} get${property.name?cap_first}(){
 		return ${property.name};
 	}
 	
-	${property.visibility} void set${property.name?cap_first}(${checkType(property.type)} ${property.name}){
+	public void set${property.name?cap_first}(${checkType(property.type)} ${property.name}){
 		this.${property.name} = ${property.name};
 	}
 	</#if>
