@@ -7,6 +7,7 @@ public class UIProperty extends UIElement {
 	private Integer precision;
 	private ComponentKind componentKind;
 	private Boolean display;
+
 	
 	public UIProperty(String label) {
 		super(label);
@@ -59,5 +60,4 @@ public class UIProperty extends UIElement {
 	public void setParent(FMProperty parent) {
 		this.parent = parent;
 	}
-	
 }

@@ -1,7 +1,5 @@
 package model;
 
-
-
 public class FMProperty extends FMNamedElement  {
 	
 	private String type;
@@ -11,6 +9,8 @@ public class FMProperty extends FMNamedElement  {
 	private Group group;
 	private DBProperty dbProperty;
 	private UIProperty uiProperty;
+    private boolean enumerated;
+    private FMType reference;
 
 	
 	/**
@@ -81,6 +81,22 @@ public class FMProperty extends FMNamedElement  {
 
 	public void setUiProperty(UIProperty uiProperty) {
 		this.uiProperty = uiProperty;
+	}
+	
+	public boolean isEnumerated() {
+		return enumerated;
+	}
+
+	public void setEnumerated(boolean enumerated) {
+		this.enumerated = enumerated;
+	}
+
+	public FMType getReference() {
+		return reference;
+	}
+
+	public void setReference(FMType reference) {
+		this.reference = reference;
 	}
 
 	@Override

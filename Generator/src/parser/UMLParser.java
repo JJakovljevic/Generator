@@ -220,7 +220,7 @@ public class UMLParser extends Observable {
 	                        			break;
 	                            	case "combobox": component = ComponentKind.combobox;
 	                        			break;
-	                            	case "checkbox": component = ComponentKind.checkbox;
+	                            	case "chechkbox": component = ComponentKind.checkbox;
 	                        			break;
 	                            	case "dateChooser": component = ComponentKind.dateChooser;
 	                        			break;
@@ -264,7 +264,7 @@ public class UMLParser extends Observable {
 	                        			break;
 	                            	case "combobox": component = ComponentKind.combobox;
 	                        			break;
-	                            	case "checkbox": component = ComponentKind.checkbox;
+	                            	case "chechkbox": component = ComponentKind.checkbox;
 	                        			break;
 	                            	case "dateChooser": component = ComponentKind.dateChooser;
 	                        			break;
@@ -308,7 +308,7 @@ public class UMLParser extends Observable {
 	                        			break;
 	                            	case "combobox": component = ComponentKind.combobox;
 	                        			break;
-	                            	case "checkbox": component = ComponentKind.checkbox;
+	                            	case "chechkbox": component = ComponentKind.checkbox;
 	                        			break;
 	                            	case "dateChooser": component = ComponentKind.dateChooser;
 	                        			break;
@@ -352,7 +352,7 @@ public class UMLParser extends Observable {
 	                        			break;
 	                            	case "combobox": component = ComponentKind.combobox;
 	                        			break;
-	                            	case "checkbox": component = ComponentKind.checkbox;
+	                            	case "chechkbox": component = ComponentKind.checkbox;
 	                        			break;
 	                            	case "dateChooser": component = ComponentKind.dateChooser;
 	                        			break;
@@ -390,6 +390,10 @@ public class UMLParser extends Observable {
                     FMType type = (FMType)model.getElementById(property.getType());
 
                     if (type != null) {
+                    	property.setReference(type);
+                    	if (model.getEnums().contains(type)){ 
+                    		property.setEnumerated(true);
+                    	}
                         property.setType(type.getName());
                     }
                 }
