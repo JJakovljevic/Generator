@@ -73,8 +73,8 @@ public class GenericDaoBean<T,ID extends Serializable> {
 	public void remove(T entity) {
 		em.getTransaction().begin();
 		entity = em.merge(entity);
-		em.getTransaction().commit();
 		em.remove(entity);
+		em.getTransaction().commit();
 		
 	}
 

@@ -14,15 +14,18 @@
   	<#return true>
   	</#if>
 </#function>
-package beans;
+package bean;
 
 import javax.persistence.*;
 import java.util.*;
+import enumeration.*;
 
-@Entity
-@Table(name = "${class.name}")
+
 <#if class.abstract>
 @MappedSuperclass
+<#else>
+@Entity
+@Table(name = "${class.name}")
 </#if>
 ${class.visibility} <#if class.abstract>abstract </#if>class ${class.name} <#if class.parent?exists>extends ${class.parent.name}</#if>{
 
@@ -32,7 +35,7 @@ ${class.visibility} <#if class.abstract>abstract </#if>class ${class.name} <#if 
 	@Id
     @GeneratedValue
 		</#if>
-	@Column(name = "${property.name}", unique = ${property.dbProperty.unique?c}, nullable = ${mandatory(property.dbProperty.mandatory)?c})
+	@Column(name = "${property.name}"<#if property.dbProperty?exists><#if !property.dbProperty.id>, unique = ${property.dbProperty.unique?c}, nullable = ${mandatory(property.dbProperty.mandatory)?c}</#if></#if>)
 	private ${checkType(property.type)} ${property.name};
 	<#else>
     	<#if property.upper == 100>
@@ -40,7 +43,6 @@ ${class.visibility} <#if class.abstract>abstract </#if>class ${class.name} <#if 
     private Set<${property.type}> ${property.name};
     	<#else>
     @ManyToOne
-    @JoinColumn(name="${property.name}", referencedColumnName = "${property.name}", nullable = false)
     private ${property.type} ${property.name};
    		 </#if>
 	</#if>

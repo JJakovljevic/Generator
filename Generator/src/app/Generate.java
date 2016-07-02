@@ -22,6 +22,7 @@ import model.FMEnum;
 import model.FMModel;
 import model.FMProperty;
 import model.MainForm;
+import model.StandardForm;
 import parser.UMLParser;
 
 @SuppressWarnings("deprecation")
@@ -64,6 +65,12 @@ public class Generate {
 			generateEnum(enumElement, path);
 		}
 
+		file = new File(path + "/gui");
+		if (!file.exists()) {
+			file.mkdirs();
+		}
+		
+		generateForms(classes, path+ "/gui");
 	}
 
 	public static void generateJavaBean(List<FMClass> classes, String path) throws Exception {
@@ -365,5 +372,59 @@ public class Generate {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	public static void generateForms(List<FMClass> classes, String path){
+		File f = new File(path + "/forms/detailpanels");
+		if (!f.exists()) {
+			f.mkdirs();
+		}
+		for(FMClass c : classes){
+			Map<String, Object> map = new HashMap<String, Object>();
+			if(c.getUiClass() == null){
+				continue;
+			}else if(!(c.getUiClass() instanceof StandardForm)){
+				continue;
+			}
+			map.put("class", c);
+			FMProperty ID = c.getID();
+			List<FMProperty> properties = new ArrayList<>();
+			properties.add(ID);
+			for(FMProperty p : c.getProperties()){
+				if(p.getName().equals(ID.getName())){
+					continue;
+				}
+				if(p.getUiProperty() == null && p.getUpper()!=1){
+					continue;
+				}
+				properties.add(p);
+			}
+			map.put("id", ID);
+			map.put("properties", properties);
+			List<FMProperty> colons = new ArrayList<>();
+			for(FMProperty fm : c.getProperties()){
+				if((fm.getUiProperty()!= null && fm.getUiProperty().getDisplay()) || (fm.getUiProperty()== null && fm.getUpper()==1)){
+					colons.add(fm);
+				}
+			}
+			map.put("columns", colons);
+			try {
+				Template temp = cfg.getTemplate("standardForm.ftl");
+
+				FileWriter out = new FileWriter(path + "/forms/" + c.getName() + "Form.java");
+				temp.process(map, out);
+				out.flush();
+				
+				temp = cfg.getTemplate("panelDetail.ftl");
+				out = new FileWriter(path + "/forms/detailpanels/PanelDetail" + c.getName() + ".java");
+				temp.process(map, out);
+				out.flush();
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			} catch (TemplateException e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println("Forme su uspesno izgenerisane.");
 	}
 }

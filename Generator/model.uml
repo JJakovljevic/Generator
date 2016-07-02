@@ -12,7 +12,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_TPRdUTxCEeaogZRN3evpZg" name="knjiga" type="_qBvacDxAEeaogZRN3evpZg" association="_TPPBEDxCEeaogZRN3evpZg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gNKQEDxCEeaogZRN3evpZg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gNKQEDxCEeaogZRN3evpZg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gNLeMDxCEeaogZRN3evpZg" value="*"/>
       </ownedAttribute>
     </packagedElement>
@@ -23,19 +23,19 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_zhR3ADxAEeaogZRN3evpZg" name="naslov" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_CYdtsDxBEeaogZRN3evpZg" name="jezik" visibility="private" type="_5MWjcDxAEeaogZRN3evpZg"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_VaC8sjxLEeaogZRN3evpZg" name="knjigaogranka" type="_0ZUDgDxGEeaogZRN3evpZg" association="_VaCVoDxLEeaogZRN3evpZg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r6Y9IDxLEeaogZRN3evpZg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r6aLQDxLEeaogZRN3evpZg" value="*"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_TPRdUDxCEeaogZRN3evpZg" name="zanr" type="_Ft6t8Dw-EeaogZRN3evpZg" association="_TPPBEDxCEeaogZRN3evpZg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fXoWQDxCEeaogZRN3evpZg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fX9GYDxCEeaogZRN3evpZg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fXoWQDxCEeaogZRN3evpZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fX9GYDxCEeaogZRN3evpZg" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Y-uWozxGEeaogZRN3evpZg" name="autor" type="_Bg3agDxFEeaogZRN3evpZg" association="_Y-tvkDxGEeaogZRN3evpZg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uLTCEDxGEeaogZRN3evpZg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uLU3QDxGEeaogZRN3evpZg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uLTCEDxGEeaogZRN3evpZg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uLU3QDxGEeaogZRN3evpZg" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7VnecEBQEeaAIcvoLmZULQ" name="jezik" type="_5MWjcDxAEeaogZRN3evpZg" association="_7VgwwEBQEeaAIcvoLmZULQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_5MWjcDxAEeaogZRN3evpZg" name="Jezik">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_770aYDxAEeaogZRN3evpZg" name="idJezik" visibility="private">
@@ -44,8 +44,12 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="__QugsDxAEeaogZRN3evpZg" name="imeJezik" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7VoFgEBQEeaAIcvoLmZULQ" name="knjiga" type="_qBvacDxAEeaogZRN3evpZg" association="_7VgwwEBQEeaAIcvoLmZULQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FdUHMEBREeaAIcvoLmZULQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FdaN0EBREeaAIcvoLmZULQ" value="*"/>
+      </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_TPPBEDxCEeaogZRN3evpZg" name="pripadaZanru" memberEnd="_TPRdUDxCEeaogZRN3evpZg _TPRdUTxCEeaogZRN3evpZg">
+    <packagedElement xmi:type="uml:Association" xmi:id="_TPPBEDxCEeaogZRN3evpZg" name="pripadaZanru" visibility="private" memberEnd="_TPRdUDxCEeaogZRN3evpZg _TPRdUTxCEeaogZRN3evpZg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TPQPMDxCEeaogZRN3evpZg" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TPQPMTxCEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
       </eAnnotations>
@@ -64,7 +68,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Y-uWojxGEeaogZRN3evpZg" name="knjiga" type="_qBvacDxAEeaogZRN3evpZg" association="_Y-tvkDxGEeaogZRN3evpZg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nlKbkDxGEeaogZRN3evpZg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nlKbkDxGEeaogZRN3evpZg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nlP7IDxGEeaogZRN3evpZg" value="*"/>
       </ownedAttribute>
     </packagedElement>
@@ -297,6 +301,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_pBJPZDxcEeaogZRN3evpZg" name="vrstaopomene" type="_X720UDxaEeaogZRN3evpZg" association="_pBJPYDxcEeaogZRN3evpZg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_DCqQgjxdEeaogZRN3evpZg" name="zaduzenje" type="_v3zUQDxTEeaogZRN3evpZg" association="_DCpCYDxdEeaogZRN3evpZg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_X720UDxaEeaogZRN3evpZg" name="VrstaOpomene">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_aogn0DxaEeaogZRN3evpZg" name="idVrste" visibility="private">
@@ -340,7 +345,6 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DCppcDxdEeaogZRN3evpZg" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DCqQgDxdEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
       </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_DCqQgjxdEeaogZRN3evpZg" name="zaduzenje" type="_v3zUQDxTEeaogZRN3evpZg" association="_DCpCYDxdEeaogZRN3evpZg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_H7Y6ADxdEeaogZRN3evpZg" visibility="protected" memberEnd="_H7Y6AzxdEeaogZRN3evpZg _H7Y6BDxdEeaogZRN3evpZg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_H7Y6ATxdEeaogZRN3evpZg" source="org.eclipse.papyrus">
@@ -367,6 +371,11 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fixbATxdEeaogZRN3evpZg" key="nature" value="UML_Nature"/>
       </eAnnotations>
     </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_7VgwwEBQEeaAIcvoLmZULQ" visibility="private" memberEnd="_7VnecEBQEeaAIcvoLmZULQ _7VoFgEBQEeaAIcvoLmZULQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7VmQUEBQEeaAIcvoLmZULQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7Vm3YEBQEeaAIcvoLmZULQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_m49hEDw_EeaogZRN3evpZg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Qzv1ID36EeakQ-cQhU3thw" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Qzv1IT36EeakQ-cQhU3thw" key="Version" value="0.0.14"/>
@@ -388,7 +397,6 @@
   <RootElement:StandardForm xmi:id="_PIu7MDxBEeaogZRN3evpZg" base_Element="_qBvacDxAEeaogZRN3evpZg" label="Knjiga" base_Class="_qBvacDxAEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
   <RootElement:ReadOnly xmi:id="_W5IVYDxBEeaogZRN3evpZg" base_Element="_sGgukDxAEeaogZRN3evpZg" label="Id knjige" base_Property="_sGgukDxAEeaogZRN3evpZg" length="6" display="true"/>
   <RootElement:Editable xmi:id="_ersSwDxBEeaogZRN3evpZg" base_Element="_zhR3ADxAEeaogZRN3evpZg" label="Naslov" base_Property="_zhR3ADxAEeaogZRN3evpZg" length="100" display="true"/>
-  <RootElement:Lookup xmi:id="_tIf6kDxBEeaogZRN3evpZg" base_Element="_CYdtsDxBEeaogZRN3evpZg" label="Jezik" base_Property="_CYdtsDxBEeaogZRN3evpZg" component="combobox" display="true"/>
   <RootElement:StandardForm xmi:id="_1-m_oDxBEeaogZRN3evpZg" base_Element="_5MWjcDxAEeaogZRN3evpZg" label="Jezik" base_Class="_5MWjcDxAEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
   <RootElement:Editable xmi:id="_9JdcwDxBEeaogZRN3evpZg" base_Element="__QugsDxAEeaogZRN3evpZg" label="Ime jezika" base_Property="__QugsDxAEeaogZRN3evpZg" length="30" display="true"/>
   <RootElement:ReadOnly xmi:id="_BMhpkDxCEeaogZRN3evpZg" base_Element="_770aYDxAEeaogZRN3evpZg" label="Id jezika" base_Property="_770aYDxAEeaogZRN3evpZg" length="6" display="true"/>
@@ -434,10 +442,10 @@
   <RootElement:Editable xmi:id="_07RqoDxSEeaogZRN3evpZg" base_Element="_Tzw3MDxSEeaogZRN3evpZg" label="Datum rezervacije" base_Property="_Tzw3MDxSEeaogZRN3evpZg" component="dateChooser" display="true"/>
   <RootElement:Editable xmi:id="_6aHR4DxSEeaogZRN3evpZg" base_Element="_YbP_sDxSEeaogZRN3evpZg" label="Status rezervacije" base_Property="_YbP_sDxSEeaogZRN3evpZg" component="chechkbox" display="true"/>
   <RootElement:StandardForm xmi:id="_3FfC8DxTEeaogZRN3evpZg" base_Element="_v3zUQDxTEeaogZRN3evpZg" label="Zaduzenja" base_Class="_v3zUQDxTEeaogZRN3evpZg" add="true" delete="true" update="true"/>
-  <RootElement:Editable xmi:id="_caJMQDxUEeaogZRN3evpZg" base_Element="_6W8zsDxTEeaogZRN3evpZg" base_Property="_6W8zsDxTEeaogZRN3evpZg"/>
-  <RootElement:ReadOnly xmi:id="_daHbgDxUEeaogZRN3evpZg" base_Element="_A97HsDxUEeaogZRN3evpZg" base_Property="_A97HsDxUEeaogZRN3evpZg"/>
-  <RootElement:Editable xmi:id="_eKehcDxUEeaogZRN3evpZg" base_Element="_F8wZMDxUEeaogZRN3evpZg" base_Property="_F8wZMDxUEeaogZRN3evpZg"/>
-  <RootElement:Editable xmi:id="_fPLfsDxUEeaogZRN3evpZg" base_Element="_NIbVsDxUEeaogZRN3evpZg" base_Property="_NIbVsDxUEeaogZRN3evpZg"/>
+  <RootElement:Editable xmi:id="_caJMQDxUEeaogZRN3evpZg" base_Element="_6W8zsDxTEeaogZRN3evpZg" base_Property="_6W8zsDxTEeaogZRN3evpZg" component="dateChooser"/>
+  <RootElement:ReadOnly xmi:id="_daHbgDxUEeaogZRN3evpZg" base_Element="_A97HsDxUEeaogZRN3evpZg" base_Property="_A97HsDxUEeaogZRN3evpZg" display="true"/>
+  <RootElement:Editable xmi:id="_eKehcDxUEeaogZRN3evpZg" base_Element="_F8wZMDxUEeaogZRN3evpZg" base_Property="_F8wZMDxUEeaogZRN3evpZg" component="dateChooser" display="true"/>
+  <RootElement:Editable xmi:id="_fPLfsDxUEeaogZRN3evpZg" base_Element="_NIbVsDxUEeaogZRN3evpZg" base_Property="_NIbVsDxUEeaogZRN3evpZg" component="dateChooser" display="true"/>
   <RootElement:StandardForm xmi:id="_wkzx8DxYEeaogZRN3evpZg" base_Element="_s_q3QDxYEeaogZRN3evpZg" label="Opomena" base_Class="_s_q3QDxYEeaogZRN3evpZg" add="true" delete="true" update="true"/>
   <RootElement:ReadOnly xmi:id="_Q98ccDxZEeaogZRN3evpZg" base_Element="_1o9BQDxYEeaogZRN3evpZg" label="Oznaka opomene" base_Property="_1o9BQDxYEeaogZRN3evpZg" length="6" display="true"/>
   <RootElement:Editable xmi:id="_dorCoDxZEeaogZRN3evpZg" base_Element="_4tkBwDxYEeaogZRN3evpZg" label="Naziv opomene" base_Property="_4tkBwDxYEeaogZRN3evpZg" length="30" display="true"/>
@@ -456,7 +464,6 @@
   <RootElement:DBProperty xmi:id="_NUvc8DxgEeat_L31rHO22A" base_Property="_oeMO8Dw-EeaogZRN3evpZg" unique="true"/>
   <RootElement:DBProperty xmi:id="_0Nvb8DxiEea6ZJGitK1rXQ" base_Property="_sGgukDxAEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_3aDm8DxiEea6ZJGitK1rXQ" base_Property="_zhR3ADxAEeaogZRN3evpZg"/>
-  <RootElement:DBProperty xmi:id="_7GcZIDxiEea6ZJGitK1rXQ" base_Property="_CYdtsDxBEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="__NjYcDxiEea6ZJGitK1rXQ" base_Property="_g8qTADxFEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_CpQqUDxjEea6ZJGitK1rXQ" base_Property="_jsvN8DxFEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_EfTl8DxjEea6ZJGitK1rXQ" base_Property="_lhtLgDxFEeaogZRN3evpZg"/>

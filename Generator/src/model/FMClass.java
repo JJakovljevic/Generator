@@ -22,7 +22,16 @@ public class FMClass extends FMType {
 		this.parent = parent;
 	}	
 	
-	
+	public FMProperty getID(){
+		FMProperty result = null;
+		for(FMProperty fm : properties){
+			if(fm.getDbProperty()!=null && fm.getDbProperty().isId()){
+				result = fm;
+				break;
+			}
+		}
+		return result;
+	}
 	
 	public FMClass getParent() {
 		return parent;
