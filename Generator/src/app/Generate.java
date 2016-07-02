@@ -28,6 +28,10 @@ import parser.UMLParser;
 public class Generate {
 	private static Configuration cfg = new Configuration();
 	private static Template enumTemplate;
+	private static Template abstractFormTemplate;
+	private static Template abstractPanelDetailTemplate;
+	private static Template dialogStatusBarTemplate;
+	private static Template dialogToolbarTemplate;
 
 	public static void main(String[] args) throws Exception {
 		File f = new File("model.uml");
@@ -51,6 +55,10 @@ public class Generate {
 		generateJavaBean(classes, path);
 		generateAction(classes, path);
 		generatePersistence(classes, model.getName(), path);
+		generateAbstractForm(model, path);
+		generateAbstractPanelDetail(path);
+		generateDialogStatusBar(path);
+		generateDialogToolbar(path);
 		
 		for (FMEnum enumElement : en) {
 			generateEnum(enumElement, path);
@@ -77,7 +85,7 @@ public class Generate {
 		System.out.println("Java Bean klase su uspesno generisane");
 
 	}
-	
+
 	public static void generateAction(List<FMClass> classes, String path) throws Exception {
 		File f = new File(path + "/action");
 		if (!f.exists()) {
@@ -86,11 +94,12 @@ public class Generate {
 		int i = 0;
 		for (FMClass fmClass : classes) {
 			Map<String, Object> data = new HashMap<String, Object>();
-			if(fmClass.getUiClass() != null){
+			if (fmClass.getUiClass() != null) {
 				data.put("class", fmClass.getUiClass());
 				System.out.println(++i + "." + fmClass.getUiClass());
 				Template temp = cfg.getTemplate("action.ftl");
-				FileWriter out = new FileWriter(path + "/action/" + "Open" + fmClass.getName() + "StandardForm" + ".java");
+				FileWriter out = new FileWriter(
+						path + "/action/" + "Open" + fmClass.getName() + "StandardForm" + ".java");
 				temp.process(data, out);
 				out.flush();
 			}
@@ -209,33 +218,33 @@ public class Generate {
 		}
 		System.out.println("Klase za enumeraciju uspesno izgenerisane.");
 	}
-	
+
 	public static void generatePersistence(List<FMClass> classes, String persistenceName, String path) {
 		File f = new File(path + "/META-INF");
 		if (!f.exists()) {
 			f.mkdirs();
 		}
-		
+
 		List<FMClass> listaKlasa = new ArrayList<>();
-		for(FMClass c : classes) {
-			if(c.getUiClass() != null && c.getUiClass() instanceof MainForm) {
+		for (FMClass c : classes) {
+			if (c.getUiClass() != null && c.getUiClass() instanceof MainForm) {
 				continue;
 			}
 			listaKlasa.add(c);
 		}
-		
+
 		Map<String, Object> data = new HashMap<String, Object>();
 		data.put("classes", listaKlasa);
 		data.put("persistenceName", persistenceName);
 
 		try {
-			
+
 			Template temp = cfg.getTemplate("persistence.ftl");
 			FileWriter out;
 			out = new FileWriter(path + "/META-INF/persistence.xml");
 			temp.process(data, out);
 			out.flush();
-			
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -245,5 +254,116 @@ public class Generate {
 		}
 
 		System.out.println("persistence.xml je uspesno generisan");
+	}
+
+	public static void generateAbstractForm(FMModel model, String path) {
+		File f = new File(path + "/abstractForm");
+		if (!f.exists()) {
+			f.mkdirs();
+		}
+
+		String fullPath = f + "/" + "AbstractForm.java";
+
+		try {
+			abstractFormTemplate = cfg.getTemplate("abstractForm.ftl");
+
+			Map<String, Object> data = new HashMap<String, Object>();
+
+			FileWriter writer = null;
+
+			try {
+				writer = new FileWriter(fullPath);
+				abstractFormTemplate.process(data, writer);
+				writer.close();
+			} catch (IOException | TemplateException e) {
+				e.printStackTrace();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void generateAbstractPanelDetail(String path){
+		File f = new File(path + "/abstractForm");
+		if (!f.exists()) {
+			f.mkdirs();
+		}
+		
+		String fullPath = f + "/" + "AbstractPanelDetail.java";
+
+		try {
+			abstractPanelDetailTemplate = cfg.getTemplate("abstractPanelDetail.ftl");
+
+			Map<String, Object> data = new HashMap<String, Object>();
+
+			FileWriter writer = null;
+
+			try {
+				writer = new FileWriter(fullPath);
+				abstractPanelDetailTemplate.process(data, writer);
+				writer.close();
+			} catch (IOException | TemplateException e) {
+				e.printStackTrace();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	public static void generateDialogStatusBar(String path){
+		File f = new File(path + "/abstractForm");
+		if (!f.exists()) {
+			f.mkdirs();
+		}
+		
+		String fullPath = f + "/" + "DialogStatusBar.java";
+
+		try {
+			dialogStatusBarTemplate = cfg.getTemplate("dialogStatusBar.ftl");
+
+			Map<String, Object> data = new HashMap<String, Object>();
+
+			FileWriter writer = null;
+
+			try {
+				writer = new FileWriter(fullPath);
+				dialogStatusBarTemplate.process(data, writer);
+				writer.close();
+			} catch (IOException | TemplateException e) {
+				e.printStackTrace();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void generateDialogToolbar(String path){
+		File f = new File(path + "/abstractForm");
+		if (!f.exists()) {
+			f.mkdirs();
+		}
+		
+		String fullPath = f + "/" + "DialogToolbar.java";
+
+		try {
+			dialogToolbarTemplate = cfg.getTemplate("dialogToolbar.ftl");
+
+			Map<String, Object> data = new HashMap<String, Object>();
+
+			FileWriter writer = null;
+
+			try {
+				writer = new FileWriter(fullPath);
+				dialogToolbarTemplate.process(data, writer);
+				writer.close();
+			} catch (IOException | TemplateException e) {
+				e.printStackTrace();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
