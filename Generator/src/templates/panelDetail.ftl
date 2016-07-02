@@ -35,7 +35,6 @@ import java.awt.FlowLayout;
 import java.util.Iterator;
 import java.util.*;
 
-
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JCheckBox;
@@ -44,8 +43,6 @@ import javax.swing.JFormattedTextField.AbstractFormatter;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
-import model.exceptions.ElementNePostoji;
 
 <#list properties as property>
 	<#if !property.uiProperty??>

@@ -60,6 +60,7 @@ public class Generate {
 		generateAbstractPanelDetail(path);
 		generateDialogStatusBar(path);
 		generateDialogToolbar(path);
+		generateMainForm(classes, path);
 		
 		for (FMEnum enumElement : en) {
 			generateEnum(enumElement, path);
@@ -102,11 +103,11 @@ public class Generate {
 		for (FMClass fmClass : classes) {
 			Map<String, Object> data = new HashMap<String, Object>();
 			if (fmClass.getUiClass() != null) {
-				data.put("class", fmClass.getUiClass());
-				System.out.println(++i + "." + fmClass.getUiClass());
+				data.put("class", fmClass);
+				//System.out.println(++i + "." + fmClass.getUiClass());
 				Template temp = cfg.getTemplate("action.ftl");
 				FileWriter out = new FileWriter(
-						path + "/action/" + "Open" + fmClass.getName() + "StandardForm" + ".java");
+						path + "/action/" + "Open" + fmClass.getName() + "FormAction.java");
 				temp.process(data, out);
 				out.flush();
 			}
@@ -188,7 +189,7 @@ public class Generate {
 
 	public static void generateEnum(FMEnum enumElement, String path) {
 
-		File f = new File(path + "/enum");
+		File f = new File(path + "/enumeration");
 		if (!f.exists()) {
 			f.mkdirs();
 		}
@@ -426,5 +427,37 @@ public class Generate {
 			}
 		}
 		System.out.println("Forme su uspesno izgenerisane.");
+	}
+	
+	public static void generateMainForm(List<FMClass> classes, String path) {
+		File f = new File(path + "/gui");
+		if (!f.exists()) {
+			f.mkdirs();
+		}
+		
+		List<FMClass> listaKlasa = new ArrayList<>();
+		for(FMClass c : classes) {
+			if(c.getUiClass() != null) {
+				listaKlasa.add(c);
+			}
+		}
+		
+		Map<String, Object> data = new HashMap<String, Object>();
+		data.put("classes", listaKlasa);
+		
+		
+		try {
+			Template temp = cfg.getTemplate("MainForm.ftl");
+			FileWriter out;
+			out = new FileWriter(path + "/gui/MainForm.java");
+			temp.process(data, out);
+			out.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (TemplateException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("MainForm klasa je uspesno generisana.");
 	}
 }

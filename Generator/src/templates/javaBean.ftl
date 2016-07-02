@@ -19,7 +19,7 @@ package bean;
 import javax.persistence.*;
 import java.util.*;
 import enumeration.*;
-
+import java.io.Serializable;
 
 <#if class.abstract>
 @MappedSuperclass
@@ -27,7 +27,7 @@ import enumeration.*;
 @Entity
 @Table(name = "${class.name}")
 </#if>
-${class.visibility} <#if class.abstract>abstract </#if>class ${class.name} <#if class.parent?exists>extends ${class.parent.name}</#if>{
+${class.visibility} <#if class.abstract>abstract </#if>class ${class.name} <#if class.parent?exists>extends ${class.parent.name}</#if> implements Serializable{
 
 	<#list class.properties as property>
 	<#if property.dbProperty?exists>

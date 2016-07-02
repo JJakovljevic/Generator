@@ -1,18 +1,20 @@
 package action;
 
+import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 
-import forms.${class.label}Form;
+import gui.MainForm;
+import gui.forms.${class.name}Form;
 
-public class Show${class.label}FormAction extends AbstractAction {
+public class Open${class.name}FormAction extends AbstractAction {
 
-    public Open${class.label}FormAction() {
+    public Open${class.name}FormAction() {
         super();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        ${class.label}Form form = new ${class.label}Form();
+        ${class.name}Form form = new ${class.name}Form(MainForm.getInstance());
         form.setVisible(true);
     }
 
