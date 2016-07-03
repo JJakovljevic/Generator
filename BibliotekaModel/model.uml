@@ -113,6 +113,9 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_VmQUEDxIEeaogZRN3evpZg" name="Administrator">
       <generalization xmi:type="uml:Generalization" xmi:id="_bhXAkDxIEeaogZRN3evpZg" general="_SpzmgDxHEeaogZRN3evpZg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_s8MxsEEoEeahHeKSd0mugw" name="maticniBrojAdministratora">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Y6DAEDxIEeaogZRN3evpZg" name="Bibliotekar">
       <generalization xmi:type="uml:Generalization" xmi:id="_cFhdkDxIEeaogZRN3evpZg" general="_SpzmgDxHEeaogZRN3evpZg"/>
@@ -477,7 +480,7 @@
   <RootElement:DBProperty xmi:id="_aqlVUDxjEea6ZJGitK1rXQ" base_Property="_8I8dIDxQEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_jnSxoDxjEea6ZJGitK1rXQ" base_Property="_tl8RQDxREeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_lY7uYDxjEea6ZJGitK1rXQ" base_Property="_wTzlsDxREeaogZRN3evpZg" unique="true"/>
-  <RootElement:DBProperty xmi:id="_qGmXYDxjEea6ZJGitK1rXQ" base_Property="_WejqgDxHEeaogZRN3evpZg" ID="true" unique="true"/>
+  <RootElement:DBProperty xmi:id="_qGmXYDxjEea6ZJGitK1rXQ" base_Property="_WejqgDxHEeaogZRN3evpZg" unique="true"/>
   <RootElement:DBProperty xmi:id="_tB7gEDxjEea6ZJGitK1rXQ" base_Property="_ZqMgEDxHEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_wD3nEDxjEea6ZJGitK1rXQ" base_Property="_cyE3ADxHEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_xTL54DxjEea6ZJGitK1rXQ" base_Property="_e3DmgDxHEeaogZRN3evpZg"/>
@@ -515,4 +518,6 @@
   <RootElement:StandardForm xmi:id="_gG_RQEEREeahHeKSd0mugw" base_Element="_9QZuEDxIEeaogZRN3evpZg" label="Ogranak" base_Class="_9QZuEDxIEeaogZRN3evpZg" add="true" delete="true" update="true"/>
   <RootElement:StandardForm xmi:id="_mGU9gEEREeahHeKSd0mugw" base_Element="_X720UDxaEeaogZRN3evpZg" label="Vrsta opomene" base_Class="_X720UDxaEeaogZRN3evpZg" add="true" delete="true" update="true"/>
   <RootElement:MainForm xmi:id="_d-JiMEEhEea2JYGcRmDC6A" base_Element="_aRwI8EEhEea2JYGcRmDC6A" label="Biblioteka" base_Class="_aRwI8EEhEea2JYGcRmDC6A" putanjaDoSlike="images/21.jpg" putanjaDoIkonice="images/icon.png"/>
+  <RootElement:DBProperty xmi:id="_ztKIIEEoEeahHeKSd0mugw" base_Property="_s8MxsEEoEeahHeKSd0mugw" ID="true"/>
+  <RootElement:ReadOnly xmi:id="_1feaUEEoEeahHeKSd0mugw" base_Element="_s8MxsEEoEeahHeKSd0mugw" label="Maticni broj administratora" base_Property="_s8MxsEEoEeahHeKSd0mugw" length="6" display="true"/>
 </xmi:XMI>
