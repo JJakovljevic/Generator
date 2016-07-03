@@ -393,7 +393,7 @@
   <RootElement:ReadOnly xmi:id="_3tzXQDw_EeaogZRN3evpZg" base_Element="_Hbu6oDw-EeaogZRN3evpZg" label="Id zanra" base_Property="_Hbu6oDw-EeaogZRN3evpZg" length="6" display="true"/>
   <RootElement:Editable xmi:id="_6W9x4Dw_EeaogZRN3evpZg" base_Element="_oeMO8Dw-EeaogZRN3evpZg" label="Naziv zanra" base_Property="_oeMO8Dw-EeaogZRN3evpZg" length="20" display="true"/>
   <RootElement:Editable xmi:id="_7Qv5kDw_EeaogZRN3evpZg" base_Element="_wqmPsDw-EeaogZRN3evpZg" label="Opis zanra" base_Property="_wqmPsDw-EeaogZRN3evpZg" length="100"/>
-  <RootElement:StandardForm xmi:id="_8g4EsDw_EeaogZRN3evpZg" base_Element="_Ft6t8Dw-EeaogZRN3evpZg" base_Class="_Ft6t8Dw-EeaogZRN3evpZg"/>
+  <RootElement:StandardForm xmi:id="_8g4EsDw_EeaogZRN3evpZg" base_Element="_Ft6t8Dw-EeaogZRN3evpZg" label="Zanr" base_Class="_Ft6t8Dw-EeaogZRN3evpZg"/>
   <RootElement:StandardForm xmi:id="_PIu7MDxBEeaogZRN3evpZg" base_Element="_qBvacDxAEeaogZRN3evpZg" label="Knjiga" base_Class="_qBvacDxAEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
   <RootElement:ReadOnly xmi:id="_W5IVYDxBEeaogZRN3evpZg" base_Element="_sGgukDxAEeaogZRN3evpZg" label="Id knjige" base_Property="_sGgukDxAEeaogZRN3evpZg" length="6" display="true"/>
   <RootElement:Editable xmi:id="_ersSwDxBEeaogZRN3evpZg" base_Element="_zhR3ADxAEeaogZRN3evpZg" label="Naslov" base_Property="_zhR3ADxAEeaogZRN3evpZg" length="100" display="true"/>
@@ -405,7 +405,7 @@
   <RootElement:Editable xmi:id="_81n98DxFEeaogZRN3evpZg" base_Element="_jsvN8DxFEeaogZRN3evpZg" label="Ime autora" base_Property="_jsvN8DxFEeaogZRN3evpZg" length="30" display="true"/>
   <RootElement:Editable xmi:id="_ElInUDxGEeaogZRN3evpZg" base_Element="_lhtLgDxFEeaogZRN3evpZg" label="Prezime autora" base_Property="_lhtLgDxFEeaogZRN3evpZg" length="35" display="true"/>
   <RootElement:Editable xmi:id="_MN0P8DxGEeaogZRN3evpZg" base_Element="_oqRe8DxFEeaogZRN3evpZg" label="Biografija" base_Property="_oqRe8DxFEeaogZRN3evpZg" length="300" component="editor"/>
-  <RootElement:StandardForm xmi:id="_6A7MQDxGEeaogZRN3evpZg" base_Element="_0ZUDgDxGEeaogZRN3evpZg" base_Class="_0ZUDgDxGEeaogZRN3evpZg"/>
+  <RootElement:StandardForm xmi:id="_6A7MQDxGEeaogZRN3evpZg" base_Element="_0ZUDgDxGEeaogZRN3evpZg" label="Knjige ogranka" base_Class="_0ZUDgDxGEeaogZRN3evpZg"/>
   <RootElement:ReadOnly xmi:id="_09w-8DxHEeaogZRN3evpZg" base_Element="_WejqgDxHEeaogZRN3evpZg" label="Korisnicko ime" base_Property="_WejqgDxHEeaogZRN3evpZg" length="30" display="true"/>
   <RootElement:Editable xmi:id="_7aXO8DxHEeaogZRN3evpZg" base_Element="_ZqMgEDxHEeaogZRN3evpZg" label="Ime zaposlenog" base_Property="_ZqMgEDxHEeaogZRN3evpZg" length="30" display="true"/>
   <RootElement:Editable xmi:id="_Alxj4DxIEeaogZRN3evpZg" base_Element="_cyE3ADxHEeaogZRN3evpZg" label="Prezime zaposlenog" base_Property="_cyE3ADxHEeaogZRN3evpZg" length="35" display="true"/>
