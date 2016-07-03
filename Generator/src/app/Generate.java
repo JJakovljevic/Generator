@@ -265,7 +265,7 @@ public class Generate {
 	}
 
 	public static void generateAbstractForm(FMModel model, String path) {
-		File f = new File(path + "/abstractForm");
+		File f = new File(path + "/gui/forms");
 		if (!f.exists()) {
 			f.mkdirs();
 		}
@@ -293,7 +293,7 @@ public class Generate {
 	}
 
 	public static void generateAbstractPanelDetail(String path){
-		File f = new File(path + "/abstractForm");
+		File f = new File(path + "/gui/forms/detailpanels");
 		if (!f.exists()) {
 			f.mkdirs();
 		}
@@ -321,7 +321,7 @@ public class Generate {
 	}
 	
 	public static void generateDialogStatusBar(String path){
-		File f = new File(path + "/abstractForm");
+		File f = new File(path + "/gui/forms");
 		if (!f.exists()) {
 			f.mkdirs();
 		}
@@ -349,7 +349,7 @@ public class Generate {
 	}
 
 	public static void generateDialogToolbar(String path){
-		File f = new File(path + "/abstractForm");
+		File f = new File(path + "/gui/forms");
 		if (!f.exists()) {
 			f.mkdirs();
 		}
@@ -399,6 +399,19 @@ public class Generate {
 				}
 				properties.add(p);
 			}
+			
+			if(c.getParent() != null) {
+				for(FMProperty p : c.getParent().getProperties()){
+					if(p.getName().equals(ID.getName())){
+						continue;
+					}
+					if(p.getUiProperty() == null && p.getUpper()!=1){
+						continue;
+					}
+					properties.add(p);
+				}
+			}
+			
 			map.put("id", ID);
 			map.put("properties", properties);
 			List<FMProperty> colons = new ArrayList<>();

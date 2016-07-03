@@ -1,4 +1,4 @@
-package abstractForm;
+package gui.forms;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -16,6 +16,7 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import gui.forms.detailpanels.AbstractPanelDetail;
 
 @SuppressWarnings("serial")
 public abstract class AbstractForm extends JDialog {

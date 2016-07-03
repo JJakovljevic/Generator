@@ -1,4 +1,4 @@
-package abstractForm;
+package gui.forms;
 
 import java.awt.Color;
 import java.awt.GridLayout;

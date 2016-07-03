@@ -1,4 +1,4 @@
-package abstractForm;
+package gui.forms.detailpanels;
 
 import javax.swing.JPanel;
 

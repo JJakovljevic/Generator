@@ -1,4 +1,4 @@
-package abstractForm;
+package gui.forms;
 
 import java.awt.Cursor;
 import java.awt.event.ActionEvent;

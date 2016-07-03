@@ -46,7 +46,7 @@ public class MainForm extends javax.swing.JFrame {
 	
 	
 	public MainForm() {
-    	setIconImage(Toolkit.getDefaultToolkit().getImage("slike/icon.png"));
+    	setIconImage(Toolkit.getDefaultToolkit().getImage("images/icon.png"));
         initComponents();
     }
     
@@ -121,7 +121,7 @@ public class MainForm extends javax.swing.JFrame {
 		this.add(pStatusBar, BorderLayout.SOUTH);
 		
 		// centralna slika
-		lCentar.setIcon(new javax.swing.ImageIcon("slike/21.jpg"));
+		lCentar.setIcon(new javax.swing.ImageIcon("images/21.jpg"));
 		pCentar.add(lCentar,BorderLayout.CENTER);
 		
 		// podesavanja prozora
