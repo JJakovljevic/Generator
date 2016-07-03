@@ -164,8 +164,12 @@ public class UMLParser extends Observable {
                             if (label == null || label.equals("")) {
                                 label = refClass.getName();
                             }
+                            String putanjaDoSlike = reader.getAttributeValue(null, "putanjaDoSlike");
+                            String putanjaDoIkonice = reader.getAttributeValue(null, "putanjaDoIkonice");
                             
                             MainForm mf = new MainForm(label);
+                            mf.setPutanjaDoIkonice(putanjaDoIkonice);
+                            mf.setPutanjaDoSlike(putanjaDoSlike);
 
                             refClass.setUiClass(mf);
                         }

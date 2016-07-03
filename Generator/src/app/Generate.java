@@ -82,7 +82,10 @@ public class Generate {
 
 		for (FMClass fmClass : classes) {
 			Map<String, Object> data = new HashMap<String, Object>();
-
+			
+			if(fmClass.getUiClass() != null && fmClass.getUiClass() instanceof MainForm) {
+				continue;
+			}
 			data.put("class", fmClass);
 
 			Template temp = cfg.getTemplate("javaBean.ftl");
@@ -102,7 +105,7 @@ public class Generate {
 		int i = 0;
 		for (FMClass fmClass : classes) {
 			Map<String, Object> data = new HashMap<String, Object>();
-			if (fmClass.getUiClass() != null) {
+			if (fmClass.getUiClass() != null && !(fmClass.getUiClass() instanceof MainForm)) {
 				data.put("class", fmClass);
 				//System.out.println(++i + "." + fmClass.getUiClass());
 				Template temp = cfg.getTemplate("action.ftl");
@@ -449,15 +452,19 @@ public class Generate {
 		}
 		
 		List<FMClass> listaKlasa = new ArrayList<>();
+		FMClass main = null;
 		for(FMClass c : classes) {
-			if(c.getUiClass() != null) {
+			if(c.getUiClass() != null && c.getUiClass() instanceof StandardForm) {
 				listaKlasa.add(c);
+			}
+			if(c.getUiClass() != null && c.getUiClass() instanceof MainForm) {
+				main = c;
 			}
 		}
 		
 		Map<String, Object> data = new HashMap<String, Object>();
 		data.put("classes", listaKlasa);
-		
+		data.put("main", main);
 		
 		try {
 			Template temp = cfg.getTemplate("MainForm.ftl");

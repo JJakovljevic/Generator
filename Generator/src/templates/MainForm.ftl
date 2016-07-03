@@ -46,7 +46,7 @@ public class MainForm extends javax.swing.JFrame {
 	
 	
 	public MainForm() {
-    	setIconImage(Toolkit.getDefaultToolkit().getImage("images/icon.png"));
+    	setIconImage(Toolkit.getDefaultToolkit().getImage("${main.uiClass.putanjaDoIkonice}"));
         initComponents();
     }
     
@@ -121,11 +121,11 @@ public class MainForm extends javax.swing.JFrame {
 		this.add(pStatusBar, BorderLayout.SOUTH);
 		
 		// centralna slika
-		lCentar.setIcon(new javax.swing.ImageIcon("images/21.jpg"));
+		lCentar.setIcon(new javax.swing.ImageIcon("${main.uiClass.putanjaDoSlike}"));
 		pCentar.add(lCentar,BorderLayout.CENTER);
 		
 		// podesavanja prozora
-        this.setTitle("Biblioteka");
+        this.setTitle("${main.uiClass.label}");
 		this.setSize(1350, 715);
 		this.setMinimumSize(new Dimension(500, 350));
 		this.setLocationRelativeTo(null);
