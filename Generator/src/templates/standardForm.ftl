@@ -247,7 +247,7 @@ public class ${class.name}Form extends AbstractForm {
 						<#if fieldType(property) == "JComboBox">
 						panel.get${property.name?cap_first}Field().setSelectedItem(null);
 						<#elseif fieldType(property) == "JDatePicker">
-						panel.get${property.name?cap_first}Field().getModel().setDate(${class.name?uncap_first}.get${property.name?cap_first}().getYear()+1900, ${class.name?uncap_first}.get${property.name?cap_first}().getDate(), ${class.name?uncap_first}.get${property.name?cap_first}().getMonth()+1);
+						panel.get${property.name?cap_first}Field().getModel().setDate(2016, 1, 1);
 						<#elseif fieldType(property) == "JCheckBox">
 						panel.get${property.name?cap_first}Field().setSelected(false);
 						<#else>
