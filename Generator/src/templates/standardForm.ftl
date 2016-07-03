@@ -34,6 +34,7 @@ import gui.forms.AbstractForm;
 import gui.forms.AbstractForm.StanjeDijaloga;
 import gui.forms.AddUpdateFindDialog;
 import gui.forms.detailpanels.PanelDetail${class.name};
+import gui.forms.detailpanels.akcije.PopupListener;
 import gui.tablemodel.DialogTableModel;
 import javax.swing.table.DefaultTableModel;
 
@@ -43,6 +44,10 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.*;
+
+<#list zoomProperties as prop>
+import action.Open${prop.type}FormAction;
+</#list>
 
 import bean.${class.name};
 
@@ -95,7 +100,22 @@ public class ${class.name}Form extends AbstractForm {
             });
         }
 		
-		initGUI();  // metodu initGUI() treba pozvati NA KRAJU konstruktora naslednika
+		initGUI();  
+		
+	<#if zoom>
+		JButton btZoom = new JButton();
+		btZoom.setIcon(new ImageIcon("images/icons/chain.gif"));
+		JPopupMenu jpm = new JPopupMenu();
+		<#list zoomProperties as prop>
+		JMenuItem jmi${prop?index} = new JMenuItem();
+		jmi${prop?index}.setAction(new Open${prop.type}FormAction());
+		jmi${prop?index}.setText("${prop.reference.uiClass.label}");
+		jpm.add(jmi${prop?index});
+		</#list>
+		btZoom.addMouseListener(new PopupListener(jpm));
+		toolbar.add(btZoom);
+	</#if>
+	
 		
 		
 		ListSelectionModel lsm = table.getSelectionModel();

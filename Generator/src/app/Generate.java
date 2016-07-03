@@ -393,11 +393,14 @@ public class Generate {
 			FMProperty ID = c.getID();
 			List<FMProperty> properties = new ArrayList<>();
 			properties.add(ID);
+			List<FMProperty> zoomProperties = new ArrayList<>();
 			for(FMProperty p : c.getProperties()){
 				if(p.getName().equals(ID.getName())){
 					continue;
 				}
 				if(p.getUiProperty() == null && p.getUpper()!=1){
+					if(((FMClass)p.getReference()).getUiClass()!=null)
+					zoomProperties.add(p);
 					continue;
 				}
 				properties.add(p);
@@ -409,6 +412,8 @@ public class Generate {
 						continue;
 					}
 					if(p.getUiProperty() == null && p.getUpper()!=1){
+						if(((FMClass)p.getReference()).getUiClass()!=null)
+						zoomProperties.add(p);
 						continue;
 					}
 					properties.add(p);
@@ -417,6 +422,8 @@ public class Generate {
 			
 			map.put("id", ID);
 			map.put("properties", properties);
+			map.put("zoom",!zoomProperties.isEmpty());
+			map.put("zoomProperties", zoomProperties);
 			List<FMProperty> colons = new ArrayList<>();
 			for(FMProperty fm : properties){
 				if((fm.getUiProperty()!= null && fm.getUiProperty().getDisplay()) || (fm.getUiProperty()== null && fm.getUpper()==1)){
