@@ -199,9 +199,10 @@ public class ${class.name}Form extends AbstractForm {
 				tableModel.fireTableDataChanged();
 				
 				for(int i = 0; i < table.getRowCount(); i++){
-				if(${class.name?uncap_first}.get${id.name?cap_first}().equals(tableModel.getValueAt(i, 0))){
-					table.setRowSelectionInterval(table.convertRowIndexToView(i), table.convertRowIndexToView(i));
-					break;
+					if(${class.name?uncap_first}.get${id.name?cap_first}().equals(tableModel.getValueAt(i, 0))){
+						table.setRowSelectionInterval(table.convertRowIndexToView(i), table.convertRowIndexToView(i));
+						break;
+					}
 				}
 			}
 			
