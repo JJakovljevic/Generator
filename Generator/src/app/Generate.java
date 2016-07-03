@@ -418,7 +418,7 @@ public class Generate {
 			map.put("id", ID);
 			map.put("properties", properties);
 			List<FMProperty> colons = new ArrayList<>();
-			for(FMProperty fm : c.getProperties()){
+			for(FMProperty fm : properties){
 				if((fm.getUiProperty()!= null && fm.getUiProperty().getDisplay()) || (fm.getUiProperty()== null && fm.getUpper()==1)){
 					colons.add(fm);
 				}
