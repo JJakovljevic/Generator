@@ -42,7 +42,10 @@ import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField.AbstractFormatter;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
 
 <#list properties as property>
 	<#if !property.uiProperty??>
@@ -113,9 +116,16 @@ public class PanelDetail${class.name} extends AbstractPanelDetail {
 		${property.name}Field = new JTextField(${property.uiProperty.length});
 		${property.name}Field.setEnabled(mode != StanjeDijaloga.BROWSE  <#if property.dbProperty.id>&& mode != StanjeDijaloga.UPDATE && mode != StanjeDijaloga.ADD</#if>);
 		${property.name}Field.addKeyListener(new BojenjeKeyListener(${property.name}Field));
+		<#elseif fieldType(property) == "JTextArea">
+		${property.name}Field = new JTextArea(5,20);
+		${property.name}Field.setEnabled(mode != StanjeDijaloga.BROWSE  <#if property.dbProperty.id>&& mode != StanjeDijaloga.UPDATE && mode != StanjeDijaloga.ADD</#if>);
+		${property.name}Field.setLineWrap(true);
+		JScrollPane jsp${property?index} = new JScrollPane(${property.name}Field);
+		jsp${property?index}.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		</#if>
 		pan${property.name}.add(lbl${property.name});
-		pan${property.name}.add((Component)${property.name}Field);
+		<#if fieldType(property) == "JTextArea">pan${property.name}.add(jsp${property?index});<#else>pan${property.name}.add((Component)${property.name}Field);</#if>
+		<#if property.dbProperty?? && property.dbProperty.id> pan${property.name}.setVisible(mode != StanjeDijaloga.ADD);</#if>
 		boxCentar.add(pan${property.name});
 		
 </#list>

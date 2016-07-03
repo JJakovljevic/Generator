@@ -143,7 +143,7 @@ public class ${class.name}Form extends AbstractForm {
 			tableModel.fireTableDataChanged();
 			
 			for(int i = 0; i < table.getRowCount(); i++){
-			if(panelDetailDodavanje.get${id.name?cap_first}Field().getText().equals(tableModel.getValueAt(i, 0))){
+			if(${class.name?uncap_first}.get${id.name?cap_first}().equals(tableModel.getValueAt(i, 0))){
 				table.setRowSelectionInterval(table.convertRowIndexToView(i), table.convertRowIndexToView(i));
 				break;
 			}
@@ -199,10 +199,9 @@ public class ${class.name}Form extends AbstractForm {
 				tableModel.fireTableDataChanged();
 				
 				for(int i = 0; i < table.getRowCount(); i++){
-					if(panel.get${id.name?cap_first}Field().getText().equals(tableModel.getValueAt(i, 0))){
-						table.setRowSelectionInterval(table.convertRowIndexToView(i), table.convertRowIndexToView(i));
-						break;
-					}
+				if(${class.name?uncap_first}.get${id.name?cap_first}().equals(tableModel.getValueAt(i, 0))){
+					table.setRowSelectionInterval(table.convertRowIndexToView(i), table.convertRowIndexToView(i));
+					break;
 				}
 			}
 			
@@ -241,8 +240,21 @@ public class ${class.name}Form extends AbstractForm {
 	        if (!e.getValueIsAdjusting()) {
 	        	int row = table.getSelectedRow();
 	        		
-	        	if (row == -1) // ništa nije selektovano 
+	        	if (row == -1){ // ništa nije selektovano 
+	        		PanelDetail${class.name} panel = (PanelDetail${class.name})panelDetail;
+					<#list properties as property>
+						<#if fieldType(property) == "JComboBox">
+						panel.get${property.name?cap_first}Field().setSelectedItem(null);
+						<#elseif fieldType(property) == "JDatePicker">
+						panel.get${property.name?cap_first}Field().getModel().setDate(${class.name?uncap_first}.get${property.name?cap_first}().getYear()+1900, ${class.name?uncap_first}.get${property.name?cap_first}().getDate(), ${class.name?uncap_first}.get${property.name?cap_first}().getMonth()+1);
+						<#elseif fieldType(property) == "JCheckBox">
+						panel.get${property.name?cap_first}Field().setSelected(false);
+						<#else>
+						panel.get${property.name?cap_first}Field().setText("");
+						</#if>
+					</#list>
 	        		return;
+	        	}
 	        		
 				${class.name} ${class.name?uncap_first} = ${class.name?lower_case}Dao.findById((${id.type})(table.getValueAt(table.getSelectedRow(), table.convertColumnIndexToView(0))));
 				PanelDetail${class.name} panel = (PanelDetail${class.name})panelDetail;

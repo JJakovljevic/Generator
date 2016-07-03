@@ -121,7 +121,7 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Ss3IQzxMEeaogZRN3evpZg" name="ogranak" type="_9QZuEDxIEeaogZRN3evpZg" association="_Ss2hMDxMEeaogZRN3evpZg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_9QZuEDxIEeaogZRN3evpZg" name="Ogranak">
+    <packagedElement xmi:type="uml:Class" xmi:id="_9QZuEDxIEeaogZRN3evpZg" name="Ogranak" visibility="public">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_AJtdgDxJEeaogZRN3evpZg" name="oznakaOgranka" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
@@ -404,7 +404,7 @@
   <RootElement:ReadOnly xmi:id="_wVkWsDxFEeaogZRN3evpZg" base_Element="_g8qTADxFEeaogZRN3evpZg" label="ID autora" base_Property="_g8qTADxFEeaogZRN3evpZg" length="6" display="true"/>
   <RootElement:Editable xmi:id="_81n98DxFEeaogZRN3evpZg" base_Element="_jsvN8DxFEeaogZRN3evpZg" label="Ime autora" base_Property="_jsvN8DxFEeaogZRN3evpZg" length="30" display="true"/>
   <RootElement:Editable xmi:id="_ElInUDxGEeaogZRN3evpZg" base_Element="_lhtLgDxFEeaogZRN3evpZg" label="Prezime autora" base_Property="_lhtLgDxFEeaogZRN3evpZg" length="35" display="true"/>
-  <RootElement:Editable xmi:id="_MN0P8DxGEeaogZRN3evpZg" base_Element="_oqRe8DxFEeaogZRN3evpZg" label="Biografija" base_Property="_oqRe8DxFEeaogZRN3evpZg" length="300"/>
+  <RootElement:Editable xmi:id="_MN0P8DxGEeaogZRN3evpZg" base_Element="_oqRe8DxFEeaogZRN3evpZg" label="Biografija" base_Property="_oqRe8DxFEeaogZRN3evpZg" length="300" component="editor"/>
   <RootElement:StandardForm xmi:id="_6A7MQDxGEeaogZRN3evpZg" base_Element="_0ZUDgDxGEeaogZRN3evpZg" base_Class="_0ZUDgDxGEeaogZRN3evpZg"/>
   <RootElement:ReadOnly xmi:id="_09w-8DxHEeaogZRN3evpZg" base_Element="_WejqgDxHEeaogZRN3evpZg" label="Korisnicko ime" base_Property="_WejqgDxHEeaogZRN3evpZg" length="30" display="true"/>
   <RootElement:Editable xmi:id="_7aXO8DxHEeaogZRN3evpZg" base_Element="_ZqMgEDxHEeaogZRN3evpZg" label="Ime zaposlenog" base_Property="_ZqMgEDxHEeaogZRN3evpZg" length="30" display="true"/>
@@ -425,7 +425,7 @@
   <RootElement:Editable xmi:id="_eMIgkDxPEeaogZRN3evpZg" base_Element="_ZblYIDxOEeaogZRN3evpZg" label="Datum rodjenja" base_Property="_ZblYIDxOEeaogZRN3evpZg" component="dateChooser" display="true"/>
   <RootElement:Editable xmi:id="_kqOlYDxPEeaogZRN3evpZg" base_Element="_bQnnIDxOEeaogZRN3evpZg" label="Adresa clana" base_Property="_bQnnIDxOEeaogZRN3evpZg" length="60" display="true"/>
   <RootElement:Editable xmi:id="_pDTecDxPEeaogZRN3evpZg" base_Element="_dSFvoDxOEeaogZRN3evpZg" label="Telefon clana" base_Property="_dSFvoDxOEeaogZRN3evpZg" length="15" display="true"/>
-  <RootElement:Editable xmi:id="_u0s1UDxPEeaogZRN3evpZg" base_Element="_e71UoDxOEeaogZRN3evpZg" label="Telefon clana" base_Property="_e71UoDxOEeaogZRN3evpZg" length="30" display="true"/>
+  <RootElement:Editable xmi:id="_u0s1UDxPEeaogZRN3evpZg" base_Element="_e71UoDxOEeaogZRN3evpZg" label="Email clana" base_Property="_e71UoDxOEeaogZRN3evpZg" length="30" display="true"/>
   <RootElement:Editable xmi:id="_2y2-sDxPEeaogZRN3evpZg" base_Element="_g150oDxOEeaogZRN3evpZg" label="Pol clana" base_Property="_g150oDxOEeaogZRN3evpZg" component="combobox" display="true"/>
   <RootElement:Editable xmi:id="_-bXBIDxPEeaogZRN3evpZg" base_Element="_i2_ioDxOEeaogZRN3evpZg" label="Clanstvo" base_Property="_i2_ioDxOEeaogZRN3evpZg" component="combobox" display="true"/>
   <RootElement:Editable xmi:id="_EjGbcDxQEeaogZRN3evpZg" base_Element="_mqELoDxOEeaogZRN3evpZg" label="Datum uplate" base_Property="_mqELoDxOEeaogZRN3evpZg" component="dateChooser" display="true"/>
@@ -442,7 +442,7 @@
   <RootElement:Editable xmi:id="_07RqoDxSEeaogZRN3evpZg" base_Element="_Tzw3MDxSEeaogZRN3evpZg" label="Datum rezervacije" base_Property="_Tzw3MDxSEeaogZRN3evpZg" component="dateChooser" display="true"/>
   <RootElement:Editable xmi:id="_6aHR4DxSEeaogZRN3evpZg" base_Element="_YbP_sDxSEeaogZRN3evpZg" label="Status rezervacije" base_Property="_YbP_sDxSEeaogZRN3evpZg" component="chechkbox" display="true"/>
   <RootElement:StandardForm xmi:id="_3FfC8DxTEeaogZRN3evpZg" base_Element="_v3zUQDxTEeaogZRN3evpZg" label="Zaduzenja" base_Class="_v3zUQDxTEeaogZRN3evpZg" add="true" delete="true" update="true"/>
-  <RootElement:Editable xmi:id="_caJMQDxUEeaogZRN3evpZg" base_Element="_6W8zsDxTEeaogZRN3evpZg" base_Property="_6W8zsDxTEeaogZRN3evpZg" component="dateChooser"/>
+  <RootElement:Editable xmi:id="_caJMQDxUEeaogZRN3evpZg" base_Element="_6W8zsDxTEeaogZRN3evpZg" base_Property="_6W8zsDxTEeaogZRN3evpZg" length="6" component="dateChooser"/>
   <RootElement:ReadOnly xmi:id="_daHbgDxUEeaogZRN3evpZg" base_Element="_A97HsDxUEeaogZRN3evpZg" base_Property="_A97HsDxUEeaogZRN3evpZg" display="true"/>
   <RootElement:Editable xmi:id="_eKehcDxUEeaogZRN3evpZg" base_Element="_F8wZMDxUEeaogZRN3evpZg" base_Property="_F8wZMDxUEeaogZRN3evpZg" component="dateChooser" display="true"/>
   <RootElement:Editable xmi:id="_fPLfsDxUEeaogZRN3evpZg" base_Element="_NIbVsDxUEeaogZRN3evpZg" base_Property="_NIbVsDxUEeaogZRN3evpZg" component="dateChooser" display="true"/>
@@ -450,13 +450,13 @@
   <RootElement:ReadOnly xmi:id="_Q98ccDxZEeaogZRN3evpZg" base_Element="_1o9BQDxYEeaogZRN3evpZg" label="Oznaka opomene" base_Property="_1o9BQDxYEeaogZRN3evpZg" length="6" display="true"/>
   <RootElement:Editable xmi:id="_dorCoDxZEeaogZRN3evpZg" base_Element="_4tkBwDxYEeaogZRN3evpZg" label="Naziv opomene" base_Property="_4tkBwDxYEeaogZRN3evpZg" length="30" display="true"/>
   <RootElement:Editable xmi:id="_4P4x0DxZEeaogZRN3evpZg" base_Element="_7oe6wDxYEeaogZRN3evpZg" label="Status opomene" base_Property="_7oe6wDxYEeaogZRN3evpZg" component="chechkbox" display="true"/>
-  <RootElement:Editable xmi:id="_SNKzMDxaEeaogZRN3evpZg" base_Element="_6Ja7wDxYEeaogZRN3evpZg" label="Opis opomene" base_Property="_6Ja7wDxYEeaogZRN3evpZg" length="200"/>
+  <RootElement:Editable xmi:id="_SNKzMDxaEeaogZRN3evpZg" base_Element="_6Ja7wDxYEeaogZRN3evpZg" label="Opis opomene" base_Property="_6Ja7wDxYEeaogZRN3evpZg" length="200" component="editor"/>
   <RootElement:ReadOnly xmi:id="_ptTcsDxaEeaogZRN3evpZg" base_Element="_aogn0DxaEeaogZRN3evpZg" base_Property="_aogn0DxaEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_WxCKgDxbEeaogZRN3evpZg" base_Property="_dbaNQDxaEeaogZRN3evpZg" unique="true"/>
   <RootElement:Editable xmi:id="_WxSCIDxbEeaogZRN3evpZg" base_Element="_dbaNQDxaEeaogZRN3evpZg" label="Naziv" base_Property="_dbaNQDxaEeaogZRN3evpZg" length="20" display="true"/>
   <RootElement:DBProperty xmi:id="_osC-kDxbEeaogZRN3evpZg" base_Property="_aogn0DxaEeaogZRN3evpZg" ID="true" unique="true"/>
   <RootElement:DBProperty xmi:id="_tPCBkDxbEeaogZRN3evpZg" base_Property="_ggQeUDxaEeaogZRN3evpZg" mandatory="false"/>
-  <RootElement:Editable xmi:id="_tPR5MDxbEeaogZRN3evpZg" base_Element="_ggQeUDxaEeaogZRN3evpZg" label="Opis" base_Property="_ggQeUDxaEeaogZRN3evpZg" length="100"/>
+  <RootElement:Editable xmi:id="_tPR5MDxbEeaogZRN3evpZg" base_Element="_ggQeUDxaEeaogZRN3evpZg" label="Opis" base_Property="_ggQeUDxaEeaogZRN3evpZg" length="100" component="editor"/>
   <RootElement:DBProperty xmi:id="_22ENQDxbEeaogZRN3evpZg" base_Property="_ih4X0DxaEeaogZRN3evpZg"/>
   <RootElement:Editable xmi:id="_22VTADxbEeaogZRN3evpZg" base_Element="_ih4X0DxaEeaogZRN3evpZg" label="Kazna" base_Property="_ih4X0DxaEeaogZRN3evpZg" length="6" display="true"/>
   <RootElement:DBProperty xmi:id="_t-B4wDxfEeat_L31rHO22A" base_Property="_Hbu6oDw-EeaogZRN3evpZg" ID="true" unique="true"/>
@@ -511,4 +511,6 @@
   <RootElement:DBProperty xmi:id="_RVQn4DxnEea6ZJGitK1rXQ" base_Property="_g150oDxOEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_Tq_JIDxnEea6ZJGitK1rXQ" base_Property="_i2_ioDxOEeaogZRN3evpZg"/>
   <RootElement:DBProperty xmi:id="_V6BzkDxnEea6ZJGitK1rXQ" base_Property="_mqELoDxOEeaogZRN3evpZg"/>
+  <RootElement:StandardForm xmi:id="_gG_RQEEREeahHeKSd0mugw" base_Element="_9QZuEDxIEeaogZRN3evpZg" label="Ogranak" base_Class="_9QZuEDxIEeaogZRN3evpZg" add="true" delete="true" update="true"/>
+  <RootElement:StandardForm xmi:id="_mGU9gEEREeahHeKSd0mugw" base_Element="_X720UDxaEeaogZRN3evpZg" label="Vrsta opomene" base_Class="_X720UDxaEeaogZRN3evpZg" add="true" delete="true" update="true"/>
 </xmi:XMI>
