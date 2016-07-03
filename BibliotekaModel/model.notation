@@ -851,6 +851,40 @@
     <element xsi:nil="true"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mGf8oEEREeahHeKSd0mugw" x="1858" y="432"/>
   </children>
+  <children xmi:type="notation:Shape" xmi:id="_aSTikEEhEea2JYGcRmDC6A" type="2008">
+    <children xmi:type="notation:DecorationNode" xmi:id="_aSnEkEEhEea2JYGcRmDC6A" type="5029"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_aSnEkUEhEea2JYGcRmDC6A" type="8510">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_aSnEkkEhEea2JYGcRmDC6A" y="5"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_aSnroEEhEea2JYGcRmDC6A" type="7017">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_aSnroUEhEea2JYGcRmDC6A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_aSnrokEhEea2JYGcRmDC6A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_aSnro0EhEea2JYGcRmDC6A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aSnrpEEhEea2JYGcRmDC6A"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_aSnrpUEhEea2JYGcRmDC6A" type="7018">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_aSnrpkEhEea2JYGcRmDC6A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_aSnrp0EhEea2JYGcRmDC6A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_aSnrqEEhEea2JYGcRmDC6A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aSnrqUEhEea2JYGcRmDC6A"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_aSnrqkEhEea2JYGcRmDC6A" type="7019">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_aSnrq0EhEea2JYGcRmDC6A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_aSnrrEEhEea2JYGcRmDC6A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_aSnrrUEhEea2JYGcRmDC6A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aSnrrkEhEea2JYGcRmDC6A"/>
+    </children>
+    <element xmi:type="uml:Class" href="model.uml#_aRwI8EEhEea2JYGcRmDC6A"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aSTikUEhEea2JYGcRmDC6A" x="1395" y="46"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_d-oqYEEhEea2JYGcRmDC6A" type="StereotypeComment">
+    <styles xmi:type="notation:TitleStyle" xmi:id="_d-oqYUEhEea2JYGcRmDC6A" showTitle="true"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_d-oqY0EhEea2JYGcRmDC6A" name="BASE_ELEMENT">
+      <eObjectValue xmi:type="uml:Class" href="model.uml#_aRwI8EEhEea2JYGcRmDC6A"/>
+    </styles>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d-oqYkEhEea2JYGcRmDC6A" x="1595" y="46"/>
+  </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_2hK28Tw9EeaogZRN3evpZg" name="diagram_compatibility_version" stringValue="1.1.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_2hK28jw9EeaogZRN3evpZg"/>
   <styles xmi:type="style:PapyrusViewStyle" xmi:id="_2hK28zw9EeaogZRN3evpZg">
@@ -1416,5 +1450,15 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mGf8pEEREeahHeKSd0mugw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mGf8pUEREeahHeKSd0mugw"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mGf8pkEREeahHeKSd0mugw"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_d-pRcEEhEea2JYGcRmDC6A" type="StereotypeCommentLink" source="_aSTikEEhEea2JYGcRmDC6A" target="_d-oqYEEhEea2JYGcRmDC6A">
+    <styles xmi:type="notation:FontStyle" xmi:id="_d-pRcUEhEea2JYGcRmDC6A"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_d-pRdUEhEea2JYGcRmDC6A" name="BASE_ELEMENT">
+      <eObjectValue xmi:type="uml:Class" href="model.uml#_aRwI8EEhEea2JYGcRmDC6A"/>
+    </styles>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_d-pRckEhEea2JYGcRmDC6A" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_d-pRc0EhEea2JYGcRmDC6A"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_d-pRdEEhEea2JYGcRmDC6A"/>
   </edges>
 </notation:Diagram>

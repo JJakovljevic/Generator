@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RootElement="http:///schemas/RootElement/_7xHv4D35EeakQ-cQhU3thw/13" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RootElement/_7xHv4D35EeakQ-cQhU3thw/13 /UserInterfaceProfile/userInterfaceProfile.profile.uml#_7xIW8D35EeakQ-cQhU3thw">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RootElement="http:///schemas/RootElement/_Q4TQ0EEiEea2JYGcRmDC6A/14" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RootElement/_Q4TQ0EEiEea2JYGcRmDC6A/14 /UserInterfaceProfile/userInterfaceProfile.profile.uml#_Q4W7MEEiEea2JYGcRmDC6A">
   <uml:Model xmi:id="_2hAe4Dw9EeaogZRN3evpZg" name="Biblioteka">
     <packagedElement xmi:type="uml:Class" xmi:id="_Ft6t8Dw-EeaogZRN3evpZg" name="Zanr">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Hbu6oDw-EeaogZRN3evpZg" name="idZanr" visibility="private">
@@ -376,16 +376,17 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7Vm3YEBQEeaAIcvoLmZULQ" key="nature" value="UML_Nature"/>
       </eAnnotations>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_aRwI8EEhEea2JYGcRmDC6A" name="MainForm"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_m49hEDw_EeaogZRN3evpZg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Qzv1ID36EeakQ-cQhU3thw" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Qzv1IT36EeakQ-cQhU3thw" key="Version" value="0.0.14"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Qzv1Ij36EeakQ-cQhU3thw" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Qzv1Iz36EeakQ-cQhU3thw" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Qzv1JD36EeakQ-cQhU3thw" key="Date" value="2016-06-29"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Qzv1JT36EeakQ-cQhU3thw" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ud5egEEiEea2JYGcRmDC6A" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ud5egUEiEea2JYGcRmDC6A" key="Version" value="0.0.15"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ud5egkEiEea2JYGcRmDC6A" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ud5eg0EiEea2JYGcRmDC6A" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ud5ehEEiEea2JYGcRmDC6A" key="Date" value="2016-07-03"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ud5ehUEiEea2JYGcRmDC6A" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m4-IIDw_EeaogZRN3evpZg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="/UserInterfaceProfile/userInterfaceProfile.profile.uml#_7xIW8D35EeakQ-cQhU3thw"/>
+        <references xmi:type="ecore:EPackage" href="/UserInterfaceProfile/userInterfaceProfile.profile.uml#_Q4W7MEEiEea2JYGcRmDC6A"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="/UserInterfaceProfile/userInterfaceProfile.profile.uml#_drb9gDq-EeaItMzh_zRl8g"/>
     </profileApplication>
@@ -513,4 +514,5 @@
   <RootElement:DBProperty xmi:id="_V6BzkDxnEea6ZJGitK1rXQ" base_Property="_mqELoDxOEeaogZRN3evpZg"/>
   <RootElement:StandardForm xmi:id="_gG_RQEEREeahHeKSd0mugw" base_Element="_9QZuEDxIEeaogZRN3evpZg" label="Ogranak" base_Class="_9QZuEDxIEeaogZRN3evpZg" add="true" delete="true" update="true"/>
   <RootElement:StandardForm xmi:id="_mGU9gEEREeahHeKSd0mugw" base_Element="_X720UDxaEeaogZRN3evpZg" label="Vrsta opomene" base_Class="_X720UDxaEeaogZRN3evpZg" add="true" delete="true" update="true"/>
+  <RootElement:MainForm xmi:id="_d-JiMEEhEea2JYGcRmDC6A" base_Element="_aRwI8EEhEea2JYGcRmDC6A" label="Biblioteka" base_Class="_aRwI8EEhEea2JYGcRmDC6A" putanjaDoSlike="images/21.jpg" putanjaDoIkonice="images/icon.png"/>
 </xmi:XMI>

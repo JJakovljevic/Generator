@@ -103,6 +103,14 @@
   <children xmi:type="notation:Shape" xmi:id="_CS50MDrAEeaItMzh_zRl8g" type="1026">
     <children xmi:type="notation:DecorationNode" xmi:id="_CS50MjrAEeaItMzh_zRl8g" type="1034"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_CS6bQDrAEeaItMzh_zRl8g" type="1071">
+      <children xmi:type="notation:Shape" xmi:id="_llsiYEEhEea2JYGcRmDC6A" type="3002">
+        <element xmi:type="uml:Property" href="userInterfaceProfile.profile.uml#_lkjS4EEhEea2JYGcRmDC6A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_llsiYUEhEea2JYGcRmDC6A"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_xfxuwEEhEea2JYGcRmDC6A" type="3002">
+        <element xmi:type="uml:Property" href="userInterfaceProfile.profile.uml#_xfWQ8EEhEea2JYGcRmDC6A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_xfxuwUEhEea2JYGcRmDC6A"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_CS6bQTrAEeaItMzh_zRl8g"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_CS6bQjrAEeaItMzh_zRl8g"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_CS6bQzrAEeaItMzh_zRl8g"/>
@@ -115,7 +123,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CS6bSTrAEeaItMzh_zRl8g"/>
     </children>
     <element xmi:type="uml:Stereotype" href="userInterfaceProfile.profile.uml#_CS4mEDrAEeaItMzh_zRl8g"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CS50MTrAEeaItMzh_zRl8g" x="264" y="387"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CS50MTrAEeaItMzh_zRl8g" x="221" y="390"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_646SYDrAEeaItMzh_zRl8g" type="1031">
     <children xmi:type="notation:DecorationNode" xmi:id="_646SYjrAEeaItMzh_zRl8g" type="1084"/>
@@ -443,7 +451,7 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_TlG70DrAEeaItMzh_zRl8g"/>
     <element xmi:type="uml:Generalization" href="userInterfaceProfile.profile.uml#_Tk78sDrAEeaItMzh_zRl8g"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TlG70TrAEeaItMzh_zRl8g" points="[0, 0, 115, 84]$[-106, 0, 9, 84]$[-106, -84, 9, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TlmEADrAEeaItMzh_zRl8g" id="(0.0,0.27)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TlmEADrAEeaItMzh_zRl8g" id="(0.0,0.24271844660194175)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TlmEATrAEeaItMzh_zRl8g" id="(0.62,1.0)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_65bPxDrAEeaItMzh_zRl8g" type="StereotypeCommentLink" source="_646SYDrAEeaItMzh_zRl8g" target="_65bPwDrAEeaItMzh_zRl8g">
