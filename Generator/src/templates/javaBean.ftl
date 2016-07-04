@@ -36,7 +36,7 @@ ${class.visibility} <#if class.abstract>abstract </#if>class ${class.name} <#if 
     @GeneratedValue
 		</#if>
 	@Column(name = "${property.name}"<#if property.dbProperty?exists><#if !property.dbProperty.id>, unique = ${property.dbProperty.unique?c}, nullable = ${mandatory(property.dbProperty.mandatory)?c}</#if></#if>)
-	private ${checkType(property.type)} ${property.name};
+	<#if class.abstract>protected<#else>private</#if> ${checkType(property.type)} ${property.name};
 	<#else>
     	<#if property.upper == 100>
   	@OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY, mappedBy = "${class.name?lower_case}")
@@ -71,4 +71,11 @@ ${class.visibility} <#if class.abstract>abstract </#if>class ${class.name} <#if 
 	}
 	</#if>
 	</#list>
+	
+	<#if str>
+	@Override
+	public String toString() {
+		return ""<#list toString as string> + " " + ${string.name}.toString()</#list>;
+	}
+	</#if>
 }

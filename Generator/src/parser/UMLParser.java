@@ -235,8 +235,9 @@ public class UMLParser extends Observable {
                             	component = ComponentKind.textField;
                             }
                             boolean display = Boolean.parseBoolean(reader.getAttributeValue(null, "display"));
+                            boolean toString = Boolean.parseBoolean(reader.getAttributeValue(null, "toString"));
                             UIProperty uiProp = new UIProperty(label, length, precision, component, display);
-                          
+                            uiProp.setToString(toString);
                             refProperty.setUiProperty(uiProp);;
                         }
                     } else if (reader.getLocalName().equals("Editable")) {
@@ -279,8 +280,9 @@ public class UMLParser extends Observable {
                             	component = ComponentKind.textField;
                             }
                             boolean display = Boolean.parseBoolean(reader.getAttributeValue(null, "display"));
-
+                            boolean toString = Boolean.parseBoolean(reader.getAttributeValue(null, "toString"));
                             Editable edit = new Editable(label, length, precision, component, display);
+                            edit.setToString(toString);
                             refProperty.setUiProperty(edit);
                         }
                     } else if (reader.getLocalName().equals("ReadOnly")) {
@@ -323,8 +325,9 @@ public class UMLParser extends Observable {
                             	component = ComponentKind.textField;
                             }
                             boolean display = Boolean.parseBoolean(reader.getAttributeValue(null, "display"));
-
+                            boolean toString = Boolean.parseBoolean(reader.getAttributeValue(null, "toString"));
                             ReadOnly read = new ReadOnly(label, length, precision, component, display);
+                            read.setToString(toString);
                             refProperty.setUiProperty(read);
                         }
                     } else if (reader.getLocalName().equals("Lookup")) {
@@ -367,8 +370,9 @@ public class UMLParser extends Observable {
                             	component = ComponentKind.textField;
                             }
                             boolean display = Boolean.parseBoolean(reader.getAttributeValue(null, "display"));
-
+                            boolean toString = Boolean.parseBoolean(reader.getAttributeValue(null, "toString"));
                             Lookup look = new Lookup(label, length, precision, component, display);
+                            look.setToString(toString);
                             refProperty.setUiProperty(look);
                         }
                     }  

@@ -65,19 +65,24 @@ import enumeration.${property.type};
 	</#if>
 </#list>
 
+<#list reference as ref>
+import bean.${ref.type};
+</#list>
+
 
 
 @SuppressWarnings("serial")
 public class ${class.name}Form extends AbstractForm {
 
 	private ${class.name}DaoBean ${class.name?lower_case}Dao = new ${class.name}DaoBean();
-<#list properties as property>
-	<#if !property.uiProperty??>
-	private ${property.type}DaoBean ${property.type?lower_case}Dao = new ${property.type}DaoBean();
-	<#elseif property.uiProperty?? && property.uiProperty.componentKind == "combobox" && !property.enumerated>
-	private ${property.type}DaoBean ${property.type?lower_case}Dao = new ${property.type}DaoBean();
-	</#if>
+<#list reference as ref>
+	private ${ref.type} ${ref.type?lower_case};
 </#list>
+<#if zoom>
+	<#list zoomProperties as prop>
+	JMenuItem jmi${prop?index};
+	</#list>
+</#if>
 
 	public ${class.name}Form(JFrame parent) {
 		super(parent);
@@ -107,9 +112,67 @@ public class ${class.name}Form extends AbstractForm {
 		btZoom.setIcon(new ImageIcon("images/icons/chain.gif"));
 		JPopupMenu jpm = new JPopupMenu();
 		<#list zoomProperties as prop>
-		JMenuItem jmi${prop?index} = new JMenuItem();
+		jmi${prop?index} = new JMenuItem();
 		jmi${prop?index}.setAction(new Open${prop.type}FormAction());
 		jmi${prop?index}.setText("${prop.reference.uiClass.label}");
+		jmi${prop?index}.setEnabled(false);
+		jpm.add(jmi${prop?index});
+		
+		</#list>
+		btZoom.addMouseListener(new PopupListener(jpm));
+		toolbar.add(btZoom);
+	</#if>
+	
+		
+		
+		ListSelectionModel lsm = table.getSelectionModel();
+		lsm.addListSelectionListener(new ${class.name}SelectionListener());
+	}
+	
+	
+<#list reference as ref>
+	public ${class.name}Form(JFrame parent,${ref.type} ${ref.type?lower_case}) {
+		super(parent);
+		setTitle("${class.uiClass.label}");
+		panelDetail = new PanelDetail${class.name}(StanjeDijaloga.BROWSE);
+		
+		tableModel = new DefaultTableModel();
+		tableModel.setColumnIdentifiers(new Object[] {
+<#list columns as column>
+           <#if column.uiProperty??>"${column.uiProperty.label}"<#if column?has_next>,</#if><#else>"${column.name}"<#if column?has_next>,</#if></#if>
+</#list>
+        });
+		List<${class.name}> ${class.name?lower_case}List = ${class.name?lower_case}Dao.findAll();
+       	List<${class.name}> ${class.name?lower_case}List1 = new ArrayList<>();
+		if(${ref.type?lower_case}!=null){
+			this.${ref.type?lower_case} = ${ref.type?lower_case};
+			for(${class.name} ${class.name?lower_case} :${class.name?lower_case}List){
+				if( ${class.name?lower_case}.get${ref.name?cap_first}().get${ref.reference.getID().name?cap_first}().equals(${ref.type?lower_case}.get${ref.reference.getID().name?cap_first}())){
+					${class.name?lower_case}List1.add(${class.name?lower_case});
+				}
+			}
+		}else{
+			${class.name?lower_case}List1 = ${class.name?lower_case}List;
+		}
+        for (${class.name} obj : ${class.name?lower_case}List1) {
+            tableModel.addRow(new Object[] {
+<#list columns as column>
+                obj.get${column.name?cap_first}()<#if column?has_next>,</#if>
+</#list>
+            });
+        }
+		
+		initGUI();  
+		
+	<#if zoom>
+		JButton btZoom = new JButton();
+		btZoom.setIcon(new ImageIcon("images/icons/chain.gif"));
+		JPopupMenu jpm = new JPopupMenu();
+		<#list zoomProperties as prop>
+		jmi${prop?index} = new JMenuItem();
+		jmi${prop?index}.setAction(new Open${prop.type}FormAction());
+		jmi${prop?index}.setText("${prop.reference.uiClass.label}");
+		jmi${prop?index}.setEnabled(false);
 		jpm.add(jmi${prop?index});
 		</#list>
 		btZoom.addMouseListener(new PopupListener(jpm));
@@ -121,11 +184,18 @@ public class ${class.name}Form extends AbstractForm {
 		ListSelectionModel lsm = table.getSelectionModel();
 		lsm.addListSelectionListener(new ${class.name}SelectionListener());
 	}
+</#list>	
 
 	@Override
 	public void dodavanje() {
 		
 		PanelDetail${class.name} panelDetailDodavanje = new PanelDetail${class.name}(StanjeDijaloga.ADD);
+		<#list reference as ref>
+		if(${ref.type?lower_case}!=null){
+			panelDetailDodavanje.get${ref.name?cap_first}Field().removeAllItems();
+			panelDetailDodavanje.get${ref.name?cap_first}Field().addItem(${ref.type?lower_case});
+		}
+		</#list>
 		AddUpdateFindDialog addUpdateDialog = new AddUpdateFindDialog(this, 
   				"Add ${class.uiClass.label}", panelDetailDodavanje);
 		addUpdateDialog.setVisible(true);
@@ -179,6 +249,12 @@ public class ${class.name}Form extends AbstractForm {
 		// TODO Auto-generated method stub
 		if(table.getSelectedRow()!=-1){
 			PanelDetail${class.name} panel = new PanelDetail${class.name}(StanjeDijaloga.UPDATE);
+			<#list reference as ref>
+			if(${ref.type?lower_case}!=null){
+				panel.get${ref.name?cap_first}Field().removeAllItems();
+				panel.get${ref.name?cap_first}Field().addItem(${ref.type?lower_case});
+			}
+			</#list>
 			AddUpdateFindDialog dialog = new AddUpdateFindDialog(this, "Update ${class.name}", panel);
 			${class.name} ${class.name?uncap_first} = null;
 			${class.name?uncap_first} = ${class.name?lower_case}Dao.findById((Integer)(table.getValueAt(table.getSelectedRow(), table.convertColumnIndexToView(0))));
@@ -265,14 +341,18 @@ public class ${class.name}Form extends AbstractForm {
 	        		PanelDetail${class.name} panel = (PanelDetail${class.name})panelDetail;
 					<#list properties as property>
 						<#if fieldType(property) == "JComboBox">
-						panel.get${property.name?cap_first}Field().setSelectedItem(null);
+					panel.get${property.name?cap_first}Field().setSelectedItem(null);
 						<#elseif fieldType(property) == "JDatePicker">
-						panel.get${property.name?cap_first}Field().getModel().setDate(2016, 1, 1);
+					panel.get${property.name?cap_first}Field().getModel().setDate(2016, 1, 1);
 						<#elseif fieldType(property) == "JCheckBox">
-						panel.get${property.name?cap_first}Field().setSelected(false);
+					panel.get${property.name?cap_first}Field().setSelected(false);
 						<#else>
-						panel.get${property.name?cap_first}Field().setText("");
+					panel.get${property.name?cap_first}Field().setText("");
 						</#if>
+					</#list>
+					<#list zoomProperties as prop>
+					jmi${prop?index}.setText("${prop.reference.uiClass.label}");
+					jmi${prop?index}.setEnabled(false);
 					</#list>
 	        		return;
 	        	}
@@ -289,6 +369,12 @@ public class ${class.name}Form extends AbstractForm {
 				<#else>
 				panel.get${property.name?cap_first}Field().setText(${class.name?uncap_first}.get${property.name?cap_first}()+"");
 				</#if>
+			</#list>
+			
+			<#list zoomProperties as prop>
+				jmi${prop?index}.setAction(new Open${prop.type}FormAction(${class.name?uncap_first}));
+				jmi${prop?index}.setText("${prop.reference.uiClass.label}");
+				jmi${prop?index}.setEnabled(true);
 			</#list>
 
 	        }

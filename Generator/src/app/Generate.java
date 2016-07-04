@@ -86,7 +86,25 @@ public class Generate {
 			if(fmClass.getUiClass() != null && fmClass.getUiClass() instanceof MainForm) {
 				continue;
 			}
+			
+			List<FMProperty> toString = new ArrayList<>();
+			for(FMProperty p : fmClass.getProperties()){
+				if(p.getUiProperty() != null && p.getUiProperty().getToString()){
+					toString.add(p);
+				}
+			}
+			
+			if(fmClass.getParent() != null) {
+				for(FMProperty p : fmClass.getParent().getProperties()){
+					if(p.getUiProperty() != null && p.getUiProperty().getToString()){
+						toString.add(p);
+					}
+				}
+			}
+			
 			data.put("class", fmClass);
+			data.put("toString",toString);
+			data.put("str", !toString.isEmpty());
 
 			Template temp = cfg.getTemplate("javaBean.ftl");
 			FileWriter out = new FileWriter(path + "/bean/" + fmClass.getName() + ".java");
@@ -102,11 +120,18 @@ public class Generate {
 		if (!f.exists()) {
 			f.mkdir();
 		}
-		int i = 0;
 		for (FMClass fmClass : classes) {
 			Map<String, Object> data = new HashMap<String, Object>();
 			if (fmClass.getUiClass() != null && !(fmClass.getUiClass() instanceof MainForm)) {
 				data.put("class", fmClass);
+				List<FMProperty> reference = new ArrayList<>();
+				for(FMProperty p : fmClass.getProperties()){
+					if(p.getUiProperty() == null && p.getUpper()==1){
+						reference.add(p);
+					}
+				}
+				data.put("reference", reference);
+				data.put("refer", !reference.isEmpty());
 				//System.out.println(++i + "." + fmClass.getUiClass());
 				Template temp = cfg.getTemplate("action.ftl");
 				FileWriter out = new FileWriter(
@@ -394,6 +419,7 @@ public class Generate {
 			List<FMProperty> properties = new ArrayList<>();
 			properties.add(ID);
 			List<FMProperty> zoomProperties = new ArrayList<>();
+			List<FMProperty> reference = new ArrayList<>();
 			for(FMProperty p : c.getProperties()){
 				if(p.getName().equals(ID.getName())){
 					continue;
@@ -401,6 +427,9 @@ public class Generate {
 				if(p.getUiProperty() == null && p.getUpper()!=1){
 					if(((FMClass)p.getReference()).getUiClass()!=null)
 					zoomProperties.add(p);
+					continue;
+				}else if(p.getUiProperty() == null && p.getUpper()==1){
+					reference.add(p);
 					continue;
 				}
 				properties.add(p);
@@ -415,6 +444,9 @@ public class Generate {
 						if(((FMClass)p.getReference()).getUiClass()!=null)
 						zoomProperties.add(p);
 						continue;
+					}else if(p.getUiProperty() == null && p.getUpper()==1){
+						reference.add(p);
+						continue;
 					}
 					properties.add(p);
 				}
@@ -424,6 +456,7 @@ public class Generate {
 			map.put("properties", properties);
 			map.put("zoom",!zoomProperties.isEmpty());
 			map.put("zoomProperties", zoomProperties);
+			map.put("reference", reference);
 			List<FMProperty> colons = new ArrayList<>();
 			for(FMProperty fm : properties){
 				if((fm.getUiProperty()!= null && fm.getUiProperty().getDisplay()) || (fm.getUiProperty()== null && fm.getUpper()==1)){
