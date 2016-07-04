@@ -170,6 +170,10 @@
         <element xmi:type="uml:Property" href="userInterfaceProfile.profile.uml#_crt74Dw9EeaogZRN3evpZg"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_csYqQTw9EeaogZRN3evpZg"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_dSJZ8EH0Eea6T_TYDBPvxQ" type="3002">
+        <element xmi:type="uml:Property" href="userInterfaceProfile.profile.uml#_dP6lUEH0Eea6T_TYDBPvxQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_dSJZ8UH0Eea6T_TYDBPvxQ"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_RVTm8TrBEeaItMzh_zRl8g"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_RVTm8jrBEeaItMzh_zRl8g"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_RVTm8zrBEeaItMzh_zRl8g"/>
