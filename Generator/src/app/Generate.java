@@ -430,7 +430,6 @@ public class Generate {
 					continue;
 				}else if(p.getUiProperty() == null && p.getUpper()==1){
 					reference.add(p);
-					continue;
 				}
 				properties.add(p);
 			}
@@ -446,7 +445,6 @@ public class Generate {
 						continue;
 					}else if(p.getUiProperty() == null && p.getUpper()==1){
 						reference.add(p);
-						continue;
 					}
 					properties.add(p);
 				}

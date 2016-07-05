@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -89,6 +91,14 @@ public class MainForm extends javax.swing.JFrame {
     	mbMeni.add(mOperacije);
 	        
 	    miIzvestaj.setText("Generiši izveštaj");
+	    miIzvestaj.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Reporter reporter = new Reporter();
+				reporter.generateReport();
+			}
+		});
 	    mOperacije.add(miIzvestaj);
                
 		
