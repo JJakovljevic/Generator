@@ -396,8 +396,8 @@
   </uml:Model>
   <RootElement:ReadOnly xmi:id="_3tzXQDw_EeaogZRN3evpZg" base_Element="_Hbu6oDw-EeaogZRN3evpZg" label="Id zanra" base_Property="_Hbu6oDw-EeaogZRN3evpZg" length="6" display="true" toString="true"/>
   <RootElement:Editable xmi:id="_6W9x4Dw_EeaogZRN3evpZg" base_Element="_oeMO8Dw-EeaogZRN3evpZg" label="Naziv zanra" base_Property="_oeMO8Dw-EeaogZRN3evpZg" length="20" display="true" toString="true"/>
-  <RootElement:Editable xmi:id="_7Qv5kDw_EeaogZRN3evpZg" base_Element="_wqmPsDw-EeaogZRN3evpZg" label="Opis zanra" base_Property="_wqmPsDw-EeaogZRN3evpZg" length="100"/>
-  <RootElement:StandardForm xmi:id="_8g4EsDw_EeaogZRN3evpZg" base_Element="_Ft6t8Dw-EeaogZRN3evpZg" label="Zanr" base_Class="_Ft6t8Dw-EeaogZRN3evpZg"/>
+  <RootElement:Editable xmi:id="_7Qv5kDw_EeaogZRN3evpZg" base_Element="_wqmPsDw-EeaogZRN3evpZg" label="Opis zanra" base_Property="_wqmPsDw-EeaogZRN3evpZg" length="100" component="editor"/>
+  <RootElement:StandardForm xmi:id="_8g4EsDw_EeaogZRN3evpZg" base_Element="_Ft6t8Dw-EeaogZRN3evpZg" label="Zanr" base_Class="_Ft6t8Dw-EeaogZRN3evpZg" add="true" delete="true" update="true"/>
   <RootElement:StandardForm xmi:id="_PIu7MDxBEeaogZRN3evpZg" base_Element="_qBvacDxAEeaogZRN3evpZg" label="Knjiga" base_Class="_qBvacDxAEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
   <RootElement:ReadOnly xmi:id="_W5IVYDxBEeaogZRN3evpZg" base_Element="_sGgukDxAEeaogZRN3evpZg" label="Id knjige" base_Property="_sGgukDxAEeaogZRN3evpZg" length="6" display="true" toString="true"/>
   <RootElement:Editable xmi:id="_ersSwDxBEeaogZRN3evpZg" base_Element="_zhR3ADxAEeaogZRN3evpZg" label="Naslov" base_Property="_zhR3ADxAEeaogZRN3evpZg" length="100" display="true" toString="true"/>
@@ -409,7 +409,7 @@
   <RootElement:Editable xmi:id="_81n98DxFEeaogZRN3evpZg" base_Element="_jsvN8DxFEeaogZRN3evpZg" label="Ime autora" base_Property="_jsvN8DxFEeaogZRN3evpZg" length="30" display="true" toString="true"/>
   <RootElement:Editable xmi:id="_ElInUDxGEeaogZRN3evpZg" base_Element="_lhtLgDxFEeaogZRN3evpZg" label="Prezime autora" base_Property="_lhtLgDxFEeaogZRN3evpZg" length="35" display="true" toString="true"/>
   <RootElement:Editable xmi:id="_MN0P8DxGEeaogZRN3evpZg" base_Element="_oqRe8DxFEeaogZRN3evpZg" label="Biografija" base_Property="_oqRe8DxFEeaogZRN3evpZg" length="300" component="editor"/>
-  <RootElement:StandardForm xmi:id="_6A7MQDxGEeaogZRN3evpZg" base_Element="_0ZUDgDxGEeaogZRN3evpZg" label="Knjige ogranka" base_Class="_0ZUDgDxGEeaogZRN3evpZg"/>
+  <RootElement:StandardForm xmi:id="_6A7MQDxGEeaogZRN3evpZg" base_Element="_0ZUDgDxGEeaogZRN3evpZg" label="Knjige ogranka" base_Class="_0ZUDgDxGEeaogZRN3evpZg" add="true" delete="true" update="true"/>
   <RootElement:ReadOnly xmi:id="_09w-8DxHEeaogZRN3evpZg" base_Element="_WejqgDxHEeaogZRN3evpZg" label="Korisnicko ime" base_Property="_WejqgDxHEeaogZRN3evpZg" length="30" display="true"/>
   <RootElement:Editable xmi:id="_7aXO8DxHEeaogZRN3evpZg" base_Element="_ZqMgEDxHEeaogZRN3evpZg" label="Ime zaposlenog" base_Property="_ZqMgEDxHEeaogZRN3evpZg" length="30" display="true" toString="true"/>
   <RootElement:Editable xmi:id="_Alxj4DxIEeaogZRN3evpZg" base_Element="_cyE3ADxHEeaogZRN3evpZg" label="Prezime zaposlenog" base_Property="_cyE3ADxHEeaogZRN3evpZg" length="35" display="true" toString="true"/>
@@ -437,7 +437,6 @@
   <RootElement:StandardForm xmi:id="_t_l80DxQEeaogZRN3evpZg" base_Element="_ZC78sDxQEeaogZRN3evpZg" label="Primerak" base_Class="_ZC78sDxQEeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
   <RootElement:ReadOnly xmi:id="_BIYLkDxREeaogZRN3evpZg" base_Element="_x3dmQDxQEeaogZRN3evpZg" label="ID primerka" base_Property="_x3dmQDxQEeaogZRN3evpZg" length="6" display="true" toString="true"/>
   <RootElement:Editable xmi:id="_VE0E0DxREeaogZRN3evpZg" base_Element="_2X1aIDxQEeaogZRN3evpZg" label="Godina izdavanja" base_Property="_2X1aIDxQEeaogZRN3evpZg" length="4" display="true"/>
-  <RootElement:ReadOnly xmi:id="_adnVgDxREeaogZRN3evpZg" base_Element="_8I8dIDxQEeaogZRN3evpZg" label="Stanje primerka" base_Property="_8I8dIDxQEeaogZRN3evpZg" component="combobox" display="true"/>
   <RootElement:StandardForm xmi:id="_pVyqsDxREeaogZRN3evpZg" base_Element="_lbxFIDxREeaogZRN3evpZg" label="Izdavac" base_Class="_lbxFIDxREeaogZRN3evpZg" add="true" delete="true" update="true" copy="true"/>
   <RootElement:ReadOnly xmi:id="_2onLoDxREeaogZRN3evpZg" base_Element="_tl8RQDxREeaogZRN3evpZg" label="ID izdavaca" base_Property="_tl8RQDxREeaogZRN3evpZg" length="6" display="true" toString="true"/>
   <RootElement:Editable xmi:id="_94QpMDxREeaogZRN3evpZg" base_Element="_wTzlsDxREeaogZRN3evpZg" label="Naziv izdavaca" base_Property="_wTzlsDxREeaogZRN3evpZg" length="30" display="true" toString="true"/>
@@ -447,7 +446,7 @@
   <RootElement:Editable xmi:id="_6aHR4DxSEeaogZRN3evpZg" base_Element="_YbP_sDxSEeaogZRN3evpZg" label="Status rezervacije" base_Property="_YbP_sDxSEeaogZRN3evpZg" component="chechkbox" display="true"/>
   <RootElement:StandardForm xmi:id="_3FfC8DxTEeaogZRN3evpZg" base_Element="_v3zUQDxTEeaogZRN3evpZg" label="Zaduzenja" base_Class="_v3zUQDxTEeaogZRN3evpZg" add="true" delete="true" update="true"/>
   <RootElement:Editable xmi:id="_caJMQDxUEeaogZRN3evpZg" base_Element="_6W8zsDxTEeaogZRN3evpZg" base_Property="_6W8zsDxTEeaogZRN3evpZg" length="6" component="dateChooser"/>
-  <RootElement:ReadOnly xmi:id="_daHbgDxUEeaogZRN3evpZg" base_Element="_A97HsDxUEeaogZRN3evpZg" base_Property="_A97HsDxUEeaogZRN3evpZg" display="true" toString="true"/>
+  <RootElement:ReadOnly xmi:id="_daHbgDxUEeaogZRN3evpZg" base_Element="_A97HsDxUEeaogZRN3evpZg" base_Property="_A97HsDxUEeaogZRN3evpZg" length="6" display="true" toString="true"/>
   <RootElement:Editable xmi:id="_eKehcDxUEeaogZRN3evpZg" base_Element="_F8wZMDxUEeaogZRN3evpZg" base_Property="_F8wZMDxUEeaogZRN3evpZg" component="dateChooser" display="true"/>
   <RootElement:Editable xmi:id="_fPLfsDxUEeaogZRN3evpZg" base_Element="_NIbVsDxUEeaogZRN3evpZg" base_Property="_NIbVsDxUEeaogZRN3evpZg" component="dateChooser" display="true"/>
   <RootElement:StandardForm xmi:id="_wkzx8DxYEeaogZRN3evpZg" base_Element="_s_q3QDxYEeaogZRN3evpZg" label="Opomena" base_Class="_s_q3QDxYEeaogZRN3evpZg" add="true" delete="true" update="true"/>
@@ -455,7 +454,7 @@
   <RootElement:Editable xmi:id="_dorCoDxZEeaogZRN3evpZg" base_Element="_4tkBwDxYEeaogZRN3evpZg" label="Naziv opomene" base_Property="_4tkBwDxYEeaogZRN3evpZg" length="30" display="true" toString="true"/>
   <RootElement:Editable xmi:id="_4P4x0DxZEeaogZRN3evpZg" base_Element="_7oe6wDxYEeaogZRN3evpZg" label="Status opomene" base_Property="_7oe6wDxYEeaogZRN3evpZg" component="chechkbox" display="true"/>
   <RootElement:Editable xmi:id="_SNKzMDxaEeaogZRN3evpZg" base_Element="_6Ja7wDxYEeaogZRN3evpZg" label="Opis opomene" base_Property="_6Ja7wDxYEeaogZRN3evpZg" length="200" component="editor"/>
-  <RootElement:ReadOnly xmi:id="_ptTcsDxaEeaogZRN3evpZg" base_Element="_aogn0DxaEeaogZRN3evpZg" base_Property="_aogn0DxaEeaogZRN3evpZg" toString="true"/>
+  <RootElement:ReadOnly xmi:id="_ptTcsDxaEeaogZRN3evpZg" base_Element="_aogn0DxaEeaogZRN3evpZg" label="Vrsta opomene" base_Property="_aogn0DxaEeaogZRN3evpZg" length="6" display="true" toString="true"/>
   <RootElement:DBProperty xmi:id="_WxCKgDxbEeaogZRN3evpZg" base_Property="_dbaNQDxaEeaogZRN3evpZg" unique="true"/>
   <RootElement:Editable xmi:id="_WxSCIDxbEeaogZRN3evpZg" base_Element="_dbaNQDxaEeaogZRN3evpZg" label="Naziv" base_Property="_dbaNQDxaEeaogZRN3evpZg" length="20" display="true" toString="true"/>
   <RootElement:DBProperty xmi:id="_osC-kDxbEeaogZRN3evpZg" base_Property="_aogn0DxaEeaogZRN3evpZg" ID="true" unique="true"/>
@@ -520,4 +519,5 @@
   <RootElement:MainForm xmi:id="_d-JiMEEhEea2JYGcRmDC6A" base_Element="_aRwI8EEhEea2JYGcRmDC6A" label="Biblioteka" base_Class="_aRwI8EEhEea2JYGcRmDC6A" putanjaDoSlike="images/21.jpg" putanjaDoIkonice="images/icon.png"/>
   <RootElement:DBProperty xmi:id="_ztKIIEEoEeahHeKSd0mugw" base_Property="_s8MxsEEoEeahHeKSd0mugw" ID="true"/>
   <RootElement:ReadOnly xmi:id="_1feaUEEoEeahHeKSd0mugw" base_Element="_s8MxsEEoEeahHeKSd0mugw" label="Maticni broj administratora" base_Property="_s8MxsEEoEeahHeKSd0mugw" length="6" display="true" toString="true"/>
+  <RootElement:Editable xmi:id="_qsGycENZEeachZRfWcz2VQ" base_Element="_8I8dIDxQEeaogZRN3evpZg" label="Stanje primerka" base_Property="_8I8dIDxQEeaogZRN3evpZg" component="combobox" display="true"/>
 </xmi:XMI>
