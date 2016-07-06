@@ -56,7 +56,6 @@ public class MainForm extends javax.swing.JFrame {
     public static MainForm getInstance() {
 		if (instance == null) {
 			instance = new MainForm();
-			instance.initComponents();
 		}
 		return instance;
 	}
