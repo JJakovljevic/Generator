@@ -99,6 +99,14 @@ public class FMProperty extends FMNamedElement  {
 		this.reference = reference;
 	}
 
+	public boolean isEditable(){
+		if(uiProperty!=null && uiProperty instanceof ReadOnly){
+			return false;
+		}else{
+			return true;
+		}
+	}
+	
 	@Override
 	public String toString() {
 		return "FMProperty [type=" + type + ", visibility=" + visibility + ", lower=" + lower + ", upper=" + upper

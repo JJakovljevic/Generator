@@ -100,25 +100,25 @@ public class PanelDetail${class.name} extends AbstractPanelDetail {
 	    	${property.name}Field.addItem(obj);
 	    }
 	    </#if>
-		${property.name}Field.setEnabled(mode != StanjeDijaloga.BROWSE);
+		${property.name}Field.setEnabled(mode != StanjeDijaloga.BROWSE && ${property.isEditable()?c});
 		<#elseif fieldType(property) == "JDatePicker">
 		UtilDateModel model${property?index} = new UtilDateModel();
 		Properties p${property?index} = new Properties();
 		JDatePanelImpl jdp${property?index} = new JDatePanelImpl(model${property?index}, p${property?index});
 		AbstractFormatter cf${property?index} = new CustDateFormatter();
 		${property.name}Field = new JDatePickerImpl(jdp${property?index}, cf${property?index} );
-		${property.name}Field.setTextEditable(mode != StanjeDijaloga.BROWSE  );
+		${property.name}Field.setTextEditable(mode != StanjeDijaloga.BROWSE  && ${property.isEditable()?c});
 		${property.name}Field.getModel().setSelected(true);
 		<#elseif fieldType(property) == "JCheckBox">
 		${property.name}Field = new JCheckBox();
-		${property.name}Field.setEnabled(mode != StanjeDijaloga.BROWSE  );
+		${property.name}Field.setEnabled(mode != StanjeDijaloga.BROWSE  && ${property.isEditable()?c});
 		<#elseif fieldType(property) == "JTextField">
 		${property.name}Field = new JTextField(${property.uiProperty.length});
-		${property.name}Field.setEnabled(mode != StanjeDijaloga.BROWSE  <#if property.dbProperty.id>&& mode != StanjeDijaloga.UPDATE && mode != StanjeDijaloga.ADD</#if>);
+		${property.name}Field.setEnabled(mode != StanjeDijaloga.BROWSE  <#if property.dbProperty.id>&& mode != StanjeDijaloga.UPDATE && mode != StanjeDijaloga.ADD</#if> && ${property.isEditable()?c});
 		${property.name}Field.addKeyListener(new BojenjeKeyListener(${property.name}Field));
 		<#elseif fieldType(property) == "JTextArea">
 		${property.name}Field = new JTextArea(5,20);
-		${property.name}Field.setEnabled(mode != StanjeDijaloga.BROWSE  <#if property.dbProperty.id>&& mode != StanjeDijaloga.UPDATE && mode != StanjeDijaloga.ADD</#if>);
+		${property.name}Field.setEnabled(mode != StanjeDijaloga.BROWSE  <#if property.dbProperty.id>&& mode != StanjeDijaloga.UPDATE && mode != StanjeDijaloga.ADD</#if> && ${property.isEditable()?c});
 		${property.name}Field.setLineWrap(true);
 		JScrollPane jsp${property?index} = new JScrollPane(${property.name}Field);
 		jsp${property?index}.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);

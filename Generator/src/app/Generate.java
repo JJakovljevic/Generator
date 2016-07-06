@@ -189,8 +189,6 @@ public class Generate {
 						// Npr. zbog sintaksne greške u šablonu.
 						e.printStackTrace();
 					}
-				} else {
-					System.out.println("Ne postoji ID!");
 				}
 			}
 		}

@@ -105,7 +105,10 @@ public class ${class.name}Form extends AbstractForm {
             });
         }
 		
-		initGUI();  
+		initGUI();
+		toolbar.getBtnDodavanje().setEnabled(${class.uiClass.add?c});
+		toolbar.getBtnBrisanje().setEnabled(${class.uiClass.delete?c});
+		toolbar.getBtnIzmena().setEnabled(${class.uiClass.update?c});  
 		
 	<#if zoom>
 		JButton btZoom = new JButton();
@@ -123,8 +126,6 @@ public class ${class.name}Form extends AbstractForm {
 		toolbar.add(btZoom);
 	</#if>
 	
-		
-		
 		ListSelectionModel lsm = table.getSelectionModel();
 		lsm.addListSelectionListener(new ${class.name}SelectionListener());
 	}
@@ -163,6 +164,9 @@ public class ${class.name}Form extends AbstractForm {
         }
 		
 		initGUI();  
+		toolbar.getBtnDodavanje().setEnabled(${class.uiClass.add?c});
+		toolbar.getBtnBrisanje().setEnabled(${class.uiClass.delete?c});
+		toolbar.getBtnIzmena().setEnabled(${class.uiClass.update?c});
 		
 	<#if zoom>
 		JButton btZoom = new JButton();
@@ -179,8 +183,6 @@ public class ${class.name}Form extends AbstractForm {
 		toolbar.add(btZoom);
 	</#if>
 	
-		
-		
 		ListSelectionModel lsm = table.getSelectionModel();
 		lsm.addListSelectionListener(new ${class.name}SelectionListener());
 	}
@@ -262,7 +264,7 @@ public class ${class.name}Form extends AbstractForm {
 			<#if fieldType(property) == "JComboBox">
 			panel.get${property.name?cap_first}Field().setSelectedItem(${class.name?uncap_first}.get${property.name?cap_first}());
 			<#elseif fieldType(property) == "JDatePicker">
-			panel.get${property.name?cap_first}Field().getModel().setDate(${class.name?uncap_first}.get${property.name?cap_first}().getYear()+1900, ${class.name?uncap_first}.get${property.name?cap_first}().getDate(), ${class.name?uncap_first}.get${property.name?cap_first}().getMonth()+1);
+			panel.get${property.name?cap_first}Field().getModel().setDate(${class.name?uncap_first}.get${property.name?cap_first}().getYear()+1900, ${class.name?uncap_first}.get${property.name?cap_first}().getMonth(), ${class.name?uncap_first}.get${property.name?cap_first}().getDate());
 			<#elseif fieldType(property) == "JCheckBox">
 			panel.get${property.name?cap_first}Field().setSelected(${class.name?uncap_first}.get${property.name?cap_first}());
 			<#else>
@@ -363,7 +365,7 @@ public class ${class.name}Form extends AbstractForm {
 				<#if fieldType(property) == "JComboBox">
 				panel.get${property.name?cap_first}Field().setSelectedItem(${class.name?uncap_first}.get${property.name?cap_first}());
 				<#elseif fieldType(property) == "JDatePicker">
-				panel.get${property.name?cap_first}Field().getModel().setDate(${class.name?uncap_first}.get${property.name?cap_first}().getYear()+1900, ${class.name?uncap_first}.get${property.name?cap_first}().getDate(), ${class.name?uncap_first}.get${property.name?cap_first}().getMonth()+1);
+				panel.get${property.name?cap_first}Field().getModel().setDate(${class.name?uncap_first}.get${property.name?cap_first}().getYear()+1900, ${class.name?uncap_first}.get${property.name?cap_first}().getMonth(), ${class.name?uncap_first}.get${property.name?cap_first}().getDate());
 				<#elseif fieldType(property) == "JCheckBox">
 				panel.get${property.name?cap_first}Field().setSelected(${class.name?uncap_first}.get${property.name?cap_first}());
 				<#else>
