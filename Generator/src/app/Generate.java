@@ -9,6 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.swing.JOptionPane;
+
 import freemarker.cache.ClassTemplateLoader;
 import freemarker.core.ParseException;
 import freemarker.template.Configuration;
@@ -34,8 +36,8 @@ public class Generate {
 	private static Template dialogStatusBarTemplate;
 	private static Template dialogToolbarTemplate;
 
-	public static void main(String[] args) throws Exception {
-		File f = new File("model.uml");
+	public static void generate(String modelPath, String destPath) throws Exception {
+		File f = new File(modelPath);
 		UMLParser umlParser = null;
 		try {
 			umlParser = new UMLParser(f);
@@ -47,7 +49,7 @@ public class Generate {
 		List<FMEnum> en = model.getEnums();
 		cfg.setTemplateLoader(new ClassTemplateLoader(Generate.class, "/templates"));
 		cfg.setObjectWrapper(new DefaultObjectWrapper());
-		String path = "generated/" + "src";
+		String path = destPath + "/src";
 		File file = new File(path);
 		if (!file.exists()) {
 			file.mkdirs();
@@ -72,6 +74,8 @@ public class Generate {
 		}
 		
 		generateForms(classes, path+ "/gui");
+		
+		JOptionPane.showMessageDialog(null, "Generisanje uspesno zavrseno.");
 	}
 
 	public static void generateJavaBean(List<FMClass> classes, String path) throws Exception {

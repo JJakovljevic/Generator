@@ -319,7 +319,7 @@ public class ${class.name}Form extends AbstractForm {
 		// TODO Auto-generated method stub
 		
 		if(table.getSelectedRow()!=-1){
-			int odgovor = JOptionPane.showConfirmDialog(this, "Da li ste sigurni da zelite da obrisete drzavu?",
+			int odgovor = JOptionPane.showConfirmDialog(this, "Da li ste sigurni da zelite da obrisete ${class.name?lower_case}?",
 					"", JOptionPane.YES_NO_OPTION);
 			if(odgovor == JOptionPane.YES_OPTION){
 				int row = table.getSelectedRow();
