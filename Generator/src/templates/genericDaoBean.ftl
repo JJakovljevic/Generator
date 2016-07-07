@@ -1,3 +1,7 @@
+/************************************************************************/
+/*          Generisano na osnovu templejta: genericDaoBean.ftl          */
+/************************************************************************/
+
 package dao;
 
 import java.io.Serializable;

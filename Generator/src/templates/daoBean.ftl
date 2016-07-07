@@ -1,3 +1,7 @@
+/*****************************************************************/
+/*          Generisano na osnovu templejta: daoBean.ftl          */
+/*****************************************************************/
+
 package dao;
 
 import javax.ejb.Stateless;

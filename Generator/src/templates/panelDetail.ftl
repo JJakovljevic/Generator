@@ -1,3 +1,7 @@
+/*********************************************************************/
+/*          Generisano na osnovu templejta: panelDetail.ftl          */
+/*********************************************************************/
+
 <#function fieldType prop>
 	<#if prop.uiProperty??>
 		<#if prop.uiProperty.componentKind == "textField">
