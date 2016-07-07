@@ -1,3 +1,6 @@
+/*****************************************************************/
+/*          Generisano na osnovu templejta: MainForm.ftl          */
+/*****************************************************************/
 package gui;
 
 import java.awt.BorderLayout;
