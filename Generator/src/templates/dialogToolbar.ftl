@@ -1,3 +1,9 @@
+/*****************************************************************/
+/*         Generisano na osnovu templejta: dialogToolbar.ftl     */
+/*****************************************************************/
+
+
+
 package gui.forms;
 
 import java.awt.Cursor;

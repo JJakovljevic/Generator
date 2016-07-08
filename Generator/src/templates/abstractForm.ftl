@@ -1,3 +1,7 @@
+/*****************************************************************/
+/*          Generisano na osnovu templejta: abstractForm.ftl     */
+/*****************************************************************/
+
 package gui.forms;
 
 import java.awt.BorderLayout;

@@ -1,3 +1,8 @@
+/*****************************************************************/
+/*       Generisano na osnovu templejta: dialogStatusBar.ftl     */
+/*****************************************************************/
+
+
 package gui.forms;
 
 import java.awt.Color;
