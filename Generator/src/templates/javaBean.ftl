@@ -1,3 +1,6 @@
+/*****************************************************************/
+/*         Generisano na osnovu templejta: javaBean.ftl     */
+/*****************************************************************/
 
 <#function checkType testSting>
 	<#if testSting == "EDate" || testSting == "EBoolean">

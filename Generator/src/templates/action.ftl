@@ -1,3 +1,7 @@
+/**********************************************************************/
+/*          Generisano na osnovu templejta: action.ftl          */
+/**********************************************************************/
+
 package action;
 
 import java.awt.event.ActionEvent;
